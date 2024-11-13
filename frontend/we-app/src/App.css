@@ -1,0 +1,14 @@
+.app {
+  width: 100%;
+  max-width: 390px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
