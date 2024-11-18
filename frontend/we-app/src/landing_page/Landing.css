@@ -1,12 +1,84 @@
 .app-container {
   width: 390px;
-  height: 844px;
+  height: 800px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start; /* Align everything at the top */
+  align-items: center; /* Keep everything centered horizontally */
   background-color: #f5f5f5;
   margin: 0 auto;
+  padding: 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  position: relative; /* Necessary for positioning menu icon */
+}
+
+/* Logo box positioning */
+.logo-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align logo to the top */
+  margin-top: 0; /* Remove extra space */
+}
+
+.logo {
+  width: 105px;
+  height: 70px;
+  margin-top: 0; /* Make sure there is no margin on the top */
+  margin-bottom: 10px; /* Reduce space below the logo */
+}
+
+/* Menu Icon */
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Landing Page Content */
+.landing-content {
+  text-align: center;
+  margin-top: 10px; /* Reduce space between the logo and content */
+}
+
+button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e65500;
+}
+
+/* Visual Elements */
+.visual-container {
   position: relative;
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.orange-circle {
+  width: 350px;
+  height: 350px;
+  background-color: #f7e4bf;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: -29px;
+}
+
+.wooden-sign {
+  width: 180px;
+  position: absolute;
+  bottom: 135px;
+  right: 120px;
 }

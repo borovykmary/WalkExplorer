@@ -1,3 +1,4 @@
+/* Register container, same as login container */
 .app-container {
   width: 390px;
   height: 844px;
@@ -9,4 +10,89 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Logo styling, same as login page */
+.logo {
+  width: 200px; /* Adjust size */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Welcome text styling, same as login page */
+.welcome-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input fields styling, same as login page */
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px; /* Round edges */
+  font-size: 16px;
+  color: #000;
+}
+
+/* Helper text below input fields */
+.input-helper-text {
+  font-size: 12px;
+  color: #777;
+  text-align: left;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Button styling for sign in */
+.button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px; /* Round edges */
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Sign In button styling */
+.login-btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.login-btn:active,
+.login-btn:focus {
+  background-color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Already have an account? link */
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
 }

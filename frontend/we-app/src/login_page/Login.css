@@ -9,4 +9,94 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.welcome-text {
+  font-size: 24px; /* Adjust the font size */
+  font-weight: bold; /* Make it bold */
+  color: black; /* Text color */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Add space between the text and the input fields */
+}
+
+.logo {
+  width: 200px; /* Set a larger width */
+  height: auto; /* Keep the aspect ratio of the logo */
+  margin-bottom: 30px;
+}
+
+.forgot-password-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgot-password-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+/* Input field styles */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px; /* Increased for rounder edges */
+  font-size: 16px;
+  color: #000;
+}
+
+/* Button base styles */
+.button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px; /* Increased for rounder edges */
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for color and shadow */
+}
+
+/* Login button styles */
+.login-btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.login-btn:active,
+.login-btn:focus {
+  background-color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Guest button styles */
+.guest-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.guest-btn:active,
+.guest-btn:focus {
+  background-color: #f3d59f;
+  color: white;
+  border: 1px solid #f1d1ab;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(231, 204, 154, 0.8);
+}
+
+.button:hover {
+  opacity: 0.9;
 }
