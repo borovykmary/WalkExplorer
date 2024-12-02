@@ -23,7 +23,10 @@ function Landing() {
 
       {/* Main Content */}
       <div className="landing-content">
-        <h1>Introducing Walk Explorer</h1>
+        <h1>
+          Introducing <span className="walk-explorer">Walk Explorer</span>
+        </h1>
+
         <p>
           “Whether you’re a visitor or a local, Walk Explorer curates the
           perfect walking journey through Wrocław. Choose your interests, set

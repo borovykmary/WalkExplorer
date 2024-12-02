@@ -1,99 +1,202 @@
-/* Profile Page Styles */
-.app-container {
+/* Profile page container */
+.profile-container {
   width: 390px;
-  height: 844px;
+  height: 700px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f5f5f5;
   margin: 0 auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  position: relative;
   padding: 20px;
-}
-
-.profile-header {
-  font-size: 24px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.profile-image-container {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+/* Header section with back button, profile photo, and edit button */
+.profile-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.back-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.profile-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  margin-top: 15mm; /* Moves profile photo down 15 millimeters */
+}
+/* Style for the "Change Profile Picture" text */
+.image-title {
+  font-size: 16px; /* Set the font size smaller */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Adjust space below the text */
+}
+
+.profile-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* User Info Section */
+.user-info {
+  width: 100%;
+  text-align: left;
   margin-bottom: 20px;
 }
 
-.profile-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #000;
+.username-section,
+.email-section {
+  margin-bottom: 15px;
 }
 
-.profile-image-upload {
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.edit-profile {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 14px;
-  color: black;
-  cursor: pointer;
-}
-
-.profile-info {
-  text-align: center;
-}
-
-.profile-info-item {
-  display: block;
-  font-size: 18px;
-  color: black;
-  margin-top: 10px;
-}
-
-.favorite-section {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.favorite-title {
+.username-title,
+.email-title {
   font-size: 20px;
-  color: black;
-  margin-bottom: 10px;
-  cursor: pointer;
+  font-weight: bold;
+  color: #333;
 }
 
-.favorite-routes {
-  margin-top: 10px;
-  text-align: left;
-  padding-left: 20px;
+.username-value,
+.email-value {
+  font-size: 16px;
+  color: #666;
 }
 
-.logout-btn {
-  display: block;
-  margin: 30px auto;
-  background-color: white;
-  border: 1px solid #000;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  cursor: pointer;
+.username-input,
+.email-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   font-size: 16px;
 }
 
-.logout-btn:hover {
-  background-color: #f4f4f4;
+.image-upload {
+  margin-top: 10px;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Favorite Routes Section */
+.favorite-routes {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.favorite-routes-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.favorite-routes-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Sign Out Button */
+.sign-out-btn {
+  width: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sign-out-btn:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the "Choose File" button */
+input[type="file"] {
+  font-size: 14px; /* Increase font size to make the text inside more readable */
+  padding: 12px 20px; /* Increase padding to make the button bigger */
+  background-color: #f5f5f5; /* Light background for aesthetic appeal */
+  border: 2px solid #ccc; /* Border with a soft color */
+  border-radius: 8px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor to indicate it is clickable */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+input[type="file"]:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+}
+
+/* Container for the "Confirm" button */
+.confirm-btn-container {
+  display: flex;
+  justify-content: center; /* Center button horizontally */
+  width: 100%; /* Ensure the container spans full width */
+  margin-top: 20px; /* Optional: space between elements */
+}
+
+/* Style for the "Confirm" button */
+button.confirm-btn {
+  padding: 10px 25px; /* Adjust padding for balanced button */
+  font-size: 16px; /* Adjust font size */
+  background-color: #d3a633; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 30px; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Make the width adjust according to the content */
+  max-width: 250px; /* Optional: Set a max-width to prevent it from becoming too wide */
+  text-align: center; /* Center the text inside the button */
+}
+
+button.confirm-btn:hover {
+  background-color: #d3a633; /* Background color on hover */
 }

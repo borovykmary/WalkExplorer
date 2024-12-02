@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
-import logo from "../logo.png"; // Adjust the path according to the folder structure
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../logo.png";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   // Handle the "Log In" button click
   const handleLogin = () => {
@@ -19,15 +20,13 @@ function Login() {
 
   // Handle "Continue as Guest" button click
   const handleGuest = () => {
-    alert("Continuing as guest...");
-    // Implement guest login logic here
+    navigate("/map"); // Redirect to the Map page
   };
 
   return (
     <div className="app-container">
       <img src={logo} alt="Walk Explorer Logo" className="logo" />
-      <h2 className="welcome-text">Welcome to Walker Explorer!!!</h2>{" "}
-      {/* Add welcome text here */}
+      <h2 className="welcome-text">Welcome to Walker Explorer!</h2>
       <input
         type="email"
         className="input-field"
@@ -50,8 +49,7 @@ function Login() {
       </button>
       <div className="forgot-password-link">
         <p>
-          <Link to="/forgot-password">Forgot your password?</Link>{" "}
-          {/* Link to Forgot Password page */}
+          <Link to="/forgot-password">Forgot your password?</Link>
         </p>
       </div>
       <div className="register-link">

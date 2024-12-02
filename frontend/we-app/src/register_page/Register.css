@@ -1,7 +1,7 @@
 /* Register container, same as login container */
 .app-container {
   width: 390px;
-  height: 844px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,10 +82,15 @@
 }
 
 /* Already have an account? link */
-.register-link {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 14px;
+.login-link {
+  color: #007bff; /* A standard link color */
+  text-decoration: none; /* Remove underline by default */
+  font-weight: bold; /* Make it stand out */
+}
+
+.login-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0056b3; /* Darker color on hover for contrast */
 }
 
 .register-link a {
