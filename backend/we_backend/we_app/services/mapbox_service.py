@@ -1,6 +1,10 @@
 import requests
+from dotenv import load_dotenv
+import os
 
-MAPBOX_TOKEN = "YOUR_MAPBOX_TOKEN"
+load_dotenv()
+
+MAPBOX_TOKEN = os.getenv("MAPBOX_TOKEN")
 
 def geocode_location(location_name):
     url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{location_name}.json"
