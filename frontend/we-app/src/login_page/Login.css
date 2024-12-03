@@ -14,17 +14,16 @@
 }
 
 .welcome-text {
-  font-size: 24px; /* Adjust the font size */
-  font-weight: bold; /* Make it bold */
-  color: black; /* Text color */
-  text-align: center; /* Center the text */
-  margin-bottom: 20px; /* Add space between the text and the input fields */
+  font-size: 24px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .logo {
-  width: 200px; /* Set a larger width */
-  height: auto; /* Keep the aspect ratio of the logo */
-  margin-bottom: 30px;
+  width: 124px;
+  height: 73px;
 }
 
 .forgot-password-link {
@@ -41,31 +40,28 @@
   text-decoration: underline;
 }
 
-/* Input field styles */
 .input-field {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 12px; /* Increased for rounder edges */
+  border-radius: 12px;
   font-size: 16px;
   color: #000;
 }
 
-/* Button base styles */
 .button {
   width: 100%;
   padding: 15px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  border-radius: 12px; /* Increased for rounder edges */
+  border-radius: 12px;
   margin-top: 10px;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for color and shadow */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Login button styles */
 .login-btn {
   background-color: black;
   color: white;
@@ -78,7 +74,6 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Guest button styles */
 .guest-btn {
   background-color: white;
   color: black;

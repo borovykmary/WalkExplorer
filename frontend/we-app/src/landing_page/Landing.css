@@ -1,40 +1,37 @@
 .app-container {
   width: 390px;
   height: 800px;
-  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align content at the top */
-  padding: 0; /* Minimize extra space */
-  box-sizing: border-box; /* Include padding in the element's dimensions */
-  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
 }
-.logo-box,
-.logo {
-  margin: 0; /* Remove all margins */
-  padding: 0; /* Remove all paddings */
+.content-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 .logo-box {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: auto; /* Ensure dynamic height */
-  margin: 0; /* Remove top and bottom margins */
-  padding: 0; /* Remove extra padding */
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 60px);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.logo {
-  width: 105px;
-  height: 70px;
-  object-fit: contain; /* Prevent stretching */
-  margin: 0; /* Remove extra space */
-  padding: 0; /* Ensure no padding adds space */
-  display: block; /* Prevent inline spacing issues */
-}
-
-/* Menu Icon */
 .menu-icon {
   position: absolute;
   top: 20px;
@@ -42,67 +39,67 @@
   font-size: 24px;
   cursor: pointer;
 }
-
-/* Landing Page Content */
-.landing-content {
-  text-align: center;
-  margin-top: 10px; /* Reduce space between the logo and content */
+.logo-landing {
+  width: 87px;
+  height: 53px;
+  margin-top: 0;
 }
 
-button {
-  background-color: #210e01;
-  color: white;
+.landing-content {
+  text-align: center;
+  margin-top: 80px;
+  z-index: 1;
+}
+
+.landing-content h1 {
+  font-size: 36px;
+  font-weight: 300;
+  color: #333333;
+}
+
+.landing-content .walk-explorer {
+  font-weight: 400;
+  color: #d05c00;
+}
+
+.landing-content .description {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 250;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+button.get-started-btn {
+  background-color: #000000;
+  color: #ffffff;
   border: none;
-  padding: 12px 30px; /* Adjust padding for better balance */
+  padding: 12px 24px;
   margin-top: 20px;
-  border-radius: 30px; /* Increase border-radius for more rounded corners */
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 300;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #411902;
+button.get-started-btn:hover {
+  background-color: #333333;
 }
 
-/* Visual Elements */
-.visual-container {
-  position: relative;
-  margin-top: 40px;
+.background-image-container {
+  position: absolute;
+  top: 261px;
+  left: 60px;
+  width: 370px;
+  height: 584px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-image {
   width: 100%;
-  height: 100%;
-}
-
-.orange-circle {
-  width: 350px;
-  height: 350px;
-  background-color: #f7e4bf;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 50px;
-  right: -29px;
-}
-
-.wooden-sign {
-  width: 180px;
-  position: absolute;
-  bottom: 190px;
-  right: 120px;
-}
-
-/* Style for Walk Explorer */
-.walk-explorer {
-  color: #e65500; /* Set the text color to orange */
-  display: inline-block; /* Ensure it's inline but can be styled */
-  font-size: 32px; /* You can adjust the font size as needed */
-  font-weight: bold; /* Optional: Make the text bold */
-}
-
-/* Landing Page Content */
-.landing-content {
-  text-align: center;
-  margin-top: 10px; /* Reduce space between the logo and content */
-}
-
-h1 {
-  font-size: 36px; /* Adjust the font size for the entire h1 */
-  line-height: 1.4; /* Add space between lines for better readability */
+  height: auto;
+  object-fit: cover;
 }

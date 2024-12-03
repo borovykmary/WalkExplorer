@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Register.css"; // Ensure you have Register.css file
-import logo from "../logo.png"; // Correct path for logo
-
+import "./Register.css";
+import { ReactComponent as LogoIcon } from "../res/logo-we.svg";
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,9 +21,8 @@ function Register() {
 
   return (
     <div className="app-container">
-      <img src={logo} alt="Logo" className="logo" />
+      <LogoIcon className="logo"> </LogoIcon>
       <h2 className="welcome-text">Welcome to Walker Explorer</h2>{" "}
-      {/* Welcome message */}
       <input
         type="email"
         className="input-field"
@@ -33,7 +31,6 @@ function Register() {
         onChange={(e) => setEmail(e.target.value)}
       />
       <small className="input-helper-text">Enter your email</small>{" "}
-      {/* Helper text for email */}
       <input
         type="password"
         className="input-field"
@@ -42,7 +39,6 @@ function Register() {
         onChange={(e) => setPassword(e.target.value)}
       />
       <small className="input-helper-text">Enter your password</small>{" "}
-      {/* Helper text for password */}
       <input
         type="password"
         className="input-field"
@@ -51,7 +47,6 @@ function Register() {
         onChange={(e) => setRepeatPassword(e.target.value)}
       />
       <small className="input-helper-text">Enter password one more time</small>{" "}
-      {/* Helper text for repeat password */}
       <button className="button login-btn" onClick={handleRegister}>
         Sign In
       </button>
@@ -59,7 +54,6 @@ function Register() {
         <p>
           Already have an account? <Link to="/login">Log In</Link>
         </p>{" "}
-        {/* Link to login page */}
       </div>
     </div>
   );

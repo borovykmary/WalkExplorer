@@ -5,7 +5,6 @@ import Login from "./login_page/Login";
 import Register from "./register_page/Register";
 import Main from "./main_page/Main";
 import Profile from "./profile_page/Profile";
-import Map from "./components/Map";
 import ForgotPassword from "./forgot_password/ForgotPassword";
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/map" element={<Map />} />
       </Routes>
     </Router>
   );

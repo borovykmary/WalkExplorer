@@ -1,4 +1,3 @@
-/* Register container, same as login container */
 .app-container {
   width: 390px;
   height: 800px;
@@ -14,14 +13,11 @@
   padding: 20px;
 }
 
-/* Logo styling, same as login page */
 .logo {
-  width: 200px; /* Adjust size */
-  height: auto;
-  margin-bottom: 30px;
+  width: 124px;
+  height: 73px;
 }
 
-/* Welcome text styling, same as login page */
 .welcome-text {
   font-size: 24px;
   font-weight: bold;
@@ -30,7 +26,6 @@
   margin-bottom: 20px;
 }
 
-/* Input fields styling, same as login page */
 .input-group {
   width: 100%;
   margin-bottom: 15px;
@@ -41,12 +36,11 @@
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 12px; /* Round edges */
+  border-radius: 12px;
   font-size: 16px;
   color: #000;
 }
 
-/* Helper text below input fields */
 .input-helper-text {
   font-size: 12px;
   color: #777;
@@ -55,20 +49,18 @@
   display: block;
 }
 
-/* Button styling for sign in */
 .button {
   width: 100%;
   padding: 15px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  border-radius: 12px; /* Round edges */
+  border-radius: 12px;
   margin-top: 10px;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Sign In button styling */
 .login-btn {
   background-color: black;
   color: white;
@@ -81,7 +73,6 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Already have an account? link */
 .login-link {
   color: #007bff; /* A standard link color */
   text-decoration: none; /* Remove underline by default */

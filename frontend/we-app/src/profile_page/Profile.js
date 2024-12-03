@@ -39,7 +39,7 @@ function Profile() {
     <div className="profile-container">
       {/* Top section with back button, profile picture, and edit button */}
       <div className="profile-header">
-        <Link to="/map">
+        <Link to="/main">
           <img src={backIcon} alt="Back" className="back-button" />
         </Link>
         <div className="profile-photo">

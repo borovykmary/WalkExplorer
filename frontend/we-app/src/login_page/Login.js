@@ -1,32 +1,29 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../logo.png";
+import { ReactComponent as LogoIcon } from "../res/logo-we.svg";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // Handle the "Log In" button click
   const handleLogin = () => {
     if (email && password) {
       alert("Logging in...");
-      // Add logic for logging in (e.g., API call)
     } else {
       alert("Please enter both email and password.");
     }
   };
 
-  // Handle "Continue as Guest" button click
   const handleGuest = () => {
-    navigate("/map"); // Redirect to the Map page
+    navigate("/main");
   };
 
   return (
     <div className="app-container">
-      <img src={logo} alt="Walk Explorer Logo" className="logo" />
-      <h2 className="welcome-text">Welcome to Walker Explorer!</h2>
+      <LogoIcon className="logo"> </LogoIcon>
+      <div className="welcome-text">Welcome to Walker Explorer!</div>
       <input
         type="email"
         className="input-field"
@@ -54,7 +51,7 @@ function Login() {
       </div>
       <div className="register-link">
         <p>
-          <Link to="/register">Don't have an account? Register</Link>
+          Don't have an account? <Link to="/register"> Register</Link>
         </p>
       </div>
     </div>

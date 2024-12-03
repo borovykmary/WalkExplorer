@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./ForgotPassword.css";
-import logo from "../logo.png"; // Ensure the logo path is correct
-
+import { ReactComponent as LogoIcon } from "../res/logo-we.svg";
 function ForgotPassword() {
   const [email, setEmail] = useState("");
 
@@ -17,7 +16,7 @@ function ForgotPassword() {
 
   return (
     <div className="app-container">
-      <img src={logo} alt="Walk Explorer Logo" className="logo" />
+      <LogoIcon className="logo"></LogoIcon>
       <h2 className="welcome-text">Forgot Password</h2>
       <p className="instruction-text">
         Enter your email below to receive a password reset link.
