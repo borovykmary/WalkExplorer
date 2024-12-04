@@ -1,108 +1,96 @@
-/* Container for the whole form */
-.form-container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
   display: flex;
-  justify-content: center; /* Center the form horizontally */
-  align-items: center; /* Center the form vertically */
   flex-direction: column;
-  min-height: 100vh; /* Ensures the form takes up full height of the page */
-  width: 100%; /* Takes up full width of the parent */
-  padding: 20px; /* Padding for space around the form */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e1e3e5;
+  padding: 20px;
 }
 
-/* Label for input fields */
-.input-label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
-  color: black;
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
 }
 
-/* Container for form inputs */
+.welcome-text {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #e1e3e500;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-group {
   margin-bottom: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Input field styles */
-.wide-field {
-  width: 100%;
-}
-
-/* Input field styles */
 .input-field {
   width: 100%;
-  max-width: 100%; /* Prevents the field from exceeding container's width */
-  padding: 15px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  padding: 10px;
   font-size: 16px;
-  color: black;
-  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
 }
 
-/* Error message for validation */
-.error-message {
-  font-size: 12px;
-  color: red;
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.input-helper-text {
+  color: #e74c3c;
+  font-size: 14px;
   margin-top: 5px;
 }
 
-/* Container for buttons */
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  justify-content: center; /* Ensures buttons are vertically centered */
-  align-items: center; /* Centers the buttons horizontally */
-  padding: 0; /* No extra padding */
-}
-
-/* Base button styles */
 .button {
-  width: auto; /* Makes the button width auto-adjust based on content */
-  max-width: 400px; /* Ensures button doesn't exceed 400px width */
-  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
   font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-/* Specific styles for 'Sign Up' button */
-.sign-up-btn {
-  background-color: black;
   color: white;
+  background-color: #007bff;
   border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-.sign-up-btn:active,
-.sign-up-btn:focus {
-  background-color: #333;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+.button:hover {
+  background-color: #d2a800;
 }
 
-/* Specific styles for 'Guest' button */
-.guest-btn {
-  background-color: transparent;
-  color: grey;
-  border: 1px solid grey;
+.register-link {
+  margin-top: 20px;
 }
 
-.guest-btn:active,
-.guest-btn:focus {
-  background-color: #f0f0f0;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+.register-link p {
+  font-size: 14px;
+  color: #555;
 }
 
-/* Link text for registering */
 .register-link a {
-  color: black;
+  color: #007bff;
   text-decoration: none;
 }
 
