@@ -1,6 +1,6 @@
 .app-container {
   width: 390px;
-  height: 844px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +9,89 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.welcome-text {
+  font-size: 24px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 124px;
+  height: 73px;
+}
+
+.forgot-password-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgot-password-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #000;
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.login-btn:active,
+.login-btn:focus {
+  background-color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.guest-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.guest-btn:active,
+.guest-btn:focus {
+  background-color: #f3d59f;
+  color: white;
+  border: 1px solid #f1d1ab;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(231, 204, 154, 0.8);
+}
+
+.button:hover {
+  opacity: 0.9;
 }
