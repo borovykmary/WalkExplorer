@@ -25,7 +25,7 @@
 .error-message {
   font-size: 12px;
   color: red;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 /* Button container */
@@ -37,32 +37,21 @@
   align-items: center;
 }
 
-/* Buttons */
 .button {
-  width: 90%;
-  max-width: 400px;
-  padding: 20px;
+  width: 269px;
+  height: 44px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  border-radius: 50px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .login-btn {
-  background-color: black !important; /* Force the black background */
-  color: white !important; /* Force the white text */
+  background-color: black !important;
+  color: white !important;
   border: none;
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .login-btn:hover {
