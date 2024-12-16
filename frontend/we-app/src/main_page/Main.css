@@ -49,3 +49,37 @@
   right: 20px;
   z-index: 10;
 }
+.route-popup {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  text-align: center;
+  z-index: 10;
+}
+
+.route-popup h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.route-popup ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.route-popup li {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.route-description {
+  margin-top: 10px;
+}
