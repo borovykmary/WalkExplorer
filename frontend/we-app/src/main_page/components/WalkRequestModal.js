@@ -79,7 +79,7 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
           onChange={(e) => setUserInput(e.target.value)}
         ></textarea>
         <div className="actions">
-          <button className="button" onClick={handleSubmit}>
+          <button className="button-lets-walk" onClick={handleSubmit}>
             Lets go! <ArrowForwardIcon fontSize="small" />
           </button>
           <button className="closeButton" onClick={onClose}>

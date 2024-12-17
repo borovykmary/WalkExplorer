@@ -140,8 +140,8 @@ const Main = () => {
                 type="line"
                 paint={{
                   "line-color": route.color,
-                  "line-width": selectedRoute?.name === route.name ? 8 : 4, // Glow on selection
-                  "line-opacity": selectedRoute?.name === route.name ? 1 : 0.6,
+                  "line-width": selectedRoute?.name === route.name ? 5 : 3, // Glow on selection
+                  "line-opacity": selectedRoute?.name === route.name ? 1 : 0.4,
                 }}
               />
             </Source>
@@ -176,6 +176,7 @@ const Main = () => {
               closeOnClick={true}
               onClose={() => setDescriptionPopup(null)}
               className="custom-popup"
+              closeButton={false}
             >
               <div className="popup-content">
                 <div

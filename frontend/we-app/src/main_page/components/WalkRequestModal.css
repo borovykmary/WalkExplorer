@@ -26,8 +26,8 @@ body,
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  height: 255px;
+  width: 320px;
+  height: 280px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,7 +45,7 @@ body,
   justify-content: space-between;
 }
 
-.button {
+.button-lets-walk {
   width: 124px;
   padding: 10px 18px;
   color: #000000;
