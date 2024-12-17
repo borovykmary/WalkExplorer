@@ -16,13 +16,6 @@ function Landing() {
           <LogoIcon className="logo-landing" />
         </div>
 
-        <div
-          className="menu-icon"
-          onClick={() => (window.location.href = "/profile")}
-        >
-          ☰
-        </div>
-
         <div className="landing-content">
           <h1>Introducing</h1>
           <h1 className="walk-explorer">Walk Explorer</h1>
