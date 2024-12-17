@@ -13,6 +13,7 @@ const TopNavigation = ({ closeMenu }) => {
         <div className="menu-content">
           <div className="menu-item">Profile Settings</div>
           <div className="menu-item">Home Page</div>
+          <div className="user-avatar">AB</div>
           <button className="logout-btn">Log Out</button>
         </div>
       </div>
