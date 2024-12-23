@@ -12,44 +12,6 @@ import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const mockRoutes = [
-  {
-    name: "Golden Path",
-    color: "#FFD700", // Yellow
-    description:
-      "Golden Path takes you on a delightful walk starting at Example street. You will pass through charming residential streets, stop by the historic Stare Miasto (Old Town), and finish with a beautiful view at Wrocław Market Square.",
-    path: [
-      [17.0362, 51.1227], // Start
-      [17.032, 51.1105], // Stop 1: Stare Miasto (Old Town)
-      [17.038, 51.1095], // Stop 2: Wrocław Market Square
-    ],
-  },
-  {
-    name: "Sea Breeze",
-    color: "#0000FF", // Blue
-    description:
-      "Blue one? Great choice! Starting at at Example stree, you’ll explore peaceful parks, take a break at a riverside cafe, and finish your relaxing walk by the Oder River for some quiet moments alone.",
-    path: [
-      [17.0362, 51.1227], // Start
-      [17.043, 51.12], // Stop 1: Park Słowackiego
-      [17.0505, 51.118], // Stop 2: Riverside Cafe
-      [17.0585, 51.117], // End: Oder River
-    ],
-  },
-  {
-    name: "Red Explorer",
-    color: "#FF0000", // Red
-    description:
-      "Red Explorer invites you to discover vibrant parts of Wrocław. Starting at at Example stree, you’ll visit key cultural landmarks and end your journey at the majestic Wrocław Cathedral.",
-    path: [
-      [17.0362, 51.1227], // Start
-      [17.038, 51.1145], // Stop 1: Wrocław Museum
-      [17.0425, 51.112], // Stop 2: Wrocław University
-      [17.046, 51.11], // End: Wrocław Cathedral
-    ],
-  },
-];
-
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
@@ -57,7 +19,7 @@ const Main = () => {
   const [selectedRoute, setSelectedRoute] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [descriptionPopup, setDescriptionPopup] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
@@ -65,7 +27,68 @@ const Main = () => {
   const mapboxToken =
     "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
 
-  const handleGenerateRoutes = () => setRoutes(mockRoutes);
+  const fetchRouteFromMapbox = async (waypoints, color, name, description) => {
+    const coordinates = waypoints.map((point) => point.join(",")).join(";");
+    const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coordinates}?geometries=geojson&access_token=${mapboxToken}`;
+
+    setLoading(true);
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.routes.length > 0) {
+        const route = {
+          name,
+          color,
+          description,
+          path: data.routes[0].geometry.coordinates, // Use street-aligned route
+        };
+        setRoutes((prevRoutes) => [...prevRoutes, route]);
+      }
+    } catch (error) {
+      console.error("Error fetching route:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const generateMockRoutes = () => {
+    const mockRouteRequests = [
+      {
+        name: "Golden Path",
+        color: "#FFD700", // Yellow
+        description:
+          "Golden Path takes you on a delightful walk starting at Example street. You will pass through charming residential streets, stop by the historic Stare Miasto (Old Town), and finish with a beautiful view at Wrocław Market Square.",
+        waypoints: [
+          [17.0362, 51.1227], // Start
+          [17.032, 51.1105], // Stop 1: Stare Miasto (Old Town)
+          [17.038, 51.1095], // Stop 2: Wrocław Market Square
+        ],
+      },
+      {
+        name: "Sea Breeze",
+        color: "#0000FF", // Blue
+        description:
+          "Blue one? Great choice! Starting at Example street, you’ll explore peaceful parks, take a break at a riverside cafe, and finish your relaxing walk by the Oder River for some quiet moments alone.",
+        waypoints: [
+          [17.0362, 51.1227], // Start
+          [17.043, 51.12], // Stop 1: Park Słowackiego
+          [17.0505, 51.118], // Stop 2: Riverside Cafe
+          [17.0585, 51.117], // End: Oder River
+        ],
+      },
+    ];
+
+    // Fetch routes for all mock requests
+    mockRouteRequests.forEach((route) =>
+      fetchRouteFromMapbox(
+        route.waypoints,
+        route.color,
+        route.name,
+        route.description
+      )
+    );
+  };
 
   // Handle map clicks for routes
   const handleMapClick = (event) => {
@@ -91,20 +114,6 @@ const Main = () => {
         <BarsIcon
           className="hamburger-icon"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-        />
-        <TextField
-          variant="outlined"
-          placeholder="Search for places..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-          className="search-bar"
         />
       </div>
       {isMenuOpen && <TopNavigation closeMenu={() => setIsMenuOpen(false)} />}
@@ -199,21 +208,6 @@ const Main = () => {
           )}
         </Map>
       </div>
-      <div className="search-bar-container">
-        <TextField
-          variant="outlined"
-          placeholder="Search"
-          fullWidth
-          InputProps={{
-            style: { backgroundColor: "white" },
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-        />
-      </div>
       <div className="bookmark-icon">
         <FavouritesIcon />
       </div>
@@ -222,7 +216,7 @@ const Main = () => {
       <WalkRequestModal
         isVisible={isModalVisible}
         onClose={closeModal}
-        onRouteGenerated={handleGenerateRoutes}
+        onRouteGenerated={generateMockRoutes}
       />
     </div>
   );
