@@ -7,10 +7,7 @@ import WalkRequestModal from "./components/WalkRequestModal";
 import { ReactComponent as BarsIcon } from "./assets/bars-2.svg";
 import { ReactComponent as FavouritesIcon } from "./assets/favourites.svg";
 import { ReactComponent as AddIcon } from "./assets/button-add.svg";
-import TextField from "@mui/material/TextField";
-import InputAdornment from "@mui/material/InputAdornment";
-import SearchIcon from "@mui/icons-material/Search";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import DescriptionPopup from "./components/DescriptionPopup";
 
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -179,32 +176,11 @@ const Main = () => {
             </Marker>
           )}
           {descriptionPopup && (
-            <Popup
-              longitude={descriptionPopup.longitude}
-              latitude={descriptionPopup.latitude}
-              closeOnClick={true}
+            <DescriptionPopup
+              descriptionPopup={descriptionPopup}
+              selectedRoute={selectedRoute}
               onClose={() => setDescriptionPopup(null)}
-              className="custom-popup"
-              closeButton={false}
-            >
-              <div className="popup-content">
-                <div
-                  className="popup-header"
-                  style={{
-                    borderBottom: "2px solid",
-                    borderBottomColor: selectedRoute.color,
-                  }}
-                >
-                  <span className="route-name">{descriptionPopup.name}</span>
-                </div>
-                <div className="popup-body">
-                  <p>{descriptionPopup.description}</p>
-                </div>
-                <button className="popup-button">
-                  Let's go! <ArrowForwardIcon fontSize="small" />{" "}
-                </button>
-              </div>
-            </Popup>
+            />
           )}
         </Map>
       </div>
