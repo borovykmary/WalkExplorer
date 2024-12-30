@@ -4,7 +4,7 @@ import "./WalkRequestModal.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CloseIcon from "@mui/icons-material/Close";
 
-const WalkRequestModal = ({ isVisible, onClose }) => {
+const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
   const [userInput, setUserInput] = useState("");
 
   if (!isVisible) return null;
@@ -17,7 +17,7 @@ const WalkRequestModal = ({ isVisible, onClose }) => {
         },
       });
       console.log("Generated Route:", response.data);
-      // Handle the response data as needed
+      onRouteGenerated(response.data);
     } catch (error) {
       console.error("Error generating route:", error);
     }

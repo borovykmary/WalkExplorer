@@ -12,7 +12,9 @@ def generate_route_view(request):
         start_coords = geocode_location(start['address'])
         waypoints_coords = [geocode_location(loc['address']) for loc in waypoints]
         end_coords = geocode_location(end['address'])
-        
+        print(start_coords)
+        print(waypoints_coords)
+        print(end_coords)
         if start_coords and end_coords:
             route = generate_route(start_coords, waypoints_coords, end_coords)
             return JsonResponse(route)

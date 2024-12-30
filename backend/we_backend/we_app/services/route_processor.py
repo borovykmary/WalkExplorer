@@ -7,8 +7,11 @@ def process_user_input(user_input):
     """
     start, waypoints, end = get_route_details(user_input)
     start_coords = geocode_location(start['address'])
+    print(start_coords)
     waypoints_coords = [geocode_location(loc['address']) for loc in waypoints]
+    print(waypoints_coords)
     end_coords = geocode_location(end['address'])
+    print(end_coords)
 
     if start_coords and end_coords:
         return generate_route(start_coords, waypoints_coords, end_coords)
