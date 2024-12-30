@@ -8,18 +8,45 @@ import { ReactComponent as BarsIcon } from "./assets/bars-2.svg";
 import { ReactComponent as FavouritesIcon } from "./assets/favourites.svg";
 import { ReactComponent as AddIcon } from "./assets/button-add.svg";
 import DescriptionPopup from "./components/DescriptionPopup";
+import FavouritesModal from "./components/FavouritesModal";
 
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isFavouritesModalVisible, setFavouritesModalVisible] = useState(false);
   const [routes, setRoutes] = useState([]);
   const [selectedRoute, setSelectedRoute] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [descriptionPopup, setDescriptionPopup] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [savedRoutes, setSavedRoutes] = useState([
+    {
+      name: "Golden Path",
+      description: "A delightful walk starting at Example street...",
+      path: [
+        [17.0362, 51.1227],
+        [17.032, 51.1105],
+        [17.038, 51.1095],
+      ],
+      color: "#FFD700",
+    },
+    {
+      name: "Sea Breeze",
+      description: "Explore peaceful parks and riverside cafes...",
+      path: [
+        [17.0362, 51.1227],
+        [17.043, 51.12],
+        [17.0505, 51.118],
+        [17.0585, 51.117],
+      ],
+      color: "#0000FF",
+    },
+  ]);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
+  const openFavouritesModal = () => setFavouritesModalVisible(true);
+  const closeFavouritesModal = () => setFavouritesModalVisible(false);
 
   const mapboxToken =
     "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
@@ -105,6 +132,36 @@ const Main = () => {
       }
     }
   };
+  const handleSelectRoute = async (route) => {
+    const coordinates = route.path.map((point) => point.join(",")).join(";");
+    const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coordinates}?geometries=geojson&access_token=${mapboxToken}`;
+
+    setLoading(true);
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.routes.length > 0) {
+        const updatedRoute = {
+          ...route,
+          path: data.routes[0].geometry.coordinates, // Use street-aligned route
+        };
+        setRoutes((prevRoutes) => [...prevRoutes, updatedRoute]);
+        setSelectedRoute(updatedRoute);
+        setDescriptionPopup({
+          longitude: updatedRoute.path[0][0],
+          latitude: updatedRoute.path[0][1],
+          name: updatedRoute.name,
+          description: updatedRoute.description,
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching route:", error);
+    } finally {
+      setLoading(false);
+      closeFavouritesModal();
+    }
+  };
   return (
     <div className="app-container">
       <div className="top-navigation">
@@ -184,7 +241,7 @@ const Main = () => {
           )}
         </Map>
       </div>
-      <div className="bookmark-icon">
+      <div className="bookmark-icon" onClick={openFavouritesModal}>
         <FavouritesIcon />
       </div>
       =
@@ -193,6 +250,12 @@ const Main = () => {
         isVisible={isModalVisible}
         onClose={closeModal}
         onRouteGenerated={generateMockRoutes}
+      />
+      <FavouritesModal
+        isVisible={isFavouritesModalVisible}
+        onClose={closeFavouritesModal}
+        savedRoutes={savedRoutes}
+        onSelectRoute={handleSelectRoute}
       />
     </div>
   );

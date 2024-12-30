@@ -1,0 +1,48 @@
+.fav-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fav-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 360px;
+  max-width: 90%;
+}
+
+.fav-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fav-modal-body {
+  margin-top: 20px;
+}
+
+.route-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.route-item:hover {
+  background: #f0f0f0;
+}

@@ -13,7 +13,6 @@ const DescriptionPopup = ({ descriptionPopup, selectedRoute, onClose }) => {
       closeButton={false}
     >
       <div className="popup-content">
-        {/* Header Section */}
         <div
           className="popup-header"
           style={{
@@ -34,7 +33,6 @@ const DescriptionPopup = ({ descriptionPopup, selectedRoute, onClose }) => {
           </h3>
         </div>
 
-        {/* Body Section */}
         <div className="popup-body">
           <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
             {descriptionPopup.description}
