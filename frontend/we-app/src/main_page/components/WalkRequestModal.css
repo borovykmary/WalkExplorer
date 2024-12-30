@@ -26,26 +26,41 @@ body,
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  height: 255px;
+  width: 320px;
+  height: auto;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .textarea {
   width: 270px;
-  height: 117px;
+  height: 80px;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+.dropdown {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
+.checkbox-container {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
 .actions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.button {
+.button-lets-walk {
   width: 124px;
   padding: 10px 18px;
   color: #000000;
