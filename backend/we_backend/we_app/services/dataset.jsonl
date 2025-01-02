@@ -1,0 +1,500 @@
+{"prompt": "", "completion": "{\"name\": \"Look Cafe\", \"full_address\": \"Tadeusza Ko\u015bciuszki 86, 50-441 Wroc\u0142aw\", \"latitude\": \"51.1008872\", \"longitude\": \"17.0420533\"}"}
+{"prompt": "", "completion": "{\"name\": \"Szczytnicki Park\", \"full_address\": \"51-618 Wroc\u0142aw\", \"latitude\": \"51.1147656\", \"longitude\": \"17.0810544\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Po\u0142udniowy\", \"full_address\": \"53-141 Wroc\u0142aw\", \"latitude\": \"51.0763017\", \"longitude\": \"17.011135499999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Grabiszy\u0144ski (Strefa Osiedlowa)\", \"full_address\": \"\u015alusarska, Wroc\u0142aw\", \"latitude\": \"51.0854968\", \"longitude\": \"16.9901956\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skowroni Park\", \"full_address\": \"Spiska, 50-562 Wroc\u0142aw\", \"latitude\": \"51.0803212\", \"longitude\": \"17.027437499999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Wschodni\", \"full_address\": \"50-001, Wroc\u0142aw\", \"latitude\": \"51.0846862\", \"longitude\": \"17.0841593\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park imienia genera\u0142a Mariana Langiewicza\", \"full_address\": \"50-001, Wroc\u0142aw\", \"latitude\": \"51.091329\", \"longitude\": \"17.0067531\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park D\u0105bski we Wroc\u0142awiu\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 7, 50-438 Wroc\u0142aw\", \"latitude\": \"51.1019981\", \"longitude\": \"17.0816523\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stanis\u0142aw To\u0142pa Park\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.1204425\", \"longitude\": \"17.0539466\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wzg\u00f3rze S\u0142owia\u0144skie\", \"full_address\": \"Unnamed Road, 50-301 Wroc\u0142aw\", \"latitude\": \"51.1248948\", \"longitude\": \"17.0438483\"}"}
+{"prompt": "", "completion": "{\"name\": \"St. Edith Stein Park\", \"full_address\": \"B\u0142ogos\u0142awionej Edyty Stein, Wroc\u0142aw\", \"latitude\": \"51.1214923\", \"longitude\": \"17.0511782\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Powsta\u0144c\u00f3w \u015al\u0105skich\", \"full_address\": \"Unnamed Road, 50-001 Wroc\u0142aw\", \"latitude\": \"51.0901881\", \"longitude\": \"17.016428899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Juliusz S\u0142owacki Park\", \"full_address\": \"52-443 Wroc\u0142aw\", \"latitude\": \"51.1096512\", \"longitude\": \"17.0451974\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park kieszonkowy przy ulicy Kwa\u015bnej\", \"full_address\": \"Kwa\u015bna 2B, 53-425 Wroc\u0142aw\", \"latitude\": \"51.0950016\", \"longitude\": \"17.0050822\"}"}
+{"prompt": "", "completion": "{\"name\": \"Staszic Park\", \"full_address\": \"Plac ks. Stanis\u0142awa Staszica, 52-443 Wroc\u0142aw\", \"latitude\": \"51.1240172\", \"longitude\": \"17.0308575\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park\", \"full_address\": \"Plac ks. Stanis\u0142awa Staszica 16, 52-007 Wroc\u0142aw\", \"latitude\": \"51.1247168\", \"longitude\": \"17.0299643\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park O\u0142awski\", \"full_address\": \"50-439 Wroc\u0142aw\", \"latitude\": \"51.0948927\", \"longitude\": \"17.0514659\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Genera\u0142a W\u0142adys\u0142awa Andersa\", \"full_address\": \"Kamienna, 50-549 Wroc\u0142aw\", \"latitude\": \"51.0877861\", \"longitude\": \"17.0306288\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park\", \"full_address\": \"aleja D\u0105bska, 51-621 Wroc\u0142aw\", \"latitude\": \"51.1086826\", \"longitude\": \"17.0828366\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Goethego we Wroc\u0142awiu\", \"full_address\": \"Przestrzenna 34, 50-533 Wroc\u0142aw\", \"latitude\": \"51.0893487\", \"longitude\": \"17.0397027\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Tarnogajski\", \"full_address\": \"Bpa Bernarda Bogedaina 8-10, Wroc\u0142aw\", \"latitude\": \"51.0837727\", \"longitude\": \"17.0669131\"}"}
+{"prompt": "", "completion": "{\"name\": \"Plac Teatralny\", \"full_address\": \"plac Teatralny, 50-070 Wroc\u0142aw\", \"latitude\": \"51.1056991\", \"longitude\": \"17.031587299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park przy wybrze\u017cu\", \"full_address\": \"plac Grunwaldzki, Wroc\u0142aw\", \"latitude\": \"51.1094897\", \"longitude\": \"17.0541803\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Gajowice\", \"full_address\": \"Jemio\u0142owa 57, 53-447 Wroc\u0142aw\", \"latitude\": \"51.094214\", \"longitude\": \"17.006511\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Ormia\u0144ski\", \"full_address\": \"Klemensa Janickiego 2/4, 50-529 Wroc\u0142aw\", \"latitude\": \"51.1091439\", \"longitude\": \"17.0404902\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Adama W\u00f3jcika\", \"full_address\": \"Mieszcza\u0144ska 4, 50-201 Wroc\u0142aw\", \"latitude\": \"51.1173019\", \"longitude\": \"17.0247809\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u015aLADAMI KRASNALI\", \"full_address\": \"Rynek, 50-116 Wroc\u0142aw\", \"latitude\": \"51.1109641\", \"longitude\": \"17.0322207\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ptasi Skwer\", \"full_address\": \"Skwierzy\u0144ska 1-7, 53-521 Wroc\u0142aw\", \"latitude\": \"51.0993304\", \"longitude\": \"17.0161414\"}"}
+{"prompt": "", "completion": "{\"name\": \"Las Rakowiecki\", \"full_address\": \"50-438 Wroc\u0142aw\", \"latitude\": \"51.09479\", \"longitude\": \"17.075350399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer\", \"full_address\": \"Popowicka 86, 54-238 Wroc\u0142aw\", \"latitude\": \"51.126357\", \"longitude\": \"16.992464\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Pionier\u00f3w\\\"\", \"full_address\": \"Spiska 50-001, 50-562 Wroc\u0142aw\", \"latitude\": \"51.0775128\", \"longitude\": \"17.0278722\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park\", \"full_address\": \"\u015arodkowa 34, 53-662 Wroc\u0142aw\", \"latitude\": \"51.1138479\", \"longitude\": \"17.0169147\"}"}
+{"prompt": "", "completion": "{\"name\": \"Plac miejski\", \"full_address\": \"Ksi\u0119cia Witolda 43, 50-202 Wroc\u0142aw\", \"latitude\": \"51.1150744\", \"longitude\": \"17.0270397\"}"}
+{"prompt": "", "completion": "{\"name\": \"Psia \u0142\u0105czka\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.0775443\", \"longitude\": \"17.010752\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park dla ps\u00f3w\", \"full_address\": \"\u015arodkowa 3A/1, 53-662 Wroc\u0142aw\", \"latitude\": \"51.1132066\", \"longitude\": \"17.016563599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Obro\u0144ca\", \"full_address\": \"Starogroblowa 4 w, 54-241 Wroc\u0142aw\", \"latitude\": \"51.1254438\", \"longitude\": \"17.0041314\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogr\u00f3dek kieszonkowy przy MPK Sp. z o.o. we Wroclawiu\", \"full_address\": \"Boles\u0142awa Prusa 75/79, 50-316 Wroc\u0142aw\", \"latitude\": \"51.121165\", \"longitude\": \"17.059949\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Paw\u0142a Adamowicza\", \"full_address\": \"Pomorska 12, 52-007 Wroc\u0142aw\", \"latitude\": \"51.1183904\", \"longitude\": \"17.0312484\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Les\u0142awa W\u0119grzynowskiego\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.1044217\", \"longitude\": \"17.0145007\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Skacz\u0105cej Gwiazdy\", \"full_address\": \"Na Sza\u0144cach 11, 50-320 Wroc\u0142aw\", \"latitude\": \"51.1190792\", \"longitude\": \"17.043935599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park \\\"Zielony Gaj\\\"\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0715007\", \"longitude\": \"17.0381856\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Hotel Diament Wroc\u0142aw\", \"full_address\": \"Muchoborska 10, 54-424 Wroc\u0142aw\", \"latitude\": \"51.1097564\", \"longitude\": \"16.9719568\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Tadeusza R\u00f3\u017cewicza\", \"full_address\": \"Sztabowa 62/66, 53-321 Wroc\u0142aw\", \"latitude\": \"51.0890862\", \"longitude\": \"17.0131071\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rezedowa Skwer\", \"full_address\": \"\u015awidnicka 2/3, 50-067 Wroc\u0142aw\", \"latitude\": \"51.1087739\", \"longitude\": \"17.033175\"}"}
+{"prompt": "", "completion": "{\"name\": \"G\u00f3rka w parku przy Chopina\", \"full_address\": \"Fryderyka Chopina 2, 51-609 Wroc\u0142aw\", \"latitude\": \"51.1180945\", \"longitude\": \"17.0797199\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Kornela Morawieckiego\", \"full_address\": \"Szczepi\u0144ska 1/13, 53-655 Wroc\u0142aw\", \"latitude\": \"51.1135227\", \"longitude\": \"17.016784599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Sp\u00f3\u0142dzielc\u00f3w\", \"full_address\": \"Swobodna 14, 50-088 Wroc\u0142aw\", \"latitude\": \"51.097172\", \"longitude\": \"17.0303018\"}"}
+{"prompt": "", "completion": "{\"name\": \"Square St. Matthias\", \"full_address\": \"plac \u015awi\u0119tego Macieja, 50-244 Wroc\u0142aw\", \"latitude\": \"51.1199888\", \"longitude\": \"17.0360177\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park\", \"full_address\": \"Wybrze\u017ce Stanis\u0142awa Wyspia\u0144skiego, Wroc\u0142aw\", \"latitude\": \"51.1077083\", \"longitude\": \"17.0687553\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Osiedlowy Dorota Barbara\", \"full_address\": \"Powsta\u0144c\u00f3w \u015al\u0105skich 52A, 50-529 Wroc\u0142aw\", \"latitude\": \"51.0957698\", \"longitude\": \"17.0257385\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Mieszcza\u0144ski\", \"full_address\": \"Mieszcza\u0144ska 29, 50-201 Wroc\u0142aw\", \"latitude\": \"51.1196087\", \"longitude\": \"17.022284499999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"D\u0105b Pami\u0119ci\", \"full_address\": \"Szczepin, 50-001 Wroc\u0142aw\", \"latitude\": \"51.1154169\", \"longitude\": \"17.0142714\"}"}
+{"prompt": "", "completion": "{\"name\": \"Popowickie tereny rekreacyjne nad Odr\u0105\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.1313017\", \"longitude\": \"16.9979124\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wroc\u0142awski Park Przemys\u0142owy\", \"full_address\": \"Fabryczna 10, 53-609 Wroc\u0142aw\", \"latitude\": \"51.1089843\", \"longitude\": \"16.9889793\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stara Odra\", \"full_address\": \"Wroc\u0142aw-Psie Pole, Przerwy-Tetmajera 17A, 51-153 Wroc\u0142aw-Psie Pole\", \"latitude\": \"51.1350058\", \"longitude\": \"17.047708099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ptasi Zagajnik\", \"full_address\": \"Lubuska 1, 53-521 Wroc\u0142aw\", \"latitude\": \"51.0993238\", \"longitude\": \"17.0157043\"}"}
+{"prompt": "", "completion": "{\"name\": \"Fontanna w Parku Stanis\u0142awa Staszica\", \"full_address\": \"Plac ks. Stanis\u0142awa Staszica, 50-221 Wroc\u0142aw\", \"latitude\": \"51.1246883\", \"longitude\": \"17.0300787\"}"}
+{"prompt": "", "completion": "{\"name\": \"Nadodrza\u0144ski Ogr\u00f3d Spo\u0142eczny\", \"full_address\": \"Rydygiera 43A, 50-248 Wroc\u0142aw\", \"latitude\": \"51.1203843\", \"longitude\": \"17.033051399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Promenada Atal Towers\", \"full_address\": \"53-659 Wroc\u0142aw\", \"latitude\": \"51.1142402\", \"longitude\": \"17.0218846\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Timbolla\", \"full_address\": \"53-307 Wroc\u0142aw\", \"latitude\": \"51.0902739\", \"longitude\": \"17.020463799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer\", \"full_address\": \"Wandy 15, 53-320 Wroc\u0142aw\", \"latitude\": \"51.0881285\", \"longitude\": \"17.0105883\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Henrykowski we Wroc\u0142awiu\", \"full_address\": \"Po\u0142udnie,50-001, 50-438 Wroc\u0142aw\", \"latitude\": \"51.0902824\", \"longitude\": \"17.0513566\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer \u015bw. o. Damiana de Veuster\", \"full_address\": \"skwer \u015bw. o. Damiana de Veuster, 52-007 Wroc\u0142aw\", \"latitude\": \"51.1166642\", \"longitude\": \"17.014025699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Jumapark\", \"full_address\": \"Borowska, 50-558 Wroc\u0142aw\", \"latitude\": \"51.0730203\", \"longitude\": \"17.0326363\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrody-Mielnicki\", \"full_address\": \"Franklina Delano Roosevelta 5, 50-301 Wroc\u0142aw\", \"latitude\": \"51.1221244\", \"longitude\": \"17.0428623\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Aleksandry Natalli-\u015awiat\", \"full_address\": \"Stacyjna 6, 53-671 Wroc\u0142aw\", \"latitude\": \"51.1158947\", \"longitude\": \"16.9993861\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stowarzyszenie Ogrody Dolno\u015bl\u0105skie\", \"full_address\": \"Henryka Sienkiewicza 23, 50-335 Wroc\u0142aw\", \"latitude\": \"51.1168188\", \"longitude\": \"17.0475161\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Zygmunta Krasi\u0144skiego\", \"full_address\": \"50-401 Wroc\u0142aw\", \"latitude\": \"51.1042022\", \"longitude\": \"17.0421942\"}"}
+{"prompt": "", "completion": "{\"name\": \"O\u0142awka\", \"full_address\": \"50-438 Wroc\u0142aw\", \"latitude\": \"51.0949307\", \"longitude\": \"17.0655234\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Tysi\u0105clecia we Wroc\u0142awiu\", \"full_address\": \"Graniczna, Wroc\u0142aw\", \"latitude\": \"51.1149346\", \"longitude\": \"16.9353858\"}"}
+{"prompt": "", "completion": "{\"name\": \"Piotr W\u0142ostowic Boulevard\", \"full_address\": \"bulwar Piotra W\u0142ostowica, Wroc\u0142aw\", \"latitude\": \"51.1137226\", \"longitude\": \"17.0408121\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogr\u00f3d Barokowy Ossolineum\", \"full_address\": \"Szewska 37, 50-139 Wroc\u0142aw\", \"latitude\": \"51.1134118\", \"longitude\": \"17.036408599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Jerzego Szmajdzi\u0144skiego\", \"full_address\": \"Krai\u0144skiego 6, 50-153 Wroc\u0142aw\", \"latitude\": \"51.1113928\", \"longitude\": \"17.0404594\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park S\u0142oneczny\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0805544\", \"longitude\": \"17.0442556\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Gajowice\", \"full_address\": \"Stalowa b/m, Wroc\u0142aw\", \"latitude\": \"51.095973\", \"longitude\": \"16.999596099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer im. Ireny Sendlerowej\", \"full_address\": \"plac Grunwaldzki, 50-001 Wroc\u0142aw\", \"latitude\": \"51.108814\", \"longitude\": \"17.0649966\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kar\u0142owicka P\u0119telka - Darmowe biegi na dystansie 5 i 10 km\", \"full_address\": \"Zawalna 17, 51-118 Wroc\u0142aw\", \"latitude\": \"51.1345987\", \"longitude\": \"17.0394591\"}"}
+{"prompt": "", "completion": "{\"name\": \"Monument with quote from Pawe\u0142 Adamowicz\", \"full_address\": \"Kaszubska 2, 50-214 Wroc\u0142aw\", \"latitude\": \"51.1202551\", \"longitude\": \"17.0310205\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer\", \"full_address\": \"Miko\u0142aja S\u0119pa-Szarzy\u0144skiego, 50-334 Wroc\u0142aw\", \"latitude\": \"51.1174145\", \"longitude\": \"17.052632\"}"}
+{"prompt": "", "completion": "{\"name\": \"Promenada Podwale\", \"full_address\": \"bulwar Tadka Jasi\u0144skiego, 50-043 Wroc\u0142aw\", \"latitude\": \"51.1083585\", \"longitude\": \"17.0225814\"}"}
+{"prompt": "", "completion": "{\"name\": \"Fontanna w Ogrodzie Staromiejskim\", \"full_address\": \"50-529 Wroc\u0142aw\", \"latitude\": \"51.1048939\", \"longitude\": \"17.033672799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wyspa Piasek\", \"full_address\": \"Unnamed Road,52-007\", \"latitude\": \"51.1143223\", \"longitude\": \"17.0397684\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kasztanowa aleja Parkowa\", \"full_address\": \"Parkowa 6, 51-616 Wroc\u0142aw\", \"latitude\": \"51.1098107\", \"longitude\": \"17.0738073\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrodowa Pasja Wroclavia\", \"full_address\": \"50-086 Wroc\u0142aw\", \"latitude\": \"51.0971053\", \"longitude\": \"17.0339933\"}"}
+{"prompt": "", "completion": "{\"name\": \"SLIVIANCHIK's KAWIARNIA\", \"full_address\": \"Zygmunta Krasi\u0144skiego 15, 50-449 Wroc\u0142aw\", \"latitude\": \"51.1065132\", \"longitude\": \"17.0434069\"}"}
+{"prompt": "", "completion": "{\"name\": \"cafe mili\", \"full_address\": \"Spi\u017cowa 16/1a, 53-442 Wroc\u0142aw\", \"latitude\": \"51.1014798\", \"longitude\": \"17.0011682\"}"}
+{"prompt": "", "completion": "{\"name\": \"NAI Wroclaw | NAJ restauracja\", \"full_address\": \"NAI, plac Jana Paw\u0142a II 16, 50-043 Wroc\u0142aw\", \"latitude\": \"51.1124045\", \"longitude\": \"17.0242516\"}"}
+{"prompt": "", "completion": "{\"name\": \"Office\", \"full_address\": \"Mi\u0119dzyleska 2/4, 50-514 Wroc\u0142aw\", \"latitude\": \"51.081289\", \"longitude\": \"17.0688223\"}"}
+{"prompt": "", "completion": "{\"name\": \"Go\u0142\u0119bnik\", \"full_address\": \"Promenada Staromiejska, 50-001 Wroc\u0142aw\", \"latitude\": \"51.1045415\", \"longitude\": \"17.034399999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park\", \"full_address\": \"Promenada Staromiejska, 50-001 Wroc\u0142aw\", \"latitude\": \"51.1046583\", \"longitude\": \"17.039941199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kaczkomat\", \"full_address\": \"\u017babia \u015acie\u017cka 6, 50-422 Wroc\u0142aw\", \"latitude\": \"51.1007838\", \"longitude\": \"17.0557598\"}"}
+{"prompt": "", "completion": "{\"name\": \"stary d\u0105b alte Eiche\", \"full_address\": \"bulwar Xawerego Dunikowskiego, 50-155 Wroc\u0142aw\", \"latitude\": \"51.1120808\", \"longitude\": \"17.0437329\"}"}
+{"prompt": "", "completion": "{\"name\": \"Silesia Park\", \"full_address\": \"Jasna 11, 56-400 Ole\u015bnica\", \"latitude\": \"51.2141679\", \"longitude\": \"17.3670337\"}"}
+{"prompt": "", "completion": "{\"name\": \"O\u0142awa Rozwidlenie na Wilczym K\u0105cie\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.08969\", \"longitude\": \"17.081668699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Adolfa Marii Boche\u0144skiego\", \"full_address\": \"plac Grunwaldzki, Wroc\u0142aw\", \"latitude\": \"51.1138218\", \"longitude\": \"17.0524094\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Plon\", \"full_address\": \"52-007 Wroc\u0142aw\", \"latitude\": \"51.1060778\", \"longitude\": \"16.997453999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Guttmanna\", \"full_address\": \"Zalesie, 51-612 Wroc\u0142aw\", \"latitude\": \"51.1203788\", \"longitude\": \"17.0876683\"}"}
+{"prompt": "", "completion": "{\"name\": \"O\u0142bi\u0144ski Ogr\u00f3d Otwarty\", \"full_address\": \"Stefana Jaracza 37K, 50-305 Wroc\u0142aw\", \"latitude\": \"51.123532\", \"longitude\": \"17.0599143\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Hanny Hirszfeldowej\", \"full_address\": \"Kazimierza Bartla, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1085414\", \"longitude\": \"17.070695\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Dalie\\\"\", \"full_address\": \"D\u0142uga 78, 53-633 Wroc\u0142aw\", \"latitude\": \"51.1225508\", \"longitude\": \"17.0113165\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stok do jazdy na sankach\", \"full_address\": \"54-235 Wroc\u0142aw\", \"latitude\": \"51.1253796\", \"longitude\": \"16.991142699999997\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Stanis\u0142awa Be\u0142zy\", \"full_address\": \"Skwer W\u0142adys\u0142awa Be\u0142zy, 51-147 Wroc\u0142aw\", \"latitude\": \"51.1418737\", \"longitude\": \"17.0545473\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Miroslowski\", \"full_address\": \"Modrzejewskiej 7B, 50-071 Wroc\u0142aw\", \"latitude\": \"51.1071045\", \"longitude\": \"17.028648699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"punkt widokowy - (\u015brodkowa \u0142awka)\", \"full_address\": \"Boles\u0142awa Prusa 53, 50-317 Wroc\u0142aw\", \"latitude\": \"51.119472\", \"longitude\": \"17.054716\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy Malina Parking\", \"full_address\": \"Szwajcarska 24, 54-400 Wroc\u0142aw\", \"latitude\": \"51.1069736\", \"longitude\": \"16.9788316\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Kieszonkowy przy ul. \u015awi\u0119tokrzyskiej 45a\", \"full_address\": \"\u015awi\u0119tokrzyska 45A, 50-327 Wroc\u0142aw\", \"latitude\": \"51.1185038\", \"longitude\": \"17.047534799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pracowniczy Ogr\u00f3d Dzia\u0142kowy \\\"R\u00f3\u017canka\\\"\", \"full_address\": \"Unnamed Road, 52-007 Wroc\u0142aw\", \"latitude\": \"51.138405\", \"longitude\": \"17.035612999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"\\\"Dog Meadow\\\" dog park\", \"full_address\": \"Na Niskich \u0141\u0105kach 8, 50-422 Wroc\u0142aw\", \"latitude\": \"51.0972302\", \"longitude\": \"17.0622702\"}"}
+{"prompt": "", "completion": "{\"name\": \"skwer Wojciecha M\u0142ynarskiego\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.1010096\", \"longitude\": \"17.0295499\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrody Katarzyny\", \"full_address\": \"Kolejowa 2/7, 53-508 Wroc\u0142aw\", \"latitude\": \"51.1013223\", \"longitude\": \"17.0238941\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Bogus\u0142awy Je\u017cowskiej- Trzebiatowskiej\", \"full_address\": \"Fryderyka Joliot-Curie, 50-300 Wroc\u0142aw\", \"latitude\": \"51.111352\", \"longitude\": \"17.051952\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stone Garden\", \"full_address\": \"Unnamed Road, Wroc\u0142aw\", \"latitude\": \"51.1083366\", \"longitude\": \"17.088170899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Eko \u0142\u0105ka\", \"full_address\": \"Zawalna 25, 51-139 Wroc\u0142aw\", \"latitude\": \"51.1345406\", \"longitude\": \"17.038829\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wybieg dla ps\u00f3w\", \"full_address\": \"W\u0142adys\u0142awa Grabskiego 2, 53-535 Wroc\u0142aw\", \"latitude\": \"51.0979158\", \"longitude\": \"17.017084\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Wroc\u0142awianek przy ulicy Bernardy\u0144skiej\", \"full_address\": \"Bernardy\u0144ska, 50-156 Wroc\u0142aw\", \"latitude\": \"51.1102397\", \"longitude\": \"17.0425093\"}"}
+{"prompt": "", "completion": "{\"name\": \"Zagajnik Kromerski\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.1342092\", \"longitude\": \"17.0752816\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Dembowskiego\", \"full_address\": \"51-668 Wroc\u0142aw\", \"latitude\": \"51.1065437\", \"longitude\": \"17.092041\"}"}
+{"prompt": "", "completion": "{\"name\": \"Nicolaus Copernicus Park\", \"full_address\": \"Teatralna, 52-443 Wroc\u0142aw\", \"latitude\": \"51.1050088\", \"longitude\": \"17.0343214\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer im. Czes\u0142awa Niemena\", \"full_address\": \"Wojciecha Bogus\u0142awskiego 20, 50-023 Wroc\u0142aw\", \"latitude\": \"51.0996201\", \"longitude\": \"17.0330425\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kaim Square\", \"full_address\": \"51-690 Wroc\u0142aw\", \"latitude\": \"51.1088747\", \"longitude\": \"17.0945851\"}"}
+{"prompt": "", "completion": "{\"name\": \"For dogs\", \"full_address\": \"S\u0142owia\u0144ska 20, 50-235 Wroc\u0142aw\", \"latitude\": \"51.1248687\", \"longitude\": \"17.042728399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Lower Silesia Landscape Parks - Wroclaw Branch\", \"full_address\": \"Puszczykowska 10, 50-559 Wroc\u0142aw\", \"latitude\": \"51.0760923\", \"longitude\": \"17.034977899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bank s\u0142oik\u00f3w i miejsce bookcrossingu\", \"full_address\": \"Boles\u0142awa Prusa, Wroc\u0142aw\", \"latitude\": \"51.1227364\", \"longitude\": \"17.0606628\"}"}
+{"prompt": "", "completion": "{\"name\": \"Old Town Promenade\", \"full_address\": \"Promenada Staromiejska, 50-529 Wroc\u0142aw\", \"latitude\": \"51.1060926\", \"longitude\": \"17.0275168\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wzg\u00f3rze Partyzant\u00f3w\", \"full_address\": \"Nowa, 52-007 Wroc\u0142aw\", \"latitude\": \"51.1049276\", \"longitude\": \"17.039078099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Perfekcyjne Ogrody\", \"full_address\": \"Nowa, 50-438 Wroc\u0142aw\", \"latitude\": \"51.1060146\", \"longitude\": \"17.0396233\"}"}
+{"prompt": "", "completion": "{\"name\": \"Polish Association of Allotment\", \"full_address\": \"Starogroblowa 4, 54-241 Wroc\u0142aw\", \"latitude\": \"51.1254659\", \"longitude\": \"17.0043339\"}"}
+{"prompt": "", "completion": "{\"name\": \"Dog Park\", \"full_address\": \"Wyszy\u0144skiego 99, 50-332 Wroc\u0142aw\", \"latitude\": \"51.121287\", \"longitude\": \"17.052374399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Promenada O\u0142awska\", \"full_address\": \"Walo\u0144ska 13, 50-413 Wroc\u0142aw\", \"latitude\": \"51.1053909\", \"longitude\": \"17.051263\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wybieg dla ps\u00f3w (psia hubka)\", \"full_address\": \"Hubska 25/9, 50-501 Wroc\u0142aw\", \"latitude\": \"51.0944457\", \"longitude\": \"17.0420765\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer na rogu Wyszy\u0144skiego i Prusa\", \"full_address\": \"Wyszy\u0144skiego, 50-331 Wroc\u0142aw\", \"latitude\": \"51.1191533\", \"longitude\": \"17.050903599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Punkt obserwacyjny RS\", \"full_address\": \"51-153 Wroc\u0142aw\", \"latitude\": \"51.1353002\", \"longitude\": \"17.050865899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Walking Promenade\", \"full_address\": \"bulwar Xawerego Dunikowskiego, 50-155 Wroc\u0142aw\", \"latitude\": \"51.1119853\", \"longitude\": \"17.0440662\"}"}
+{"prompt": "", "completion": "{\"name\": \"G\u00f3rka Zdrowia\", \"full_address\": \"grobla Kozanowska 1A, Wroc\u0142aw\", \"latitude\": \"51.1286116\", \"longitude\": \"17.005569899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Xawery Dunikowski Boulevard\", \"full_address\": \"bulwar Xawerego Dunikowskiego, 52-007 Wroc\u0142aw\", \"latitude\": \"51.1129556\", \"longitude\": \"17.0411947\"}"}
+{"prompt": "", "completion": "{\"name\": \"ZIELONO NIEBIESKI PLAC ORL\u0104T LWOWSKICH\", \"full_address\": \"T\u0119czowa 2, 53-602 Wroc\u0142aw\", \"latitude\": \"51.1074836\", \"longitude\": \"17.0209279\"}"}
+{"prompt": "", "completion": "{\"name\": \"art-object piwo ksi\u0105\u017c\u0119ce\", \"full_address\": \"Ksi\u0119cia Witolda 49/15, 50-202 Wroc\u0142aw\", \"latitude\": \"51.1145833\", \"longitude\": \"17.0300025\"}"}
+{"prompt": "", "completion": "{\"name\": \"Publiczne \u017ar\u00f3d\u0142o wody do picia\", \"full_address\": \"Boles\u0142awa Prusa 37, 50-319 Wroc\u0142aw\", \"latitude\": \"51.1195734\", \"longitude\": \"17.0518116\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ptaki Wodne ZOO Wroc\u0142aw\", \"full_address\": \"51-618 D\u0105bie\", \"latitude\": \"51.1058004\", \"longitude\": \"17.0702175\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kilimand\u017caro\", \"full_address\": \"Fryderyka Chopina 32, 51-613 Wroc\u0142aw\", \"latitude\": \"51.125793\", \"longitude\": \"17.0864041\"}"}
+{"prompt": "", "completion": "{\"name\": \"Klubokawiarnia Mleczarnia\", \"full_address\": \"Paw\u0142a W\u0142odkowica 5, 50-072 Wroc\u0142aw\", \"latitude\": \"51.1081093\", \"longitude\": \"17.0252436\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Bella Storia\", \"full_address\": \"plac Grunwaldzki 53, 50-366 Wroc\u0142aw\", \"latitude\": \"51.1139651\", \"longitude\": \"17.069944\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park U\u015bmiechu na Borku\", \"full_address\": \"Wolbromska, 53-318 Wroc\u0142aw\", \"latitude\": \"51.0862674\", \"longitude\": \"17.0081247\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park linearny | Tor Partynice\", \"full_address\": \"O\u0142taszy\u0144ska 98a, 53-034 Wroc\u0142aw\", \"latitude\": \"51.0584272\", \"longitude\": \"17.0058301\"}"}
+{"prompt": "", "completion": "{\"name\": \"Nowy Park Kleci\u0144ski. Cz\u0119\u015b\u0107 po\u0142udniowa\", \"full_address\": \"53-015 Wroc\u0142aw\", \"latitude\": \"51.0620171\", \"longitude\": \"16.9876732\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Grabiszy\u0144ski\", \"full_address\": \"Grabiszy\u0144ska 333, Wroc\u0142aw\", \"latitude\": \"51.0878431\", \"longitude\": \"16.9788331\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park kieszonkowy \u0141\u0105czka na Wiejskiej\", \"full_address\": \"Wiejska 2, 52-411 Wroc\u0142aw\", \"latitude\": \"51.0771167\", \"longitude\": \"16.962708499999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Strefa Relaksu\", \"full_address\": \"Chociebuska 9, 54-433 Wroc\u0142aw\", \"latitude\": \"51.1157112\", \"longitude\": \"16.958770299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Strachowicki\", \"full_address\": \"Graniczna, 54-530 Wroc\u0142aw\", \"latitude\": \"51.1093605\", \"longitude\": \"16.8985426\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Kleci\u0144ski\", \"full_address\": \"Partynicka, 53-015 Wroc\u0142aw\", \"latitude\": \"51.0626941\", \"longitude\": \"16.9892622\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park osiedlowy\", \"full_address\": \"52-200 Wroc\u0142aw\", \"latitude\": \"51.0576904\", \"longitude\": \"17.0095225\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Kleci\u0144ski. Skwer Katy\u0144ski\", \"full_address\": \"52-314 Wroc\u0142aw\", \"latitude\": \"51.0643212\", \"longitude\": \"16.9853427\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer\", \"full_address\": \"Jerzego Cie\u015blikowskiego 26, 54-622 Wroc\u0142aw\", \"latitude\": \"51.1037405\", \"longitude\": \"16.9499791\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park kieszonkowy\", \"full_address\": \"Hugona Steinhausa 11a, 52-300 Wroc\u0142aw\", \"latitude\": \"51.074417\", \"longitude\": \"16.9762943\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park In Sp. z o.o.\", \"full_address\": \"O\u017cynowa 51B/lok. 2, 53-009 Wroc\u0142aw\", \"latitude\": \"51.0651848\", \"longitude\": \"17.0109921\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park genera\u0142a Tadeusza Rozwadowskiego\", \"full_address\": \"52-200 Wroc\u0142aw\", \"latitude\": \"51.0533597\", \"longitude\": \"17.015183999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Zielnik w parku Skowronim\", \"full_address\": \"Weigla 12, 53-114 Wroc\u0142aw\", \"latitude\": \"51.0765229\", \"longitude\": \"17.0241771\"}"}
+{"prompt": "", "completion": "{\"name\": \"Oporowski Forest\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0914865\", \"longitude\": \"16.9679005\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ma\u0142a Sob\u00f3tka / G\u00f3rka Skarbowc\u00f3w\", \"full_address\": \"Rac\u0142awicka 50, 50-001 Wroc\u0142aw\", \"latitude\": \"51.0817707\", \"longitude\": \"16.9967927\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park z rozet\u0105\", \"full_address\": \"Poranna 11, 53-026 Wroc\u0142aw\", \"latitude\": \"51.073847\", \"longitude\": \"16.993292\"}"}
+{"prompt": "", "completion": "{\"name\": \"Obserwatorium Przyrody\", \"full_address\": \"50-030 Wroc\u0142aw\", \"latitude\": \"51.0740581\", \"longitude\": \"16.9958927\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Wojciecha Korfantego\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.0800397\", \"longitude\": \"17.0073382\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Krzycki\", \"full_address\": \"Skarbowc\u00f3w 100, 53-032 Wroc\u0142aw\", \"latitude\": \"51.0704373\", \"longitude\": \"16.9896148\"}"}
+{"prompt": "", "completion": "{\"name\": \"Mammoth Park\", \"full_address\": \"Marcina Bukowskiego, Wroc\u0142aw\", \"latitude\": \"51.0811089\", \"longitude\": \"16.975497\"}"}
+{"prompt": "", "completion": "{\"name\": \"Aleja Europejskiej Stolicy Kultury\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.1110781\", \"longitude\": \"16.9477321\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwerek Nowodworski\", \"full_address\": \"Nowodworska 49B, 54-433 Wroc\u0142aw\", \"latitude\": \"51.116\", \"longitude\": \"16.9602379\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Pod Topolami\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.0697752\", \"longitude\": \"17.0285638\"}"}
+{"prompt": "", "completion": "{\"name\": \"Oaza Buczacka- Park Deszczowy\", \"full_address\": \"Buczacka 6, 54-611 Wroc\u0142aw\", \"latitude\": \"51.0995845\", \"longitude\": \"16.9380822\"}"}
+{"prompt": "", "completion": "{\"name\": \"ChrupkOgr\u00f3d\", \"full_address\": \"Lipowa, 52-200 Wysoka\", \"latitude\": \"51.0455206\", \"longitude\": \"17.0148436\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Pod Wi\u015bniami\\\"\", \"full_address\": \"Powsta\u0144c\u00f3w \u015al\u0105skich 209a, 53-332 Wroc\u0142aw\", \"latitude\": \"51.0770938\", \"longitude\": \"17.0069209\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Ewy Szuma\u0144skiej\", \"full_address\": \"53-014 Wroc\u0142aw\", \"latitude\": \"51.0698893\", \"longitude\": \"17.005674199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Fayden Sp.z.o.o\", \"full_address\": \"al. Armii Krajowej 10A/1, 50-541 Wroc\u0142aw\", \"latitude\": \"51.0835382\", \"longitude\": \"17.0392273\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park \\\" Green Hutmen\\\"\", \"full_address\": \"Grabiszy\u0144ska 186, 53-234 Wroc\u0142aw\", \"latitude\": \"51.0977494\", \"longitude\": \"16.9905522\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD ODPOCZYNEK Boczne Wej\u015bcie\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0831346\", \"longitude\": \"16.9975454\"}"}
+{"prompt": "", "completion": "{\"name\": \"DACH MAJORKA\", \"full_address\": \"\u015awi\u0119tego Miko\u0142aja 55, 50-043 Wroc\u0142aw\", \"latitude\": \"51.1113463\", \"longitude\": \"17.0253199\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Irys\\\"\", \"full_address\": \"Stanis\u0142awowska 32-34, 54-611 Wroc\u0142aw\", \"latitude\": \"51.0946267\", \"longitude\": \"16.9516392\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Strachowice kolonia Szafirek\", \"full_address\": \"54-530 Wroc\u0142aw\", \"latitude\": \"51.1172663\", \"longitude\": \"16.892440399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Kleci\u0144ski. Plac Zabaw\", \"full_address\": \"53-031, Partynicka 5, 53-031 Wroc\u0142aw\", \"latitude\": \"51.0624261\", \"longitude\": \"16.9906644\"}"}
+{"prompt": "", "completion": "{\"name\": \"Nowy skwer przy Polarnej z si\u0142owni\u0105 zewn\u0119trzn\u0105\", \"full_address\": \"Polarna, 53-018 Wroc\u0142aw\", \"latitude\": \"51.0693192\", \"longitude\": \"17.0013324\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer przy ulicy Modli\u0144skiej\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.0820725\", \"longitude\": \"16.9992141\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogr\u00f3dki Dzia\u0142kowe WARZYWO\", \"full_address\": \"Graniczna 2A 54-530, 54-530 Wroc\u0142aw\", \"latitude\": \"51.1089879\", \"longitude\": \"16.9491524\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Irys\\\"\", \"full_address\": \"Krzemieniecka 90, 54-614 Wroc\u0142aw\", \"latitude\": \"51.0953976\", \"longitude\": \"16.9568702\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Jana Kasprowicza we Wroc\u0142awiu\", \"full_address\": \"Park przy al. Jana Kasprowicza, aleja Jana Kasprowicza, 51-140 Wroc\u0142aw\", \"latitude\": \"51.1359968\", \"longitude\": \"17.0488796\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Irys\\\"\", \"full_address\": \"Pi\u0144ska, 54-618 Wroc\u0142aw\", \"latitude\": \"51.0949494\", \"longitude\": \"16.947824\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Dolinka\", \"full_address\": \"Rac\u0142awicka 107, 53-149 Wroc\u0142aw\", \"latitude\": \"51.076305\", \"longitude\": \"16.9847046\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Wojszycki\", \"full_address\": \"52-234 Wroc\u0142aw\", \"latitude\": \"51.0604594\", \"longitude\": \"17.0397543\"}"}
+{"prompt": "", "completion": "{\"name\": \"Manganowa Street Art\", \"full_address\": \"Manganowa, Wroc\u0142aw\", \"latitude\": \"51.1022661\", \"longitude\": \"17.006156999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Grabiszy\u0144ski\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0861643\", \"longitude\": \"16.9863325\"}"}
+{"prompt": "", "completion": "{\"name\": \"LISOVE OGRODY Us\u0142ugi projektowe i wykonawcze\", \"full_address\": \"Wiejska 3, 52-411 Wroc\u0142aw\", \"latitude\": \"51.0778788\", \"longitude\": \"16.9627856\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Pod Grusz\u0105\\\"\", \"full_address\": \"52-225 Wroc\u0142aw\", \"latitude\": \"51.0692335\", \"longitude\": \"17.0179422\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer przy Anielewicza\", \"full_address\": \"Oksywska 3, 53-152 Wroc\u0142aw\", \"latitude\": \"51.0843107\", \"longitude\": \"17.0016003\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Opor\u00f3w\", \"full_address\": \"Jordanowska 48, 52-403 Wroc\u0142aw\", \"latitude\": \"51.0836787\", \"longitude\": \"16.9606912\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kopiec Ko\u015bciuszki\", \"full_address\": \"4W6X+2F, Wroc\u0142aw\", \"latitude\": \"51.1100997\", \"longitude\": \"16.9487128\"}"}
+{"prompt": "", "completion": "{\"name\": \"WKO Chill & Friends\", \"full_address\": \"Cesarzowicka 100/1, 52-408 Wroc\u0142aw\", \"latitude\": \"51.0752013\", \"longitude\": \"16.9583688\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer na Kruszwickiej\", \"full_address\": \"Kruszwicka 8, 53-652 Wroc\u0142aw\", \"latitude\": \"51.1136168\", \"longitude\": \"17.0107981\"}"}
+{"prompt": "", "completion": "{\"name\": \"Testowelove\", \"full_address\": \"Kryniczna, 52-213 Wroc\u0142aw\", \"latitude\": \"51.0530029\", \"longitude\": \"17.0225577\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrodowi Czarodzieje\", \"full_address\": \"Grabiszy\u0144ska 251B, 53-234 Wroc\u0142aw\", \"latitude\": \"51.0968714\", \"longitude\": \"16.9862118\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wa\u0142y \u015al\u0119za\u0144sko-Muchoborskie\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.1055758\", \"longitude\": \"16.9570069\"}"}
+{"prompt": "", "completion": "{\"name\": \"Lots Allotment Gardens\", \"full_address\": \"53-006, Agrestowa 66, 53-006 Wroc\u0142aw\", \"latitude\": \"51.0691889\", \"longitude\": \"17.0184691\"}"}
+{"prompt": "", "completion": "{\"name\": \"AQUAFLORA\", \"full_address\": \"Komorowska 29, 54-436 Wroc\u0142aw\", \"latitude\": \"51.1120008\", \"longitude\": \"16.9553305\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stonehenge (kr\u0119gi ogniskowe)\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.1164113\", \"longitude\": \"16.9429955\"}"}
+{"prompt": "", "completion": "{\"name\": \"P\u0142aska\", \"full_address\": \"54-516 Wroc\u0142aw\", \"latitude\": \"51.1092178\", \"longitude\": \"16.9415729\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Przed\u015bwit\\\"\", \"full_address\": \"Przed\u015bwit 10, 54-618 Wroc\u0142aw\", \"latitude\": \"51.0935061\", \"longitude\": \"16.9481084\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u015awietlisty d\u0105b przy Sukielickiej\", \"full_address\": \"Sukielicka 15, 54-311 Wroc\u0142aw\", \"latitude\": \"51.1187158\", \"longitude\": \"16.9426912\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pracowniczy Ogr\u00f3d Dzia\u0142kowy\", \"full_address\": \"Odkrywc\u00f3w 58, 53-212 Wroc\u0142aw\", \"latitude\": \"51.0843863\", \"longitude\": \"16.9840423\"}"}
+{"prompt": "", "completion": "{\"name\": \"'Red Poppies' Allotment\", \"full_address\": \"Orawska, 52-227 Wroc\u0142aw\", \"latitude\": \"51.0703071\", \"longitude\": \"17.0247286\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrodomania Suprynowicz Wroc\u0142aw\", \"full_address\": \"Stanis\u0142awowska 47, 54-611 Wroc\u0142aw\", \"latitude\": \"51.0963632\", \"longitude\": \"16.9486299\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD\", \"full_address\": \"Unnamed Road, Wroc\u0142aw\", \"latitude\": \"51.1006799\", \"longitude\": \"16.9547265\"}"}
+{"prompt": "", "completion": "{\"name\": \"R.O.D. Magnolia\", \"full_address\": \"Buraczana 29, 52-311 Wroc\u0142aw\", \"latitude\": \"51.0689517\", \"longitude\": \"16.976278399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Las Kleci\u0144ski\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0607245\", \"longitude\": \"16.9579797\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Zabrodzki\", \"full_address\": \"Zabrodzie, Wroc\u0142aw\", \"latitude\": \"51.0586887\", \"longitude\": \"16.9406836\"}"}
+{"prompt": "", "completion": "{\"name\": \"Tablica informacyjna\", \"full_address\": \"Most Muchoborski, most Muchoborski, 52-007 Wroc\u0142aw\", \"latitude\": \"51.0942503\", \"longitude\": \"16.9689659\"}"}
+{"prompt": "", "completion": "{\"name\": \"GreenWro Jaros\u0142aw Sto\u0142owski\", \"full_address\": \"\u015aliwkowa 89, 55-080 Smolec\", \"latitude\": \"51.0839092\", \"longitude\": \"16.9024662\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park\", \"full_address\": \"Stare Miasto, 50-001 Wroc\u0142aw\", \"latitude\": \"51.104288\", \"longitude\": \"17.031716799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Migda\u0142owy\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0599737\", \"longitude\": \"16.9802341\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy Nad \u015al\u0119z\u0105\", \"full_address\": \"Kleci\u0144ska 2a, 53-238 Wroc\u0142aw\", \"latitude\": \"51.0961238\", \"longitude\": \"16.9705919\"}"}
+{"prompt": "", "completion": "{\"name\": \"Us\u0142ugi Ogrodnicze Floris Ogrody Sp. z o.o.\", \"full_address\": \"\u015awi\u0119tego Miko\u0142aja 30, 50-046 Wroc\u0142aw\", \"latitude\": \"51.1116395\", \"longitude\": \"17.025233399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Przodownik\", \"full_address\": \"Odkrywc\u00f3w 91A, Wroc\u0142aw\", \"latitude\": \"51.0808641\", \"longitude\": \"16.9844071\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy Obro\u0144ca\", \"full_address\": \"Weigla 9, 53-114 Wroc\u0142aw\", \"latitude\": \"51.0753002\", \"longitude\": \"17.0237808\"}"}
+{"prompt": "", "completion": "{\"name\": \"Iseki Bielany Wroc\u0142awskie\", \"full_address\": \"Wroc\u0142awska 13, 55-040 Bielany Wroc\u0142awskie\", \"latitude\": \"51.040203\", \"longitude\": \"16.9696183\"}"}
+{"prompt": "", "completion": "{\"name\": \"G\u00f6tz-Geb\u00e4udemanagement\", \"full_address\": \"Zwyci\u0119ska 20A/102, 53-033 Wroc\u0142aw\", \"latitude\": \"51.058279\", \"longitude\": \"17.013575\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Kwitn\u0105ca Dolina\", \"full_address\": \"Francuska 164a, 54-405 Wroc\u0142aw\", \"latitude\": \"51.1033085\", \"longitude\": \"16.9625157\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer\", \"full_address\": \"52-200 Wysoka\", \"latitude\": \"51.0481169\", \"longitude\": \"17.0019641\"}"}
+{"prompt": "", "completion": "{\"name\": \"On the Low Meadows Park\", \"full_address\": \"Na Niskich \u0141\u0105kach 2A, 50-422 Wroc\u0142aw\", \"latitude\": \"51.0983417\", \"longitude\": \"17.0578604\"}"}
+{"prompt": "", "completion": "{\"name\": \"Florizon - Naturalnie Profesjonalny!\", \"full_address\": \"Karmelkowa 70, 52-319 Wroc\u0142aw\", \"latitude\": \"51.0683931\", \"longitude\": \"16.971946\"}"}
+{"prompt": "", "completion": "{\"name\": \"Las So\u0142tysowicki\", \"full_address\": \"So\u0142tysowicka 73, 51-168 Wroc\u0142aw\", \"latitude\": \"51.1520753\", \"longitude\": \"17.0794675\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bruk-Garden\", \"full_address\": \"Drohobycka 21, 54-620 Wroc\u0142aw\", \"latitude\": \"51.0960405\", \"longitude\": \"16.9389996\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Kozi Park\", \"full_address\": \"Str\u0105czkowa 30, 52-214 Wroc\u0142aw\", \"latitude\": \"51.0528585\", \"longitude\": \"17.0306104\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer na Wojszycach\", \"full_address\": \"Skibowa 2C, 52-230 Wroc\u0142aw\", \"latitude\": \"51.065488\", \"longitude\": \"17.034437999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD ODPOCZYNEK B/N\", \"full_address\": \"Park, Rac\u0142awicka, 53-149 Wroc\u0142aw\", \"latitude\": \"51.0816167\", \"longitude\": \"16.9984198\"}"}
+{"prompt": "", "completion": "{\"name\": \"Sequoia tree (Malinka i Banan)\", \"full_address\": \"3XMF+JQ, Wroc\u0142aw\", \"latitude\": \"51.084069\", \"longitude\": \"16.9744313\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer przy ulicy Przyja\u017ani\", \"full_address\": \"53-015 Wroc\u0142aw\", \"latitude\": \"51.068645\", \"longitude\": \"17.002853899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Dolina Lupik\u00f3w\", \"full_address\": \"Krzycka 42, 53-020 Wroc\u0142aw\", \"latitude\": \"51.0706181\", \"longitude\": \"16.9982361\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer na O\u0142taszynie\", \"full_address\": \"Parafialna 79, 52-233 Wroc\u0142aw\", \"latitude\": \"51.0572772\", \"longitude\": \"17.0223217\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Oaza\", \"full_address\": \"\u015al\u0119\u017cna 224, 53-113 Wroc\u0142aw\", \"latitude\": \"51.0734893\", \"longitude\": \"17.016023999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Szpitalny\", \"full_address\": \"Unnamed Road, 52-007 Wroc\u0142aw\", \"latitude\": \"51.0732878\", \"longitude\": \"17.0195248\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Skalniak\", \"full_address\": \"Orawska 14, 52-227 Wroc\u0142aw\", \"latitude\": \"51.0639573\", \"longitude\": \"17.021853\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Odpoczynek B/N II\", \"full_address\": \"Skarbowc\u00f3w 2, 53-025 Wroc\u0142aw\", \"latitude\": \"51.0799803\", \"longitude\": \"16.9993321\"}"}
+{"prompt": "", "completion": "{\"name\": \"Us\u0142ugi arborystyczne - Quercus Chirurgia Drzew Konrad \u017bywio\u0142\", \"full_address\": \"Zaporoska 73/8, 53-415 Wroc\u0142aw\", \"latitude\": \"51.0927627\", \"longitude\": \"17.0152564\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park sp. z o.o.\", \"full_address\": \"Muchoborska 16, 54-424 Wroc\u0142aw\", \"latitude\": \"51.10853\", \"longitude\": \"16.97065\"}"}
+{"prompt": "", "completion": "{\"name\": \"Lupus\", \"full_address\": \"Stro\u0144ska 8, 50-540 Wroc\u0142aw\", \"latitude\": \"51.0738573\", \"longitude\": \"17.0415727\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD FIO\u0141EK I\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0789667\", \"longitude\": \"17.0856811\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Korea\u0144ski\", \"full_address\": \"Korea\u0144ska, 55-010 Wroc\u0142aw\", \"latitude\": \"51.0554623\", \"longitude\": \"17.0858106\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park pa\u0142acowy\", \"full_address\": \"Parkowa, 55-010 \u017berniki Wroc\u0142awskie\", \"latitude\": \"51.0327778\", \"longitude\": \"17.0525\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Na Skraju\", \"full_address\": \"52-116 Wroc\u0142aw\", \"latitude\": \"51.0492207\", \"longitude\": \"17.082767399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy\", \"full_address\": \"Unnamed Road, 52, 007\", \"latitude\": \"51.0762636\", \"longitude\": \"17.073130799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Jelcz\\\"\", \"full_address\": \"Morwowa, 50-509 Wroc\u0142aw\", \"latitude\": \"51.0763113\", \"longitude\": \"17.0556384\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy Wiarus\", \"full_address\": \"Agrestowa 131,52-228, 52-228 Wroc\u0142aw\", \"latitude\": \"51.0624911\", \"longitude\": \"17.016197599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kosmiczne Wojszyce\", \"full_address\": \"Kosmiczna 15, 52-225 Wroc\u0142aw\", \"latitude\": \"51.0657841\", \"longitude\": \"17.0303395\"}"}
+{"prompt": "", "completion": "{\"name\": \"Cztery Pory Roku\", \"full_address\": \"Sucharskiego 19, 52-205 Wroc\u0142aw\", \"latitude\": \"51.0561056\", \"longitude\": \"17.0160065\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Jagoda\\\" sektor C\", \"full_address\": \"52-131 Wroc\u0142aw\", \"latitude\": \"51.0614268\", \"longitude\": \"17.063819\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Jagoda\\\" sektor A\", \"full_address\": \"52-131 Wroc\u0142aw\", \"latitude\": \"51.0621926\", \"longitude\": \"17.058739199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \u201eBajki\u201d Kolonia \u201eAstry\u201d\", \"full_address\": \"Gliniana 49, 50-525 Wroc\u0142aw\", \"latitude\": \"51.0925788\", \"longitude\": \"17.037211\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wzg\u00f3rze Gajowickie\", \"full_address\": \"Krucza 93, Wroc\u0142aw\", \"latitude\": \"51.0935064\", \"longitude\": \"16.9963327\"}"}
+{"prompt": "", "completion": "{\"name\": \"Hachiko - Park dla Ps\u00f3w\", \"full_address\": \"Sztabowa 66, 53-310 Wroc\u0142aw\", \"latitude\": \"51.0894105\", \"longitude\": \"17.012664\"}"}
+{"prompt": "", "completion": "{\"name\": \"Naturalnie Kamila Szklarz\", \"full_address\": \"Cypryjska, 52-121 Wroc\u0142aw\", \"latitude\": \"51.0550357\", \"longitude\": \"17.082153299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Harivansha Rai Bachchana\", \"full_address\": \"52-114 Wroc\u0142aw\", \"latitude\": \"51.062225\", \"longitude\": \"17.079419299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Jagoda\\\" sektor B\", \"full_address\": \"Ernesta Malinowskiego, 52-131 Wroc\u0142aw\", \"latitude\": \"51.0618035\", \"longitude\": \"17.0613348\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \u0141\u0105czno\u015b\u0107\", \"full_address\": \"Zi\u0119bicka 44, 50-507 Wroc\u0142aw\", \"latitude\": \"51.0791377\", \"longitude\": \"17.0558724\"}"}
+{"prompt": "", "completion": "{\"name\": \"Dzikie ogrody\", \"full_address\": \"Wietrzna 97, 53-024 Wroc\u0142aw\", \"latitude\": \"51.0736311\", \"longitude\": \"16.995582\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinne Ogrody Dzia\u0142kowe \\\"Jedno\u015b\u0107\\\"\", \"full_address\": \"Unnamed Road 52-231, 52-231\", \"latitude\": \"51.0691622\", \"longitude\": \"17.0511715\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Dolinka\", \"full_address\": \"al. Genera\u0142a J\u00f3zefa Hallera 99, 53-110 Wroc\u0142aw\", \"latitude\": \"51.0904634\", \"longitude\": \"16.9945587\"}"}
+{"prompt": "", "completion": "{\"name\": \"Altanka\", \"full_address\": \"52-200 Wysoka\", \"latitude\": \"51.0475107\", \"longitude\": \"17.0018212\"}"}
+{"prompt": "", "completion": "{\"name\": \"Zesp\u00f3\u0142 Dworski\", \"full_address\": \"55-040 \u015al\u0119za\", \"latitude\": \"51.0345796\", \"longitude\": \"16.9904719\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wybieg dla ps\u00f3w\", \"full_address\": \"Morwowa 4, 50-509 Wroc\u0142aw\", \"latitude\": \"51.0773743\", \"longitude\": \"17.0596758\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Brochowski\", \"full_address\": \"Konduktorska, 52-443 Wroc\u0142aw\", \"latitude\": \"51.0630266\", \"longitude\": \"17.071864899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Pok\u00f3j\\\"\", \"full_address\": \"al. Armii Krajowej 54, Wroc\u0142aw\", \"latitude\": \"51.085795\", \"longitude\": \"17.0608491\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrody us\u0142ugi ogrodnicze\", \"full_address\": \"Stefana, Grota-Roweckiego 24, 52-219 Wroc\u0142aw\", \"latitude\": \"51.0677548\", \"longitude\": \"17.0322283\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wzg\u00f3rze Tarnogajskie\", \"full_address\": \"Owocowa 3B, 50-508 Wroc\u0142aw\", \"latitude\": \"51.0734176\", \"longitude\": \"17.0633907\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kontener ESK\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.0834507\", \"longitude\": \"17.0668497\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer Solidarno\u015bci Walcz\u0105cej\", \"full_address\": \"Tadeusza Ko\u015bciuszki, 50-001 Wroc\u0142aw\", \"latitude\": \"51.1028594\", \"longitude\": \"17.0300639\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \\\"Jagoda\\\"\", \"full_address\": \"Dr\u00f3\u017cnicza, 52-129 Wroc\u0142aw\", \"latitude\": \"51.0598178\", \"longitude\": \"17.0606156\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wzg\u00f3rze Gajowe\", \"full_address\": \"50-001 Wroc\u0142aw\", \"latitude\": \"51.073191\", \"longitude\": \"17.0503295\"}"}
+{"prompt": "", "completion": "{\"name\": \"Lower Silesia Tourist Organization\", \"full_address\": \"\u015awidnicka 44, 50-027 Wroc\u0142aw\", \"latitude\": \"51.1020875\", \"longitude\": \"17.0299048\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Mieczyk\", \"full_address\": \"Konduktorska, Wroc\u0142aw\", \"latitude\": \"51.0649021\", \"longitude\": \"17.068153199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Promyk\", \"full_address\": \"Unnamed Road, 52-010 Wroc\u0142aw\", \"latitude\": \"51.0619201\", \"longitude\": \"17.090794\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy JELCZ (wej\u015bcie od Winogronowej)\", \"full_address\": \"Winogronowa, 50-509 Wroc\u0142aw\", \"latitude\": \"51.0779218\", \"longitude\": \"17.0560404\"}"}
+{"prompt": "", "completion": "{\"name\": \"PergoPlus\", \"full_address\": \"Ludwiga van Beethovena, 52-129 Wroc\u0142aw\", \"latitude\": \"51.0539783\", \"longitude\": \"17.063755099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Elektron\", \"full_address\": \"Wiaduktowa 19, 52-111 Wroc\u0142aw\", \"latitude\": \"51.0662628\", \"longitude\": \"17.073454299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wybieg dla ps\u00f3w\", \"full_address\": \"53-015 Wroc\u0142aw\", \"latitude\": \"51.0603361\", \"longitude\": \"16.9899439\"}"}
+{"prompt": "", "completion": "{\"name\": \"Las Zakrzowski\", \"full_address\": \"51-217 Wroc\u0142aw\", \"latitude\": \"51.1777508\", \"longitude\": \"17.1316623\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wa\u0142 przeciwpowodziowy, spacerowy \\\"Nowy Dom\\\"\", \"full_address\": \"Opatowicka 18, 52-028 Wroc\u0142aw\", \"latitude\": \"51.093574\", \"longitude\": \"17.1088249\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wzg\u00f3rze przy ulicy Wilczej\", \"full_address\": \"50-438 Wroc\u0142aw\", \"latitude\": \"51.0917096\", \"longitude\": \"17.070975699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wybieg dla ps\u00f3w\", \"full_address\": \"Gaj,50-001\", \"latitude\": \"51.0795046\", \"longitude\": \"17.0461097\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park Z\u0142otnicki\", \"full_address\": \"54-029 Wroc\u0142aw\", \"latitude\": \"51.1357865\", \"longitude\": \"16.8793978\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Park Wschodni\", \"full_address\": \"33PM+P3, Wroc\u0142aw\", \"latitude\": \"51.086751\", \"longitude\": \"17.082722\"}"}
+{"prompt": "", "completion": "{\"name\": \"Zielona Przestrze\u0144 - projektowanie, aran\u017cacja, zak\u0142adanie i piel\u0119gnacja ogrod\u00f3w\", \"full_address\": \"al. Wi\u015bniowa 33/Lokal 2, 53-313 Wroc\u0142aw\", \"latitude\": \"51.085183\", \"longitude\": \"17.015332\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Zgoda\", \"full_address\": \"52-131 Wroc\u0142aw\", \"latitude\": \"51.0670177\", \"longitude\": \"17.0598136\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ogrody Bies Wycinka Drzew Wroc\u0142aw, Piel\u0119gnacja Zieleni\", \"full_address\": \"Tarninowa 4, 53-009 Wroc\u0142aw\", \"latitude\": \"51.0683684\", \"longitude\": \"17.0149142\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Maciejka\", \"full_address\": \"Grota-Roweckiego 215, 53-316 Wroc\u0142aw\", \"latitude\": \"51.0442854\", \"longitude\": \"17.028233999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy \\\"Witaminka\\\"\", \"full_address\": \"Wroc\u0142aw\", \"latitude\": \"51.074806\", \"longitude\": \"17.0540332\"}"}
+{"prompt": "", "completion": "{\"name\": \"Plac przed Centrum Historii Zajezdnia\", \"full_address\": \"Centrum Zajezdnia, Bzowa, 53-437 Wroc\u0142aw\", \"latitude\": \"51.0971765\", \"longitude\": \"16.9916151\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy\", \"full_address\": \"Owocowa, 50-508 Wroc\u0142aw\", \"latitude\": \"51.0750379\", \"longitude\": \"17.056113099999997\"}"}
+{"prompt": "", "completion": "{\"name\": \"Allium Design - projektowanie zieleni Wroc\u0142aw\", \"full_address\": \"Kukuczki 13, 50-570 Wroc\u0142aw\", \"latitude\": \"51.0715805\", \"longitude\": \"17.035914299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD \u201ePrzyja\u017a\u0144\u201d\", \"full_address\": \"Herbaciana 1, 52-311 Wroc\u0142aw\", \"latitude\": \"51.06941\", \"longitude\": \"16.9827342\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rodzinny Ogr\u00f3d Dzia\u0142kowy Z\u0141OCIE\u0143\", \"full_address\": \"Wiaduktowa 21, 52-111 Wroc\u0142aw\", \"latitude\": \"51.0702841\", \"longitude\": \"17.072449799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Polskie Konsorcjum Granitu\", \"full_address\": \"Kobierzycka 10, 52-315 Wroc\u0142aw\", \"latitude\": \"51.0619259\", \"longitude\": \"16.984557799999997\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Azalia\", \"full_address\": \"Terenowa 5, 52-231 Wroc\u0142aw\", \"latitude\": \"51.0696624\", \"longitude\": \"17.0456325\"}"}
+{"prompt": "", "completion": "{\"name\": \"Staw\", \"full_address\": \"Chabrowa 11, 52-200 Wysoka\", \"latitude\": \"51.0480326\", \"longitude\": \"17.0024408\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wroc\u0142aw\", \"full_address\": \"\", \"latitude\": \"51.1092948\", \"longitude\": \"17.0386019\"}"}
+{"prompt": "", "completion": "{\"name\": \"Korill180\", \"full_address\": \"Krakowska 180, 50-429 Wroc\u0142aw\", \"latitude\": \"51.0817258\", \"longitude\": \"17.0790772\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bistro Rodzinne\", \"full_address\": \"Maksymiliana Jackowskiego 57c, 51-645 Wroc\u0142aw\", \"latitude\": \"51.1038752\", \"longitude\": \"17.1112716\"}"}
+{"prompt": "", "completion": "{\"name\": \"Strefa foodtruck\u00f3w\", \"full_address\": \"Wystawowa 1, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1063003\", \"longitude\": \"17.0768248\"}"}
+{"prompt": "", "completion": "{\"name\": \"Momentai Singapore\", \"full_address\": \"Karola Olszewskiego 118/4, 51-646 Wroc\u0142aw\", \"latitude\": \"51.101726\", \"longitude\": \"17.1078621\"}"}
+{"prompt": "", "completion": "{\"name\": \"Z\u0141OTY SMOK 1\", \"full_address\": \"p\u0119tla Bacciarellego, 51-649 Wroc\u0142aw\", \"latitude\": \"51.1023452\", \"longitude\": \"17.1162507\"}"}
+{"prompt": "", "completion": "{\"name\": \"Hotel Wodnik\", \"full_address\": \"Na Grobli 28, 50-421 Wroc\u0142aw\", \"latitude\": \"51.1034395\", \"longitude\": \"17.0638967\"}"}
+{"prompt": "", "completion": "{\"name\": \"Karczma u Lwa\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1045464\", \"longitude\": \"17.0769315\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Hotel \u015al\u0105sk\", \"full_address\": \"Oporowska 60, 53-434 Wroc\u0142aw\", \"latitude\": \"51.0972948\", \"longitude\": \"16.9980959\"}"}
+{"prompt": "", "completion": "{\"name\": \"Lepione | ul. Ku\u017anicza 43\", \"full_address\": \"Ku\u017anicza 42, 50-138 Wroc\u0142aw\", \"latitude\": \"51.1136349\", \"longitude\": \"17.0345573\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wyndham Wroclaw Old Town\", \"full_address\": \"\u015awi\u0119tego Miko\u0142aja 67, 50-127 Wroc\u0142aw\", \"latitude\": \"51.111323\", \"longitude\": \"17.028617\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wild Bean Cafe\", \"full_address\": \"Krakowska 6/7, 50-425 Wroc\u0142aw\", \"latitude\": \"51.095228\", \"longitude\": \"17.0565492\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bar Pho Viet\", \"full_address\": \"\u0141adna 1A, 50-353 Wroc\u0142aw\", \"latitude\": \"51.1129411\", \"longitude\": \"17.0560479\"}"}
+{"prompt": "", "completion": "{\"name\": \"Dragon Box\", \"full_address\": \"Tytusa Cha\u0142ubi\u0144skiego 1, 50-369 Wroc\u0142aw\", \"latitude\": \"51.109764\", \"longitude\": \"17.066347699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Western tortilla\", \"full_address\": \"Wystawowa 1, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1063017\", \"longitude\": \"17.0768201\"}"}
+{"prompt": "", "completion": "{\"name\": \"Labirynt Resto.Bar\", \"full_address\": \"Ofiar O\u015bwi\u0119cimskich 17, 50-069 Wroc\u0142aw\", \"latitude\": \"51.1082247\", \"longitude\": \"17.031430999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Aksameet Bistro Restauracja\", \"full_address\": \"Krakowska 180, 52-015 Wroc\u0142aw\", \"latitude\": \"51.0820733\", \"longitude\": \"17.0789723\"}"}
+{"prompt": "", "completion": "{\"name\": \"Sushi Friends Bar & Resto\", \"full_address\": \"Marca Polo 9e, 51-504 Wroc\u0142aw\", \"latitude\": \"51.1103185\", \"longitude\": \"17.1180611\"}"}
+{"prompt": "", "completion": "{\"name\": \"Z\u0142oty Smok\", \"full_address\": \"Marcelego Bacciarellego, 51-649 Wroc\u0142aw\", \"latitude\": \"51.1049583\", \"longitude\": \"17.1130124\"}"}
+{"prompt": "", "completion": "{\"name\": \"Grill Brothers burgery Na Grobli\", \"full_address\": \"Na Grobli 6, 50-421 Wroc\u0142aw\", \"latitude\": \"51.1054476\", \"longitude\": \"17.0537273\"}"}
+{"prompt": "", "completion": "{\"name\": \"WOO THAI Restaurant\", \"full_address\": \"Grunwaldzka 67, 50-415 Wroc\u0142aw\", \"latitude\": \"51.114413\", \"longitude\": \"17.0667235\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rahim kebab\", \"full_address\": \"Curie-Sk\u0142odowskiej 63/2, 50-369 Wroc\u0142aw\", \"latitude\": \"51.1095905\", \"longitude\": \"17.0643565\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wroc\u0142awska\", \"full_address\": \"Szewska 59/60, 50-139 Wroc\u0142aw\", \"latitude\": \"51.1111397\", \"longitude\": \"17.0349957\"}"}
+{"prompt": "", "completion": "{\"name\": \"RAMZES Wroc\u0142aw\", \"full_address\": \"Henryka Sienkiewicza 29a, 50-335 Wroc\u0142aw\", \"latitude\": \"51.1165086\", \"longitude\": \"17.0516297\"}"}
+{"prompt": "", "completion": "{\"name\": \"Obiady dla Wycieczek Zoo Wroc\u0142aw - Pod Papugami\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 1/5, 51-618 Wroc\u0142aw\", \"latitude\": \"51.104134\", \"longitude\": \"17.071292\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ymca\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 1/5, 51-618 Wroc\u0142aw\", \"latitude\": \"51.105672\", \"longitude\": \"17.0760719\"}"}
+{"prompt": "", "completion": "{\"name\": \"Salad Story\", \"full_address\": \"plac Grunwaldzki 22, 50-363 Wroc\u0142aw\", \"latitude\": \"51.1128532\", \"longitude\": \"17.0593054\"}"}
+{"prompt": "", "completion": "{\"name\": \"WOO THAI Street Food Grunwaldzka\", \"full_address\": \"Grunwaldzka 67, 50-357 Wroc\u0142aw\", \"latitude\": \"51.1140911\", \"longitude\": \"17.066746\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Kuchnia March\u00e9 \u015awidnicka Wroc\u0142aw\", \"full_address\": \"\u015awidnicka 53, 50-030 Wroc\u0142aw\", \"latitude\": \"51.1010621\", \"longitude\": \"17.0287643\"}"}
+{"prompt": "", "completion": "{\"name\": \"Kaczka Dziwaczka PL\", \"full_address\": \"Podwale 62, 50-005 Wroc\u0142aw\", \"latitude\": \"51.1033152\", \"longitude\": \"17.0385492\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Piwnica \u015awidnicka Wroc\u0142aw\", \"full_address\": \"Rynek Ratusz 1A, 50-106 Wroc\u0142aw\", \"latitude\": \"51.1094788\", \"longitude\": \"17.031978\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Como\", \"full_address\": \"Marca Polo 9c, 51-504 Wroc\u0142aw\", \"latitude\": \"51.110582\", \"longitude\": \"17.1175109\"}"}
+{"prompt": "", "completion": "{\"name\": \"STOCKHOLM\", \"full_address\": \"Marsza\u0142ka J\u00f3zefa Pi\u0142sudskiego 49/57, 50-529 Wroc\u0142aw\", \"latitude\": \"51.1013969\", \"longitude\": \"17.028067399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stara Biblioteka restauracja i noclegi\", \"full_address\": \"Parkowa 1/3, 51-616 Wroc\u0142aw\", \"latitude\": \"51.1095854\", \"longitude\": \"17.0744979\"}"}
+{"prompt": "", "completion": "{\"name\": \"INSTYTUT SMAKU restauracja, kantyna\", \"full_address\": \"Ok\u00f3lna 2, 50-422 Wroc\u0142aw\", \"latitude\": \"51.1010999\", \"longitude\": \"17.067583499999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Przyjaciele i Znajomi\", \"full_address\": \"Grunwaldzka 98, 50-357 Wroc\u0142aw\", \"latitude\": \"51.1152689\", \"longitude\": \"17.0691205\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pod Zielonym Dzi\u0119cio\u0142em - Pub & Caf\u00e9\", \"full_address\": \"Olszewskiego 136a, 51-648 Wroc\u0142aw\", \"latitude\": \"51.1016256\", \"longitude\": \"17.1101998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restaurant & Cafe Bar \\\"jeden\\\"\", \"full_address\": \"\u015awi\u0119tego Miko\u0142aja 70, 50-127 Wroc\u0142aw\", \"latitude\": \"51.111269\", \"longitude\": \"17.028837\"}"}
+{"prompt": "", "completion": "{\"name\": \"Reset bistro\", \"full_address\": \"Maksymiliana Jackowskiego 55, 51-665 Wroc\u0142aw\", \"latitude\": \"51.1035067\", \"longitude\": \"17.110723399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Szarpane Burgery\", \"full_address\": \"Tadeusza Ko\u015bciuszki 158, 50-430 Wroc\u0142aw\", \"latitude\": \"51.0991621\", \"longitude\": \"17.0505985\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bistro przy Pergoli\", \"full_address\": \"Wystawowa 1, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1076741\", \"longitude\": \"17.0785583\"}"}
+{"prompt": "", "completion": "{\"name\": \"Przestrze\u0144\", \"full_address\": \"al Ignacego Jana Paderewskiego 35, 51-612 Wroc\u0142aw\", \"latitude\": \"51.1136787\", \"longitude\": \"17.091010699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Czasoprzestrze\u0144\", \"full_address\": \"Tramwajowa 1-3, 51-621 Wroc\u0142aw\", \"latitude\": \"51.104763\", \"longitude\": \"17.085945\"}"}
+{"prompt": "", "completion": "{\"name\": \"Jungle - kuchnia azjatycka\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 7, 51-627 Wroc\u0142aw\", \"latitude\": \"51.1041787\", \"longitude\": \"17.0816201\"}"}
+{"prompt": "", "completion": "{\"name\": \"PIENO pizza & pasta\", \"full_address\": \"Ameriga Vespucciego 18, 51-505 Wroc\u0142aw\", \"latitude\": \"51.1070964\", \"longitude\": \"17.1231772\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Tarasowa\", \"full_address\": \"Wroclaw Congress Center (RCTB), Wystawowa 1, 51-618 Wroc\u0142aw\", \"latitude\": \"51.107908\", \"longitude\": \"17.0779791\"}"}
+{"prompt": "", "completion": "{\"name\": \"Laguna Bistro & Cafe\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 1-5, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1042138\", \"longitude\": \"17.0750597\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Letnia\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 1-5, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1027148\", \"longitude\": \"17.076413499999997\"}"}
+{"prompt": "", "completion": "{\"name\": \"Browar Wielka Wyspa\", \"full_address\": \"Partyzant\u00f3w 1, 51-672 Wroc\u0142aw\", \"latitude\": \"51.1068669\", \"longitude\": \"17.0928655\"}"}
+{"prompt": "", "completion": "{\"name\": \"The Granary La Suite Hotel\", \"full_address\": \"Mennicza 24, 50-057 Wroc\u0142aw\", \"latitude\": \"51.1062983\", \"longitude\": \"17.0347056\"}"}
+{"prompt": "", "completion": "{\"name\": \"Chatka przy Jatkach\", \"full_address\": \"Odrza\u0144ska 7, 50-113 Wroc\u0142aw\", \"latitude\": \"51.1119289\", \"longitude\": \"17.0313524\"}"}
+{"prompt": "", "completion": "{\"name\": \"Konspira\", \"full_address\": \"Plac Solny 11, 50-061 Wroc\u0142aw\", \"latitude\": \"51.1092228\", \"longitude\": \"17.0282396\"}"}
+{"prompt": "", "completion": "{\"name\": \"GastroBaza\", \"full_address\": \"Adama Mickiewicza 62, 51-620 Wroc\u0142aw\", \"latitude\": \"51.1140434\", \"longitude\": \"17.097524099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pod Kuflem\", \"full_address\": \"Nowowiejska 95, 50-340 Wroc\u0142aw\", \"latitude\": \"51.1171878\", \"longitude\": \"17.0610896\"}"}
+{"prompt": "", "completion": "{\"name\": \"Hilvis sp. z o.o\", \"full_address\": \"Krakowska 180, 52-015 Wroc\u0142aw\", \"latitude\": \"51.0822446\", \"longitude\": \"17.0777261\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja Kuchnia Obfito\u015bci\", \"full_address\": \"Marcelego Bacciarellego 20/24c, 51-622 Wroc\u0142aw\", \"latitude\": \"51.1051101\", \"longitude\": \"17.1130806\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bazar Dawna Pralnia\", \"full_address\": \"Krakowska 180, 52-015 Wroc\u0142aw\", \"latitude\": \"51.0817136\", \"longitude\": \"17.079307999999997\"}"}
+{"prompt": "", "completion": "{\"name\": \"Przystanek Wrocek\", \"full_address\": \"Szybka 6/10, 50-421 Wroc\u0142aw\", \"latitude\": \"51.1031443\", \"longitude\": \"17.0541846\"}"}
+{"prompt": "", "completion": "{\"name\": \"Namaste Gorkha\", \"full_address\": \"Ameriga Vespucciego 10A, 51-504 Wroc\u0142aw\", \"latitude\": \"51.1077579\", \"longitude\": \"17.1221318\"}"}
+{"prompt": "", "completion": "{\"name\": \"La Habana cafe and restaurante\", \"full_address\": \"8 Maja 86/1B, 51-671 Wroc\u0142aw\", \"latitude\": \"51.1067517\", \"longitude\": \"17.091552099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja \u010cesk\u00e1\", \"full_address\": \"\u015awidnicka 8A, 50-529 Wroc\u0142aw\", \"latitude\": \"51.1078459\", \"longitude\": \"17.0327859\"}"}
+{"prompt": "", "completion": "{\"name\": \"Beszamel\", \"full_address\": \"Karola Marcinkowskiego 2a, 50-368 Wroc\u0142aw\", \"latitude\": \"51.1118428\", \"longitude\": \"17.0687976\"}"}
+{"prompt": "", "completion": "{\"name\": \"Trattoria Siesta Nuova\", \"full_address\": \"\u015aliczna 22a/5, 50-566 Wroc\u0142aw\", \"latitude\": \"51.0853658\", \"longitude\": \"17.0375218\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pizza nel Parco\", \"full_address\": \"aleja Ludomira R\u00f3\u017cyckiego 1, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1153275\", \"longitude\": \"17.0747394\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bar Studencki Budynek CDN 1pi\u0119tro\", \"full_address\": \"DK98, 50-378 Wroc\u0142aw\", \"latitude\": \"51.1128524\", \"longitude\": \"17.063830499999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"El Gordito Grunwald\", \"full_address\": \"Curie-Sk\u0142odowskiej 39/U1A, 50-369 Wroc\u0142aw\", \"latitude\": \"51.1104133\", \"longitude\": \"17.0617588\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ukrai\u0144ska Knajpa\", \"full_address\": \"Kotlarska 40, 50-116 Wroc\u0142aw\", \"latitude\": \"51.1115665\", \"longitude\": \"17.0334656\"}"}
+{"prompt": "", "completion": "{\"name\": \"Marco Polo Restaurant & Wine\", \"full_address\": \"Marca Polo 9f, 51-504 Wroc\u0142aw\", \"latitude\": \"51.110477\", \"longitude\": \"17.1180134\"}"}
+{"prompt": "", "completion": "{\"name\": \"Vivere Italiano restauracja w\u0142oska Wroc\u0142aw l pizza gluten free l wino Wroc\u0142aw\", \"full_address\": \"Ofiar O\u015bwi\u0119cimskich 21, 50-069 Wroc\u0142aw\", \"latitude\": \"51.1083455\", \"longitude\": \"17.032204099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bazylia Bistro\", \"full_address\": \"Janiszewskiego 8, 50-372 Wroc\u0142aw\", \"latitude\": \"51.110296\", \"longitude\": \"17.059904\"}"}
+{"prompt": "", "completion": "{\"name\": \"Karczma Kasie\u0144ka\", \"full_address\": \"Piotra Micha\u0142owskiego 3, 51-637 Wroc\u0142aw\", \"latitude\": \"51.1012955\", \"longitude\": \"17.1031475\"}"}
+{"prompt": "", "completion": "{\"name\": \"Restauracja P2 Dinner&Bar\", \"full_address\": \"Plac Solny 2/3, 50-060 Wroc\u0142aw\", \"latitude\": \"51.1099047\", \"longitude\": \"17.0295445\"}"}
+{"prompt": "", "completion": "{\"name\": \"Giaga Caffe\", \"full_address\": \"Edwarda Dembowskiego 18, 51-670 Wroc\u0142aw\", \"latitude\": \"51.1067812\", \"longitude\": \"17.0928075\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bafra Kebab\", \"full_address\": \"Marcelego Bacciarellego 6, 51-649 Wroc\u0142aw\", \"latitude\": \"51.1057133\", \"longitude\": \"17.111390999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Mc Falafel\", \"full_address\": \"Curie-Sk\u0142odowskiej 47, 50-001 Wroc\u0142aw\", \"latitude\": \"51.1102858\", \"longitude\": \"17.0623882\"}"}
+{"prompt": "", "completion": "{\"name\": \"Casa Della Pizza\", \"full_address\": \"Partyzant\u00f3w 21, 51-672 Wroc\u0142aw\", \"latitude\": \"51.1091763\", \"longitude\": \"17.0970714\"}"}
+{"prompt": "", "completion": "{\"name\": \"KOI Sushi Bar II\", \"full_address\": \"Edwarda Dembowskiego 18, 51-670 Wroc\u0142aw\", \"latitude\": \"51.1066842\", \"longitude\": \"17.092890399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Express Oriental Pasa\u017c Grunwaldzki\", \"full_address\": \"plac Grunwaldzki 22, 50-359 Wroc\u0142aw\", \"latitude\": \"51.1130272\", \"longitude\": \"17.0593868\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pierogarnia Krystyny\", \"full_address\": \"Karola Olszewskiego 138/140, 50-360 Wroc\u0142aw\", \"latitude\": \"51.1011535\", \"longitude\": \"17.110484\"}"}
+{"prompt": "", "completion": "{\"name\": \"Panda Ramen - Grunwald\", \"full_address\": \"Norwida 32, 50-375 Wroc\u0142aw\", \"latitude\": \"51.1107127\", \"longitude\": \"17.0628136\"}"}
+{"prompt": "", "completion": "{\"name\": \"Papi Chulo Cantina\", \"full_address\": \"Grunwaldzka 67, 50-357 Wroc\u0142aw\", \"latitude\": \"51.1142395\", \"longitude\": \"17.066222\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pizza Station Wielka Wyspa\", \"full_address\": \"Edwarda Dembowskiego 63, 51-669 Wroc\u0142aw\", \"latitude\": \"51.1060388\", \"longitude\": \"17.1049613\"}"}
+{"prompt": "", "completion": "{\"name\": \"Parking Biedronka\", \"full_address\": \"\u015aliczna 12, 50-566 Wroc\u0142aw\", \"latitude\": \"51.0851128\", \"longitude\": \"17.0367365\"}"}
+{"prompt": "", "completion": "{\"name\": \"Monster Cook\", \"full_address\": \"Szymona Konarskiego 2, 51-685 Wroc\u0142aw\", \"latitude\": \"51.1132135\", \"longitude\": \"17.1046829\"}"}
+{"prompt": "", "completion": "{\"name\": \"Mexico Bar\", \"full_address\": \"Miko\u0142aja S\u0119pa-Szarzy\u0144skiego 59, 50-334 Wroc\u0142aw\", \"latitude\": \"51.1172074\", \"longitude\": \"17.0528948\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pizzeria Stacholino przy ZOO (wcze\u015bniej Hybryda)\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 2, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1050351\", \"longitude\": \"17.0799417\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wasabi Sushi Shop Shop Oriental\", \"full_address\": \"Swojczycka 82, 51-502 Wroc\u0142aw\", \"latitude\": \"51.1138029\", \"longitude\": \"17.1217145\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Gda\u0144ska 1B/LOK. U2.1, 50-344 Wroc\u0142aw\", \"latitude\": \"51.1159783\", \"longitude\": \"17.0642481\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Kowalska 81A, 51-424 Wroc\u0142aw\", \"latitude\": \"51.133455\", \"longitude\": \"17.103535\"}"}
+{"prompt": "", "completion": "{\"name\": \"STRZELEC- Accommodation, Restaurant, Catering\", \"full_address\": \"Wodzis\u0142awska 10A, Wroc\u0142aw\", \"latitude\": \"51.0817959\", \"longitude\": \"17.0905242\"}"}
+{"prompt": "", "completion": "{\"name\": \"Burger King\", \"full_address\": \"plac Grunwaldzki 22, 50-363 Wroc\u0142aw\", \"latitude\": \"51.1129426\", \"longitude\": \"17.0591226\"}"}
+{"prompt": "", "completion": "{\"name\": \"Gastro Kebab i Falafel- Biskupin - Wroc\u0142aw\", \"full_address\": \"Karola Olszewskiego 124A, 51-646 Wroc\u0142aw\", \"latitude\": \"51.1013518\", \"longitude\": \"17.1083669\"}"}
+{"prompt": "", "completion": "{\"name\": \"KFC Wroc\u0142aw Pasa\u017c Grunwaldzki\", \"full_address\": \"Pasa\u017c Grunwaldzki, plac Grunwaldzki 22, 50-363 Wroc\u0142aw\", \"latitude\": \"51.1129426\", \"longitude\": \"17.0591226\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Ameriga Vespucciego 18b, 51-505 Wroc\u0142aw\", \"latitude\": \"51.1071841\", \"longitude\": \"17.1230749\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pizza Hut\", \"full_address\": \"Curie-Sk\u0142odowskiej 1, 50-381 Wroc\u0142aw\", \"latitude\": \"51.1122607\", \"longitude\": \"17.0563774\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Adama Mickiewicza 65, 51-684 Wroc\u0142aw\", \"latitude\": \"51.113548\", \"longitude\": \"17.0972544\"}"}
+{"prompt": "", "completion": "{\"name\": \"McDonald's\", \"full_address\": \"plac Grunwaldzki 34, 50-365 Wroc\u0142aw\", \"latitude\": \"51.1145281\", \"longitude\": \"17.0696692\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"ul. H, Siemiradzkiego 1, 51-631 Wroc\u0142aw\", \"latitude\": \"51.1030806\", \"longitude\": \"17.0949126\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bravo. Pizzeria\", \"full_address\": \"plac Grunwaldzki 18/20, 50-384 Wroc\u0142aw\", \"latitude\": \"51.1112258\", \"longitude\": \"17.0581235\"}"}
+{"prompt": "", "completion": "{\"name\": \"Greco - greek restaurant\", \"full_address\": \"Curie-Sk\u0142odowskiej 33, 50-996 Wroc\u0142aw\", \"latitude\": \"51.1107101\", \"longitude\": \"17.0610045\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Curie-Sk\u0142odowskiej 45/1, 50-369 Wroc\u0142aw\", \"latitude\": \"51.1103547\", \"longitude\": \"17.0621245\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"plac Grunwaldzki 23-27/budynek C, 50-365 Wroc\u0142aw\", \"latitude\": \"51.112092\", \"longitude\": \"17.063741\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Rybnicka 8a i/8b, 52-016 Wroc\u0142aw\", \"latitude\": \"51.0813707\", \"longitude\": \"17.0802119\"}"}
+{"prompt": "", "completion": "{\"name\": \"Neobab Kebab Wroc\u0142aw\", \"full_address\": \"Miko\u0142aja Reja 47, 50-340 Wroc\u0142aw\", \"latitude\": \"51.1183395\", \"longitude\": \"17.0587567\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pizzeria Mammamia S\u0119polno\", \"full_address\": \"Jana Szanieckiego 68, 51-692 Wroc\u0142aw\", \"latitude\": \"51.1113244\", \"longitude\": \"17.101214799999997\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Marcelego Bacciarellego 10/I, 51-649 Wroc\u0142aw\", \"latitude\": \"51.1053929\", \"longitude\": \"17.1121385\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Cha\u0142upnicza 67/lok. 17, 51-503 Wroc\u0142aw\", \"latitude\": \"51.1100954\", \"longitude\": \"17.1249197\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Karola Olszewskiego 70/1a, 51-646 Wroc\u0142aw\", \"latitude\": \"51.10244\", \"longitude\": \"17.102012\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Siemianowicka 9C i 9D lok. U2 i U1, 52-007 Wroc\u0142aw\", \"latitude\": \"51.0713752\", \"longitude\": \"17.0917574\"}"}
+{"prompt": "", "completion": "{\"name\": \"Popeyes\", \"full_address\": \"plac Grunwaldzki 22, 50-363 Wroc\u0142aw\", \"latitude\": \"51.1129426\", \"longitude\": \"17.0591226\"}"}
+{"prompt": "", "completion": "{\"name\": \"Makarun, Plac Grunwaldzki 22\", \"full_address\": \"plac Grunwaldzki 22, 50-363 Wroc\u0142aw\", \"latitude\": \"51.1122878\", \"longitude\": \"17.059098199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Adama Mickiewicza 100, 51-685 Wroc\u0142aw\", \"latitude\": \"51.113886\", \"longitude\": \"17.104443\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"wybrze\u017ce Ludwika Pasteura 17A/lok. 41, 50-367 Wroc\u0142aw\", \"latitude\": \"51.113503\", \"longitude\": \"17.07068\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Jerzego Badury 4, 51-507 Wroc\u0142aw\", \"latitude\": \"51.1079849\", \"longitude\": \"17.1406487\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Walo\u0144ska 17/lok. U1, 50-413 Wroc\u0142aw\", \"latitude\": \"51.1036652\", \"longitude\": \"17.0521083\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Henryka Sienkiewicza 131, 50-346 Wroc\u0142aw\", \"latitude\": \"51.1149085\", \"longitude\": \"17.0666966\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Ferdynanda Magellana 14a, 51-505 Wroc\u0142aw\", \"latitude\": \"51.1109029\", \"longitude\": \"17.1214326\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Gazowa 94, 50-513 Wroc\u0142aw\", \"latitude\": \"51.0785785\", \"longitude\": \"17.0690892\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Partyzant\u00f3w 35, 51-675 Wroc\u0142aw\", \"latitude\": \"51.1095783\", \"longitude\": \"17.0998964\"}"}
+{"prompt": "", "completion": "{\"name\": \"Cynamon Bar\", \"full_address\": \"plac Grunwaldzki 23, 50-365 Wroc\u0142aw\", \"latitude\": \"51.1118614\", \"longitude\": \"17.063109\"}"}
+{"prompt": "", "completion": "{\"name\": \"P\u0119tla biskupin\", \"full_address\": \"Karola Olszewskiego 128, 51-648 Wroc\u0142aw\", \"latitude\": \"51.1016792\", \"longitude\": \"17.109511599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Manufaktura Pizzy i Chleba\", \"full_address\": \"Tadeusza Ko\u015bciuszki 159, 50-438 Wroc\u0142aw\", \"latitude\": \"51.0986813\", \"longitude\": \"17.0514451\"}"}
+{"prompt": "", "completion": "{\"name\": \"La piazzetta (Wroc\u0142aw)\", \"full_address\": \"plac Marsza\u0142ka J\u00f3zefa Pi\u0142sudskiego 1/1b, 51-152 Wroc\u0142aw\", \"latitude\": \"51.1377116\", \"longitude\": \"17.0558205\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Strachocinska 90/90A, 51-511 Wroc\u0142aw\", \"latitude\": \"51.1062287\", \"longitude\": \"17.1442324\"}"}
+{"prompt": "", "completion": "{\"name\": \"Sklep diabetyk24\", \"full_address\": \"Tytusa Cha\u0142ubi\u0144skiego 2a, 50-368 Wroc\u0142aw\", \"latitude\": \"51.1103515\", \"longitude\": \"17.0659377\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Krzysztofa Kolumba 9a, 51-503 Wroc\u0142aw\", \"latitude\": \"51.1119029\", \"longitude\": \"17.117877399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Papa John's Pizza\", \"full_address\": \"Nowowiejska 126, 50-340 Wroc\u0142aw\", \"latitude\": \"51.115825\", \"longitude\": \"17.0642311\"}"}
+{"prompt": "", "completion": "{\"name\": \"u Hindusa\", \"full_address\": \"plac Grunwaldzki 22, 50-384 Wroc\u0142aw\", \"latitude\": \"51.1118198\", \"longitude\": \"17.0592008\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka\", \"full_address\": \"Genera\u0142a Romualda Traugutta 98-100/I, 50-420 Wroc\u0142aw\", \"latitude\": \"51.1013135\", \"longitude\": \"17.0530567\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Edwarda Dembowskiego 57, 51-670 Wroc\u0142aw\", \"latitude\": \"51.1061504\", \"longitude\": \"17.1041034\"}"}
+{"prompt": "", "completion": "{\"name\": \"\u017babka | Prosto z pieca\", \"full_address\": \"Grunwaldzka 22, 50-355 Wroc\u0142aw\", \"latitude\": \"51.11457\", \"longitude\": \"17.057489999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Niez\u0142y Cyrk Burgerownia Wroc\u0142aw\", \"full_address\": \"Miko\u0142aja Kopernika 19, 51-617 Wroc\u0142aw\", \"latitude\": \"51.1138369\", \"longitude\": \"17.0839526\"}"}
+{"prompt": "", "completion": "{\"name\": \"Grape Restaurant Wroc\u0142aw\", \"full_address\": \"Parkowa 8, 51-616 Wroc\u0142aw\", \"latitude\": \"51.1101169\", \"longitude\": \"17.073236899999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Bucanero Club\", \"full_address\": \"Zygmunta Wr\u00f3blewskiego 9, 51-627 Wroc\u0142aw\", \"latitude\": \"51.1041042\", \"longitude\": \"17.08205\"}"}
+{"prompt": "", "completion": "{\"name\": \"Odra-Pany\", \"full_address\": \"K\u0142adka Zwierzyniecka, 50-438 Wroc\u0142aw\", \"latitude\": \"51.1031982\", \"longitude\": \"17.071115799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Hotel Grape\", \"full_address\": \"Parkowa 8, 51-616 Wroc\u0142aw\", \"latitude\": \"51.1100577\", \"longitude\": \"17.0732559\"}"}
+{"prompt": "", "completion": "{\"name\": \"Czarna Cebula Gem\u00fcse Kebab &Grill\", \"full_address\": \"Partyzant\u00f3w 14B, 51-672 Wroc\u0142aw\", \"latitude\": \"51.1082157\", \"longitude\": \"17.094125299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Hitobito sushi\", \"full_address\": \"plac Grunwaldzki 55, 50-366 Wroc\u0142aw\", \"latitude\": \"51.1139904\", \"longitude\": \"17.0702632\"}"}
+{"prompt": "", "completion": "{\"name\": \"Przeno\u015bna Pasja - Pizza Mobile\", \"full_address\": \"Mi\u0119dzyrzecka 11, 50-421 Wroc\u0142aw\", \"latitude\": \"51.0989929\", \"longitude\": \"17.0707477\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pizzeria Nocna z dostaw\u0105 - Nocne Smaki Wroc\u0142aw - Pizza Wroc\u0142aw\", \"full_address\": \"Lokal zewn\u0119trzny oszklony LU1, Karola Olszewskiego 23B, 51-642 Wroc\u0142aw\", \"latitude\": \"51.1015915\", \"longitude\": \"17.0974728\"}"}
+{"prompt": "", "completion": "{\"name\": \"Najadacze.pl Vege Kuchnia \u015awiata\", \"full_address\": \"No\u017cownicza 40, 50-147 Wroc\u0142aw\", \"latitude\": \"51.1120768\", \"longitude\": \"17.03605\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum \u015al\u0105ska Wroc\u0142aw\", \"full_address\": \"al. \u015al\u0105ska 1, 54-118 Wroc\u0142aw\", \"latitude\": \"51.1412791\", \"longitude\": \"16.9450581\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Sztuki Mieszcza\u0144skiej\", \"full_address\": \"Rynek 50, 50-996 Wroc\u0142aw\", \"latitude\": \"51.1096489\", \"longitude\": \"17.0317456\"}"}
+{"prompt": "", "completion": "{\"name\": \"National Museum in Wroc\u0142aw\", \"full_address\": \"plac Powsta\u0144c\u00f3w Warszawy 5, 50-153 Wroc\u0142aw\", \"latitude\": \"51.1109051\", \"longitude\": \"17.0476483\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wroclaw Contemporary Museum\", \"full_address\": \"plac Strzegomski 2, 53-681 Wroc\u0142aw\", \"latitude\": \"51.1132367\", \"longitude\": \"17.0050883\"}"}
+{"prompt": "", "completion": "{\"name\": \"Post and Telecommunication Museum\", \"full_address\": \"Zygmunta Krasi\u0144skiego 1, 50-954 Wroc\u0142aw\", \"latitude\": \"51.1083053\", \"longitude\": \"17.044484699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Etnograficzne - Oddzia\u0142 Muzeum Narodowego\", \"full_address\": \"Genera\u0142a Romualda Traugutta 111/113, 50-419 Wroc\u0142aw\", \"latitude\": \"51.0998503\", \"longitude\": \"17.053012199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Motoryzacji i Techniki Zamek Topacz\", \"full_address\": \"Templariuszy 1, 55-040 \u015al\u0119za\", \"latitude\": \"51.0341017\", \"longitude\": \"16.9913073\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Techniki Filmowej\", \"full_address\": \"G\u0142\u00f3wna 12C, 55-040 \u015al\u0119za\", \"latitude\": \"51.0342919\", \"longitude\": \"16.9916229\"}"}
+{"prompt": "", "completion": "{\"name\": \"Rac\u0142awice Panorama\", \"full_address\": \"Jana Ewangelisty Purkyniego 11, 50-155 Wroc\u0142aw\", \"latitude\": \"51.1103046\", \"longitude\": \"17.0449743\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of the Oder - Foundation of the Open Museum of Technology\", \"full_address\": \"A-1, Wybrze\u017ce Stanis\u0142awa Wyspia\u0144skiego 27, 50-370 Wroc\u0142aw\", \"latitude\": \"51.1067285\", \"longitude\": \"17.0628896\"}"}
+{"prompt": "", "completion": "{\"name\": \"Archeological Museum of Wroclaw\", \"full_address\": \"Antoniego Cieszy\u0144skiego 9, 50-136 Wroc\u0142aw\", \"latitude\": \"51.1129265\", \"longitude\": \"17.0264873\"}"}
+{"prompt": "", "completion": "{\"name\": \"Centrum Historii Zajezdnia\", \"full_address\": \"Grabiszy\u0144ska 184, 53-235 Wroc\u0142aw\", \"latitude\": \"51.0967097\", \"longitude\": \"16.991344599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pharmacy Museum\", \"full_address\": \"Kurzy Targ 4, 50-103 Wroc\u0142aw\", \"latitude\": \"51.1096504\", \"longitude\": \"17.0338855\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of Architecture\", \"full_address\": \"Bernardy\u0144ska 7, 50-156 Wroc\u0142aw\", \"latitude\": \"51.1095231\", \"longitude\": \"17.0421574\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of the Academy of Fine Arts\", \"full_address\": \"Genera\u0142a Romualda Traugutta 19/21, 50-416 Wroc\u0142aw\", \"latitude\": \"51.1062905\", \"longitude\": \"17.0452029\"}"}
+{"prompt": "", "completion": "{\"name\": \"Henryk Tomaszewski Museum of Theater\", \"full_address\": \"plac Wolno\u015bci 7A, 50-071 Wroc\u0142aw\", \"latitude\": \"51.1069341\", \"longitude\": \"17.0279696\"}"}
+{"prompt": "", "completion": "{\"name\": \"Jezioro\", \"full_address\": \"G\u0142\u00f3wna 12, 55-040 \u015al\u0119za\", \"latitude\": \"51.034003\", \"longitude\": \"16.9882231\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of Games and Computers of the Past\", \"full_address\": \"plac Orl\u0105t Lwowskich 20A, 53-605 Wroc\u0142aw\", \"latitude\": \"51.1081286\", \"longitude\": \"17.0181216\"}"}
+{"prompt": "", "completion": "{\"name\": \"Four Domes Pavilion\", \"full_address\": \"Wystawowa 1, 51-618 Wroc\u0142aw\", \"latitude\": \"51.1082478\", \"longitude\": \"17.0758624\"}"}
+{"prompt": "", "completion": "{\"name\": \"Arch-Sil. Pracownia archeologiczno - konserwatorska. Piszcza\u0142owski W., Lissak Z.\", \"full_address\": \"\u017bernicka 239A, 54-510 Wroc\u0142aw\", \"latitude\": \"51.1241107\", \"longitude\": \"16.921906\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of Cemetery Art\", \"full_address\": \"\u015al\u0119\u017cna 37/39, 53-301 Wroc\u0142aw\", \"latitude\": \"51.087884\", \"longitude\": \"17.026753199999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Moviegate\", \"full_address\": \"Plac Solny 10a, 50-061 Wroc\u0142aw\", \"latitude\": \"51.1093372\", \"longitude\": \"17.0289908\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Wojsk In\u017cynieryjnych i Chemicznych we Wroc\u0142awiu\", \"full_address\": \"Obornicka 146, 51-114 Wroc\u0142aw\", \"latitude\": \"51.1525211\", \"longitude\": \"17.0161844\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of Radio\", \"full_address\": \"al. Karkonoska 10, 53-015 Wroc\u0142aw\", \"latitude\": \"51.0715586\", \"longitude\": \"17.0064201\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of Pan Tadeusz\", \"full_address\": \"Rynek 6, 50-106 Wroc\u0142aw\", \"latitude\": \"51.1103688\", \"longitude\": \"17.0302821\"}"}
+{"prompt": "", "completion": "{\"name\": \"Geological Museum of the University of Wroclaw\", \"full_address\": \"Wojciecha Cybulskiego 30, 50-205 Wroc\u0142aw\", \"latitude\": \"51.116287\", \"longitude\": \"17.029882\"}"}
+{"prompt": "", "completion": "{\"name\": \"The City Museum of Wroclaw\", \"full_address\": \"Kazimierza Wielkiego 35, 50-077 Wroc\u0142aw\", \"latitude\": \"51.1074369\", \"longitude\": \"17.028870599999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Galeria M | Sztuka wsp\u00f3\u0142czesna | Wroc\u0142aw | Dzie\u0142a sztuki online\", \"full_address\": \"\u015awidnicka 38A, 50-068 Wroc\u0142aw\", \"latitude\": \"51.1047055\", \"longitude\": \"17.031371699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Politechniki Wroc\u0142awskiej\", \"full_address\": \"Norwida 1/3, 50-373 Wroc\u0142aw\", \"latitude\": \"51.1083117\", \"longitude\": \"17.061544299999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Budynek dworcowy kolejki w\u0105skotorowej wroc\u0142awsko-trzebnicko-prusickiej\", \"full_address\": \"plac Strzelecki 1, 52-007 Wroc\u0142aw\", \"latitude\": \"51.122999\", \"longitude\": \"17.029678399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Fundacja Ochrony Dziedzictwa Przemys\u0142owego \u015al\u0105ska\", \"full_address\": \"O\u0142awska 15, 50-123 Wroc\u0142aw\", \"latitude\": \"51.1083341\", \"longitude\": \"17.035446399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of the University of Wroc\u0142aw\", \"full_address\": \"plac Uniwersytecki 1, 50-001 Wroc\u0142aw\", \"latitude\": \"51.1137814\", \"longitude\": \"17.033504399999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Branch of the Mineralogical Museum of the University of Wroclaw\", \"full_address\": \"Ku\u017anicza 22, 50-138 Wroc\u0142aw\", \"latitude\": \"51.1121561\", \"longitude\": \"17.0343087\"}"}
+{"prompt": "", "completion": "{\"name\": \"Golgota Wschodu\", \"full_address\": \"Edwarda Wittiga 10, 51-628 Wroc\u0142aw\", \"latitude\": \"51.1027145\", \"longitude\": \"17.0858888\"}"}
+{"prompt": "", "completion": "{\"name\": \"Museum of Natural History\", \"full_address\": \"Henryka Sienkiewicza 21, 50-335 Wroc\u0142aw\", \"latitude\": \"51.1168313\", \"longitude\": \"17.0464664\"}"}
+{"prompt": "", "completion": "{\"name\": \"Archeolog Pawe\u0142 Trzepizur MP Projekt Wroc\u0142aw\", \"full_address\": \"Macedo\u0144ska 15/16, 51-113 Wroc\u0142aw\", \"latitude\": \"51.134535\", \"longitude\": \"17.030729\"}"}
+{"prompt": "", "completion": "{\"name\": \"Grodzisko Las Osobowicki\", \"full_address\": \"Osobowicka, 51-004 Wroc\u0142aw\", \"latitude\": \"51.15843\", \"longitude\": \"16.9791643\"}"}
+{"prompt": "", "completion": "{\"name\": \"Galeria Miejska\", \"full_address\": \"Kie\u0142ba\u015bnicza 28, 50-109 Wroc\u0142aw\", \"latitude\": \"51.1108305\", \"longitude\": \"17.0292442\"}"}
+{"prompt": "", "completion": "{\"name\": \"Anna German\", \"full_address\": \"Trzebnicka 5, 50-245 Wroc\u0142aw\", \"latitude\": \"51.121142\", \"longitude\": \"17.036635999999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Historic Tram Line\", \"full_address\": \"plac Teatralny 8, 55-200 Wroc\u0142aw\", \"latitude\": \"51.1055759\", \"longitude\": \"17.0319385\"}"}
+{"prompt": "", "completion": "{\"name\": \"Baszta Nied\u017awiadka XIVw.\", \"full_address\": \"50-153 Wroc\u0142aw\", \"latitude\": \"51.1119461\", \"longitude\": \"17.0402707\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pa\u0142ac Ballestrem\u00f3w we Wroc\u0142awiu\", \"full_address\": \"Pa\u0142ac Ballestrem\u00f3w, Paw\u0142a W\u0142odkowica 4, 50-072 Wroc\u0142aw\", \"latitude\": \"51.1078518\", \"longitude\": \"17.0250374\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pomnik \u017bo\u0142nierzy Niez\u0142omnych\", \"full_address\": \"Legnicka, 52-443 Wroc\u0142aw\", \"latitude\": \"51.1260175\", \"longitude\": \"16.9830379\"}"}
+{"prompt": "", "completion": "{\"name\": \"Siedlisko Kozioroga D\u0119bosza\", \"full_address\": \"50-001, Wroc\u0142aw\", \"latitude\": \"51.1160101\", \"longitude\": \"16.9877741\"}"}
+{"prompt": "", "completion": "{\"name\": \"Ruins of the Castle of the Silesian Piasts\", \"full_address\": \"48-300 Wroc\u0142aw\", \"latitude\": \"51.115868\", \"longitude\": \"17.0437564\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wroclaw Mausoleum of Silesian Piasts\", \"full_address\": \"plac Nankiera 16, 50-139 Wroc\u0142aw\", \"latitude\": \"51.112874\", \"longitude\": \"17.037243699999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Jung Hyun Gallery\", \"full_address\": \"Marsza\u0142ka J\u00f3zefa Pi\u0142sudskiego 74, 50-020 Wroc\u0142aw\", \"latitude\": \"51.1009184\", \"longitude\": \"17.0321262\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pomnik profesora Zwierzyckiego\", \"full_address\": \"bulwar J\u00f3zefa Zwierzyckiego, 52-443 Wroc\u0142aw\", \"latitude\": \"51.1161822\", \"longitude\": \"17.0278517\"}"}
+{"prompt": "", "completion": "{\"name\": \"66P (66Piekarnia)\", \"full_address\": \"Ksi\u0119cia Witolda 66, 50-203 Wroc\u0142aw\", \"latitude\": \"51.1161592\", \"longitude\": \"17.02254\"}"}
+{"prompt": "", "completion": "{\"name\": \"Wie\u017ca Matematyczna\", \"full_address\": \"plac Uniwersytecki 1, 50-137 Wroc\u0142aw\", \"latitude\": \"51.1138303\", \"longitude\": \"17.0334403\"}"}
+{"prompt": "", "completion": "{\"name\": \"Muzeum Mineralogiczne im. Kazimierza Ma\u015blankiewicza we Wroc\u0142awiu\", \"full_address\": \"plac Maxa Borna 9, 50-205 Wroc\u0142aw\", \"latitude\": \"51.1162816\", \"longitude\": \"17.0288368\"}"}
+{"prompt": "", "completion": "{\"name\": \"Stare Jatki\", \"full_address\": \"Jatki 12 -13, 50-111 Wroc\u0142aw\", \"latitude\": \"51.1121072\", \"longitude\": \"17.030659099999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"Oppenheim\", \"full_address\": \"Plac Solny 4, 50-060 Wroc\u0142aw\", \"latitude\": \"51.1099349\", \"longitude\": \"17.0293697\"}"}
+{"prompt": "", "completion": "{\"name\": \"Jezioro na Krzyckiej\", \"full_address\": \"Przyja\u017ani 121B, 53-030 Wroc\u0142aw\", \"latitude\": \"51.0670379\", \"longitude\": \"16.992831\"}"}
+{"prompt": "", "completion": "{\"name\": \"Lubomirski Princes' Museum\", \"full_address\": \"Szewska 37, 50-139 Wroc\u0142aw\", \"latitude\": \"51.11387\", \"longitude\": \"17.036597\"}"}
+{"prompt": "", "completion": "{\"name\": \"Pole flankowe\", \"full_address\": \"Parkowa, 51-616 Wroc\u0142aw\", \"latitude\": \"51.1140414\", \"longitude\": \"17.072494799999998\"}"}
+{"prompt": "", "completion": "{\"name\": \"ROD Pod D\u0119bem\", \"full_address\": \"K\u0142okoczycka, 51-376 Wroc\u0142aw\", \"latitude\": \"51.1539892\", \"longitude\": \"17.105186\"}"}
+{"prompt": "", "completion": "{\"name\": \"Drzewo\", \"full_address\": \"Kie\u0142czowska 43, 51-315 Wroc\u0142aw\", \"latitude\": \"51.144993\", \"longitude\": \"17.1223511\"}"}
+{"prompt": "", "completion": "{\"name\": \"Skwer pod D\u0119bem\", \"full_address\": \"Kowalska 78, 51-424 Wroc\u0142aw\", \"latitude\": \"51.133816\", \"longitude\": \"17.1033308\"}"}
+{"prompt": "", "completion": "{\"name\": \"Park kieszonkowy\", \"full_address\": \"Chmielna 4, 51-212 Wroc\u0142aw\", \"latitude\": \"51.1634721\", \"longitude\": \"17.1192135\"}"}

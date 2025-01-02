@@ -24,6 +24,8 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
         { headers: { "Content-Type": "application/json" } }
       );
       console.log("Generated Route:", response.data);
+      onRouteGenerated(response.data);
+      
       // Handle the response data as needed
       if (response.data.route) {
         onClose();
