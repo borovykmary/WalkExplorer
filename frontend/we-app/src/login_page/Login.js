@@ -20,21 +20,25 @@ function Login() {
       .required("Password is required"),
   });
 
-  const handleSubmit = async (values, { setSubmitting }) => {
+  const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
     try {
-      const response = await fetch("http://localhost:8000/api/login/", {
+      const response = await fetch("http://localhost:8000/login/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
       if (!response.ok) {
-        throw new Error("Login failed");
+        const errorData = await response.json();
+        if (errorData.error) {
+          setFieldError("email", errorData.error); // Show error on email field
+        }
+        throw new Error(errorData.error || "Login failed");
       }
       const data = await response.json();
-      alert("Login successful!");
-      navigate("/main");
+      localStorage.setItem("authToken", data.token); // Store token
+      navigate("/main"); // Redirect to main page
     } catch (error) {
-      alert(error.message);
+      alert(error.message); // Display generic error message
     } finally {
       setSubmitting(false);
     }

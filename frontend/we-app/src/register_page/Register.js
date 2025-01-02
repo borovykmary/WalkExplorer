@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./Register.css";
@@ -18,6 +18,7 @@ const validationSchema = Yup.object({
 });
 
 const Register = () => {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -27,21 +28,26 @@ const Register = () => {
     validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await fetch("http://localhost:8000/api/register/", {
+        const response = await fetch("http://localhost:8000/register/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(values),
+          body: JSON.stringify({
+            email: values.email,
+            password: values.password,
+          }),
         });
 
         const data = await response.json();
-        if (data.success) {
-          alert("Registration successful!");
+        if (response.ok) {
+          alert(data.message || "Registration successful!");
+          navigate("/login");
         } else {
-          alert(data.message || "Registration failed.");
+          alert(data.error || "Registration failed.");
         }
       } catch (error) {
+        console.error("Error:", error);
         alert("An error occurred. Please try again.");
       }
     },
