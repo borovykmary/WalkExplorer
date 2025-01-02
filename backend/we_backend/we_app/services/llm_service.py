@@ -2,15 +2,25 @@ import openai
 import json
 from dotenv import load_dotenv
 import os
+from django.core.cache import cache
 
 load_dotenv()
 
 # Get the API key from environment variables
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+def load_filtered_data(file_name):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, file_name)
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read()
+    
+filtered_data = load_filtered_data('filtered_dataset.csv')
 
 def read_prompts(file_name):
-    with open(file_name, 'r') as file:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, file_name)
+    with open(file_path, 'r', encoding='utf-8') as file:
         return file.readlines()
     
 def filter_response(response):
@@ -43,19 +53,35 @@ def parse_response(response_content):
     
     return title, description, start, waypoints, end
     
-def get_route_details(user_input):
+def initialize_context():
     prompts = read_prompts('prompts.txt')
+    context = [
+        {"role": "system", "content": prompts[0]},
+        {"role": "system", "content": prompts[1]},
+        {"role": "system", "content": prompts[2]},
+        {"role": "system", "content": filtered_data}
+    ]
+    return context
+
+def get_route_details(user_input):
+    context = cache.get('conversation_context', initialize_context())
+    dataset_sent = cache.get('dataset_sent', False)
+    
+    if not dataset_sent:
+        context.append({"role": "system", "content": filtered_data})
+        cache.set('dataset_sent', True)
+    
+    context.append({"role": "user", "content": user_input})
+
     completion = openai.chat.completions.create(
         model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": prompts[0]},
-            {"role": "system", "content": prompts[1]},
-            {"role": "user", "content": prompts[2]},
-            {"role": "user", "content": user_input}
-        ]
+        messages=context
     )
 
     response_content = completion.choices[0].message.content
+    context.append({"role": "assistant", "content": response_content})
+    cache.set('conversation_context', context)
+    
     print(response_content)
     return response_content
     
