@@ -51,7 +51,7 @@ function Login() {
   return (
     <div className="app-container">
       <LogoIcon className="logo" />
-      <div className="welcome-text">Welcome to Walker Explorer!</div>
+      <div className="welcome-text">Welcome to Walk Explorer!</div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

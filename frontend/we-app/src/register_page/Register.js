@@ -56,7 +56,7 @@ const Register = () => {
   return (
     <div className="app-container">
       <LogoIcon className="logo" />
-      <h2 className="welcome-text">Welcome to Walker Explorer</h2>
+      <h2 className="welcome-text">Welcome to Walk Explorer!</h2>
 
       <form onSubmit={formik.handleSubmit} className="register-form">
         <div className="form-group">
