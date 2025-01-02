@@ -5,9 +5,8 @@ import pandas as pd
 csv_file_path = 'dataset.csv'
 df = pd.read_csv(csv_file_path)
 
-columns_to_keep = ['name', 'full_address']
+columns_to_keep = ['name', 'full_address','latitude','longitude']
 filtered_df = df[columns_to_keep]
-
 filtered_csv_file_path = 'filtered_dataset.csv'
 filtered_df.to_csv(filtered_csv_file_path, index=False, encoding='utf-8')
 

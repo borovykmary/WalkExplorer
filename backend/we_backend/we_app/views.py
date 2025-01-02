@@ -9,10 +9,13 @@ def generate_route_view(request):
         try:
             data = json.loads(request.body)
             user_input = data.get('user_input', '')
+            route_style = data.get('route_style', '')
+            route_time = data.get('route_time', '')
+            
             if not user_input:
                 return JsonResponse({'error': 'No user input provided'}, status=400)
             
-            result = process_user_input(user_input)
+            result = process_user_input(user_input, route_style, route_time)
             title, description, start, waypoints, end = result
             
             return JsonResponse({

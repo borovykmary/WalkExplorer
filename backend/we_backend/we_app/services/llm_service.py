@@ -27,7 +27,7 @@ def filter_response(response):
     required_keys = ['title', 'description', 'start', 'waypoints', 'endpoint']
     
     if response == "ERROR OCCURED":
-        return "ERROR OCURRED DURING RESPONSE GENERATION"
+        return "ERROR OCURRED DURING RESPONSE GENERATION INVALID REQUEST"
     
     for key in required_keys:
         if key not in response:
@@ -63,14 +63,16 @@ def initialize_context():
     ]
     return context
 
-def get_route_details(user_input):
+def get_route_details(user_input, route_style, route_time):
     context = cache.get('conversation_context', initialize_context())
     dataset_sent = cache.get('dataset_sent', False)
     
     if not dataset_sent:
         context.append({"role": "system", "content": filtered_data})
         cache.set('dataset_sent', True)
+        print("dataset_sent set to True")
     
+    user_input = user_input + f" Route style: {route_style}, Route time: {route_time}"
     context.append({"role": "user", "content": user_input})
 
     completion = openai.chat.completions.create(
@@ -81,6 +83,7 @@ def get_route_details(user_input):
     response_content = completion.choices[0].message.content
     context.append({"role": "assistant", "content": response_content})
     cache.set('conversation_context', context)
+    print("conversation_context updated")
     
     print(response_content)
     return response_content
