@@ -42,6 +42,8 @@ const Main = () => {
       color: "#0000FF",
     },
   ]);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [adjustedWaypoints, setAdjustedWaypoints] = useState([]);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
@@ -162,6 +164,7 @@ const Main = () => {
       closeFavouritesModal();
     }
   };
+
   return (
     <div className="app-container">
       <div className="top-navigation">
@@ -211,15 +214,16 @@ const Main = () => {
           ))}
           {selectedRoute && (
             <Marker
-              longitude={selectedRoute.path[0][0]}
-              latitude={selectedRoute.path[0][1]}
+              longitude={selectedRoute.path[selectedRoute.path.length - 1][0]}
+              latitude={selectedRoute.path[selectedRoute.path.length - 1][1]}
               anchor="bottom"
             >
-              <div className="marker-start"></div>
+              <div
+                className="marker-end"
+                style={{ backgroundColor: selectedRoute.color }}
+              ></div>
             </Marker>
           )}
-
-          {/* End Marker */}
           {selectedRoute && (
             <Marker
               longitude={selectedRoute.path[selectedRoute.path.length - 1][0]}

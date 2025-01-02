@@ -39,9 +39,23 @@ body,
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+.dropdown-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .dropdown {
-  width: 100%;
-  margin: 10px 0;
+  flex: 1;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown-2 {
+  width: 40%;
+  margin: 5px 0;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -84,4 +98,9 @@ body,
   font-size: 14px;
   font-weight: 300;
   color: #454c52;
+}
+.message {
+  margin-top: 1px;
+  color: rgb(86, 18, 18);
+  font-size: 12px;
 }

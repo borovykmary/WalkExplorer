@@ -163,3 +163,55 @@
   font-size: 14px;
   margin-bottom: 5px;
 }
+.edit-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-controls button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-controls button:hover {
+  background-color: #0056b3;
+}
+.marker-waypoint {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.marker-start {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.marker-end {
+  width: 15px;
+  height: 15px;
+  background-color: blue;
+  border-radius: 50%;
+}
+.marker-waypoint {
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+
+.marker-waypoint.editing {
+  background-color: #00ff00; /* Green for edit mode */
+  border: 2px solid #000;
+}

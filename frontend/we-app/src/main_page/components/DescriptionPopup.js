@@ -2,7 +2,12 @@ import React from "react";
 import { Popup } from "react-map-gl";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const DescriptionPopup = ({ descriptionPopup, selectedRoute, onClose }) => {
+const DescriptionPopup = ({
+  descriptionPopup,
+  selectedRoute,
+  onClose,
+  onModifyRoute,
+}) => {
   return (
     <Popup
       longitude={descriptionPopup.longitude}
@@ -66,7 +71,7 @@ const DescriptionPopup = ({ descriptionPopup, selectedRoute, onClose }) => {
         </div>
 
         {/* Footer Section */}
-        <button className="popup-button">
+        <button className="popup-button" onClick={onModifyRoute}>
           Modify Route
           <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
         </button>

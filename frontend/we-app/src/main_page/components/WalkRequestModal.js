@@ -10,8 +10,9 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [walkType, setWalkType] = useState("Thematic Walk");
-  const [newToTown, setNewToTown] = useState(false);
+  const [timeSpan, setTimeSpan] = useState("Time Span");
   const [additionalInput, setAdditionalInput] = useState("");
+  const [showOtherMessage, setShowOtherMessage] = useState(false);
 
   if (!isVisible) return null;
 
@@ -79,7 +80,24 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
       }
     }
   };
-
+  const handleTimeSpanChange = (e) => {
+    const value = e.target.value;
+    setTimeSpan(value);
+    if (value === "Other") {
+      setShowOtherMessage(true);
+    } else {
+      setShowOtherMessage(false);
+    }
+  };
+  const handleWalkTypeChange = (e) => {
+    const value = e.target.value;
+    setWalkType(value);
+    if (value === "Other") {
+      setShowOtherMessage(true);
+    } else {
+      setShowOtherMessage(false);
+    }
+  };
   return (
     <div className="overlay">
       <div className="modal">
@@ -90,26 +108,38 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
               walk, are you new to town? Share all the details, I will help you
               to make a pleasant trip.
             </div>
-            <select
-              className="dropdown"
-              value={walkType}
-              onChange={(e) => setWalkType(e.target.value)}
-            >
-              <option value="Thematic Walk">Thematic Walk</option>
-              <option value="Historical">Historical</option>
-              <option value="Nature-themed">Nature-themed</option>
-              <option value="Modern">Modern</option>
-              <option value="Art-themed">Art-themed</option>
-              <option value="Other">Other</option>
-            </select>
-            <label className="checkbox-container">
-              <input
-                type="checkbox"
-                checked={newToTown}
-                onChange={(e) => setNewToTown(e.target.checked)}
-              />
-              New-to-town
-            </label>
+            <div className="dropdown-container">
+              <select
+                className="dropdown"
+                value={walkType}
+                onChange={handleWalkTypeChange}
+              >
+                <option value="Thematic Walk">Thematic Walk</option>
+                <option value="Historical">Historical</option>
+                <option value="Nature-themed">Nature-themed</option>
+                <option value="Modern">Modern</option>
+                <option value="Art-themed">Art-themed</option>
+                <option value="Other">Other</option>
+              </select>
+              <select
+                className="dropdown-2"
+                value={timeSpan}
+                onChange={handleTimeSpanChange}
+              >
+                <option value="Time Span">Time Span</option>
+                <option value="30 min">30 min</option>
+                <option value="1 hour">1 hour</option>
+                <option value="1,5 hour">1,5 hour</option>
+                <option value="2 hours">2 hours</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            {showOtherMessage && (
+              <div className="message">
+                If you select option 'Other' you should provide this information
+                in the input.
+              </div>
+            )}
             <textarea
               className="textarea"
               placeholder="Add Text"
