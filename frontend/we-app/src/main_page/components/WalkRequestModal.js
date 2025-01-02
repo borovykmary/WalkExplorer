@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import "./WalkRequestModal.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CloseIcon from "@mui/icons-material/Close";
@@ -35,7 +35,7 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
       console.error("Error generating route:", error);
     }
   };
-  */
+  
   const handleSubmit = () => {
     if (step === 1) {
       setLoading(true);
@@ -80,6 +80,55 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
       } else {
         console.error("Mock data error: no coordinates found.");
       }
+    }
+  };
+  */
+  const handleSubmit = async () => {
+    if (step === 1) {
+      setLoading(true);
+
+      // Prepare the request payload
+      const requestData = {
+        user_input: userInput,
+        route_style: walkType,
+        route_time: timeSpan,
+      };
+
+      try {
+        const response = await axios.post(
+          "http://localhost:8000/api/generate_route/",
+          requestData,
+          { headers: { "Content-Type": "application/json" } }
+        );
+
+        console.log("Generated Route:", response.data);
+
+        // Handle the response data
+        if (response.data.routes) {
+          const routes = response.data.routes.map((route) => ({
+            name: route.title,
+            description: route.description,
+            path: [
+              [route.start.longitude, route.start.latitude],
+              ...route.waypoints.map((wp) => [wp.longitude, wp.latitude]),
+              [route.endpoint.longitude, route.endpoint.latitude],
+            ],
+            color: "#FFD700", // You can customize the color as needed
+          }));
+
+          onRouteGenerated(routes);
+          onClose();
+        } else {
+          console.error("No routes found in the response.");
+        }
+      } catch (error) {
+        console.error("Error generating route:", error);
+      } finally {
+        setLoading(false);
+      }
+    } else if (step === 2) {
+      // Handle additional input step if needed
+      setStep(1); // Reset to step 1 for now
     }
   };
   const handleTimeSpanChange = (e) => {

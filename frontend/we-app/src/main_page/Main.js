@@ -42,8 +42,8 @@ const Main = () => {
       color: "#0000FF",
     },
   ]);
-  const [isEditMode, setIsEditMode] = useState(false);
-  const [adjustedWaypoints, setAdjustedWaypoints] = useState([]);
+  const colors = ["#FFD700", "#0000FF", "#E94B3E"];
+  let colorIndex = 0;
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
@@ -65,10 +65,11 @@ const Main = () => {
       if (data.routes.length > 0) {
         const route = {
           name,
-          color,
+          color: colors[colorIndex % colors.length],
           description,
           path: data.routes[0].geometry.coordinates, // Use street-aligned route
         };
+        colorIndex++;
         setRoutes((prevRoutes) => [...prevRoutes, route]);
       }
     } catch (error) {
@@ -77,43 +78,12 @@ const Main = () => {
       setLoading(false);
     }
   };
-
-  const generateMockRoutes = () => {
-    const mockRouteRequests = [
-      {
-        name: "Golden Path",
-        color: "#FFD700", // Yellow
-        description:
-          "Golden Path takes you on a delightful walk starting at Example street. You will pass through charming residential streets, stop by the historic Stare Miasto (Old Town), and finish with a beautiful view at Wrocław Market Square.",
-        waypoints: [
-          [17.0362, 51.1227], // Start
-          [17.032, 51.1105], // Stop 1: Stare Miasto (Old Town)
-          [17.038, 51.1095], // Stop 2: Wrocław Market Square
-        ],
-      },
-      {
-        name: "Sea Breeze",
-        color: "#0000FF", // Blue
-        description:
-          "Blue one? Great choice! Starting at Example street, you’ll explore peaceful parks, take a break at a riverside cafe, and finish your relaxing walk by the Oder River for some quiet moments alone.",
-        waypoints: [
-          [17.0362, 51.1227], // Start
-          [17.043, 51.12], // Stop 1: Park Słowackiego
-          [17.0505, 51.118], // Stop 2: Riverside Cafe
-          [17.0585, 51.117], // End: Oder River
-        ],
-      },
-    ];
-
-    // Fetch routes for all mock requests
-    mockRouteRequests.forEach((route) =>
-      fetchRouteFromMapbox(
-        route.waypoints,
-        route.color,
-        route.name,
-        route.description
-      )
-    );
+  const handleRouteGenerated = (routes) => {
+    const updatedRoutes = routes.map((route) => ({
+      ...route,
+      color: colors[colorIndex++ % colors.length],
+    }));
+    setRoutes((prevRoutes) => [...prevRoutes, ...updatedRoutes]);
   };
 
   // Handle map clicks for routes
@@ -253,7 +223,7 @@ const Main = () => {
       <WalkRequestModal
         isVisible={isModalVisible}
         onClose={closeModal}
-        onRouteGenerated={generateMockRoutes}
+        onRouteGenerated={handleRouteGenerated}
       />
       <FavouritesModal
         isVisible={isFavouritesModalVisible}
