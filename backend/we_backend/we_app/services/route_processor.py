@@ -2,9 +2,11 @@ from .llm_service import get_route_details, parse_response, filter_response
 
 def process_user_input(user_input, route_style, route_time):
     """
-    Process user input to generate a walking route.
+    Process user input to generate walking routes.
     """
-    return parse_response(filter_response(get_route_details(user_input, route_style, route_time)))
+    response_content = get_route_details(user_input, route_style, route_time)
+    filtered_response = filter_response(response_content)
+    return parse_response(filtered_response)
 
 if __name__ == '__main__':
     user_input = input("Enter your route details: ")

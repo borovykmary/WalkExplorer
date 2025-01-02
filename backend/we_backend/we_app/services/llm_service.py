@@ -31,8 +31,8 @@ def filter_response(response_content):
     # Parse JSON
     response = json.loads(json_str)
     
-    required_keys = ['title', 'description', 'route']
-    route_keys = ['start', 'waypoints', 'endpoint']
+    required_keys = ['routes']
+    route_keys = ['route_index', 'title', 'description', 'start', 'waypoints', 'endpoint']
     location_keys = ['name', 'address', 'latitude', 'longitude']
     
     if response == "ERROR OCCURED":
@@ -42,40 +42,55 @@ def filter_response(response_content):
         if key not in response:
             return "ERROR OCCURRED DURING RESPONSE GENERATION"
     
-    route = response['route']
-    for key in route_keys:
-        if key not in route:
-            return "ERROR OCCURRED DURING RESPONSE GENERATION"
-        if key == 'waypoints':
-            for waypoint in route['waypoints']:
+    routes = response['routes']
+    for route in routes:
+        for key in route_keys:
+            if key not in route:
+                return "ERROR OCCURRED DURING RESPONSE GENERATION"
+            if key == 'waypoints':
+                for waypoint in route['waypoints']:
+                    for loc_key in location_keys:
+                        if loc_key not in waypoint:
+                            return "ERROR OCCURRED DURING RESPONSE GENERATION"
+            elif key in ['start', 'endpoint']:
                 for loc_key in location_keys:
-                    if loc_key not in waypoint:
+                    if loc_key not in route[key]:
                         return "ERROR OCCURRED DURING RESPONSE GENERATION"
-        else:
-            for loc_key in location_keys:
-                if loc_key not in route[key]:
-                    return "ERROR OCCURRED DURING RESPONSE GENERATION"
     
     return response
 
 def parse_response(response):
-    # Extract route details
-    title = response['title']
-    description = response['description']
-    start = response['route']['start']
-    waypoints = response['route']['waypoints']
-    end = response['route']['endpoint']
+    routes = response['routes']
+    parsed_routes = []
+
+    for route in routes:
+        route_index = route['route_index']
+        title = route['title']
+        description = route['description']
+        start = route['start']
+        waypoints = route['waypoints']
+        end = route['endpoint']
+        
+        print(route_index, title, description, start, waypoints, end)
+        
+        parsed_routes.append({
+            'route_index': route_index,
+            'title': title,
+            'description': description,
+            'start': start,
+            'waypoints': waypoints,
+            'endpoint': end
+        })
     
-    print(title, description, start, waypoints, end)
-    
-    return title, description, start, waypoints, end
+    return parsed_routes
     
 def initialize_context():
     prompts = read_prompts('prompts.txt')
     context = [
         {"role": "system", "content": prompts[0]},
         {"role": "system", "content": prompts[1]},
-        {"role": "system", "content": prompts[2]},
+        {"role": "system", "content": ''.join(prompts[2:106])},
+        {"role": "system", "content": ''.join(prompts[107:108])},
         {"role": "system", "content": filtered_data}
     ]
     return context
