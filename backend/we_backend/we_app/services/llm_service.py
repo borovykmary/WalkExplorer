@@ -23,32 +23,49 @@ def read_prompts(file_name):
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.readlines()
     
-def filter_response(response):
-    required_keys = ['title', 'description', 'start', 'waypoints', 'endpoint']
-    
-    if response == "ERROR OCCURED":
-        return "ERROR OCURRED DURING RESPONSE GENERATION INVALID REQUEST"
-    
-    for key in required_keys:
-        if key not in response:
-            return "ERROR OCURRED DURING RESPONSE GENERATION"
-    
-    return response
-
-def parse_response(response_content):
+def filter_response(response_content):
     json_start = response_content.find('{')
     json_end = response_content.rfind('}') + 1
     json_str = response_content[json_start:json_end]
     
     # Parse JSON
-    route_details = json.loads(json_str)
+    response = json.loads(json_str)
     
-    # Extract coordinates
-    title = route_details['title']
-    description = route_details['description']
-    start = route_details['start']
-    waypoints = route_details['waypoints']
-    end = route_details['endpoint']
+    required_keys = ['title', 'description', 'route']
+    route_keys = ['start', 'waypoints', 'endpoint']
+    location_keys = ['name', 'address', 'latitude', 'longitude']
+    
+    if response == "ERROR OCCURED":
+        return "ERROR OCCURRED DURING RESPONSE GENERATION INVALID REQUEST"
+    
+    for key in required_keys:
+        if key not in response:
+            return "ERROR OCCURRED DURING RESPONSE GENERATION"
+    
+    route = response['route']
+    for key in route_keys:
+        if key not in route:
+            return "ERROR OCCURRED DURING RESPONSE GENERATION"
+        if key == 'waypoints':
+            for waypoint in route['waypoints']:
+                for loc_key in location_keys:
+                    if loc_key not in waypoint:
+                        return "ERROR OCCURRED DURING RESPONSE GENERATION"
+        else:
+            for loc_key in location_keys:
+                if loc_key not in route[key]:
+                    return "ERROR OCCURRED DURING RESPONSE GENERATION"
+    
+    return response
+
+def parse_response(response):
+    # Extract route details
+    title = response['title']
+    description = response['description']
+    start = response['route']['start']
+    waypoints = response['route']['waypoints']
+    end = response['route']['endpoint']
+    
     print(title, description, start, waypoints, end)
     
     return title, description, start, waypoints, end
