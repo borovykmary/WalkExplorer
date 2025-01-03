@@ -15,74 +15,9 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
   const [showOtherMessage, setShowOtherMessage] = useState(false);
 
   if (!isVisible) return null;
+  const colors = ["#FFD700", "#0000FF", "#E94B3E"];
+  let colorIndex = 0;
 
-  /* const handleSubmit = async () => {
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/api/generate_route/",
-        { user_input: userInput },
-        { headers: { "Content-Type": "application/json" } }
-      );
-      console.log("Generated Route:", response.data);
-      onRouteGenerated(response.data);
-      
-      // Handle the response data as needed
-      if (response.data.route) {
-        onClose();
-        alert("Route generated! Check the map."); // Placeholder for now
-      }
-    } catch (error) {
-      console.error("Error generating route:", error);
-    }
-  };
-  
-  const handleSubmit = () => {
-    if (step === 1) {
-      setLoading(true);
-
-      // Simulate AI processing delay
-      setTimeout(() => {
-        setLoading(false);
-        setStep(2); // Proceed to additional input step
-      }, 2000);
-    } else if (step === 2) {
-      const mockResponse = {
-        routes: [
-          {
-            geometry: {
-              coordinates: [
-                [17.020462, 51.094802],
-                [17.022123, 51.095678],
-                [17.024567, 51.096789],
-                [17.0289, 51.097456],
-                [17.0315, 51.1083], // Waypoint
-                [17.037, 51.1105], // Endpoint
-              ],
-            },
-            distance: 5000,
-            duration: 3600,
-          },
-        ],
-        waypoints: [
-          { location: [17.020462, 51.094802], name: "Start Point" },
-          { location: [17.0315, 51.1083], name: "Waypoint" },
-          { location: [17.037, 51.1105], name: "End Point" },
-        ],
-      };
-
-      console.log("Mocked Route:", mockResponse);
-
-      const coordinates = mockResponse.routes[0]?.geometry?.coordinates;
-
-      if (coordinates) {
-        onRouteGenerated(coordinates); // Pass mock data to Main.js
-        onClose(); // Close the modal
-      } else {
-        console.error("Mock data error: no coordinates found.");
-      }
-    }
-  };
-  */
   const handleSubmit = async () => {
     if (step === 1) {
       setLoading(true);
@@ -103,18 +38,21 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
 
         console.log("Generated Route:", response.data);
 
-        // Handle the response data
         if (response.data.routes) {
-          const routes = response.data.routes.map((route) => ({
-            name: route.title,
-            description: route.description,
-            path: [
-              [route.start.longitude, route.start.latitude],
-              ...route.waypoints.map((wp) => [wp.longitude, wp.latitude]),
-              [route.endpoint.longitude, route.endpoint.latitude],
-            ],
-            color: "#FFD700", // You can customize the color as needed
-          }));
+          const routes = response.data.routes.map((route) => {
+            const color = colors[colorIndex % colors.length];
+            colorIndex++;
+            return {
+              name: route.title,
+              description: route.description,
+              path: [
+                [route.start.longitude, route.start.latitude],
+                ...route.waypoints.map((wp) => [wp.longitude, wp.latitude]),
+                [route.endpoint.longitude, route.endpoint.latitude],
+              ],
+              color: color,
+            };
+          });
 
           onRouteGenerated(routes);
           onClose();
@@ -127,7 +65,6 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
         setLoading(false);
       }
     } else if (step === 2) {
-      // Handle additional input step if needed
       setStep(1); // Reset to step 1 for now
     }
   };
