@@ -30,7 +30,6 @@ const Main = () => {
   const [routes, setRoutes] = useState([]);
   const [selectedRoute, setSelectedRoute] = useState(null);
   const [descriptionPopup, setDescriptionPopup] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [savedRoutes, setSavedRoutes] = useState([
     {
       name: "Golden Path",
@@ -83,9 +82,13 @@ const Main = () => {
           latitude: event.lngLat.lat,
           name: clickedRoute.name,
           description: clickedRoute.description,
+          waypoints: clickedRoute.path,
         });
       }
     }
+  };
+  const handleRouteClick = (route) => {
+    setSelectedRoute(route);
   };
 
   const handleSelectRoute = async (route) => {
@@ -105,11 +108,23 @@ const Main = () => {
         latitude: newRoute.path[0][1],
         name: newRoute.name,
         description: newRoute.description,
+        waypoints: newRoute.path,
       });
     }
 
     setFavouritesModalVisible(false);
   };
+  const Point = ({ color }) => (
+    <div
+      style={{
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        backgroundColor: color,
+      }}
+    ></div>
+  );
+
   return (
     <div className="app-container">
       <div className="top-navigation">
@@ -122,9 +137,9 @@ const Main = () => {
       <div className="map-container">
         <Map
           initialViewState={{
-            longitude: 17.0362,
-            latitude: 51.1227,
-            zoom: 16, // Closer zoom for a detailed view
+            longitude: 17.0323,
+            latitude: 51.1106,
+            zoom: 12, // Closer zoom for a detailed view
           }}
           style={{ width: "100%", height: "100%" }}
           mapStyle="mapbox://styles/mapbox/streets-v11"
@@ -163,21 +178,41 @@ const Main = () => {
                 longitude={route.path[0][0]}
                 latitude={route.path[0][1]}
                 anchor="bottom"
+                onClick={() => handleRouteClick(route)}
               >
                 <div
                   className="marker-start"
-                  style={{ backgroundColor: route.color }}
-                ></div>
+                  style={{
+                    backgroundColor:
+                      selectedRoute?.name === route.name ? route.color : "gray",
+                  }}
+                >
+                  <Point
+                    color={
+                      selectedRoute?.name === route.name ? route.color : "gray"
+                    }
+                  />
+                </div>
               </Marker>
               <Marker
                 longitude={route.path[route.path.length - 1][0]}
                 latitude={route.path[route.path.length - 1][1]}
                 anchor="bottom"
+                onClick={() => handleRouteClick(route)}
               >
                 <div
                   className="marker-end"
-                  style={{ backgroundColor: route.color }}
-                ></div>
+                  style={{
+                    backgroundColor:
+                      selectedRoute?.name === route.name ? route.color : "gray",
+                  }}
+                >
+                  <Point
+                    color={
+                      selectedRoute?.name === route.name ? route.color : "gray"
+                    }
+                  />
+                </div>
               </Marker>
             </React.Fragment>
           ))}

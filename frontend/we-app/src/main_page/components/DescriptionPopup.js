@@ -42,35 +42,8 @@ const DescriptionPopup = ({
           <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
             {descriptionPopup.description}
           </p>
-          <h4
-            style={{
-              fontSize: "14px",
-              margin: "10px 0 5px",
-              fontWeight: "600",
-            }}
-          >
-            Waypoints:
-          </h4>
-          <ul style={{ padding: "0 15px", margin: 0, listStyle: "none" }}>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Start:</strong> your location
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Stop point:</strong> National Wroclaw Museum
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Stop point:</strong> Art monument "name"
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Food Stop:</strong> Seafood restaurant "Marine"
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>End point:</strong> River Odra
-            </li>
-          </ul>
         </div>
 
-        {/* Footer Section */}
         <button className="popup-button" onClick={onModifyRoute}>
           Modify Route
           <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
