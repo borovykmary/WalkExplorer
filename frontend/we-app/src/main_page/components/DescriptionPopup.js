@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Popup } from "react-map-gl";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ExportModal from "./ExportModal";
+
 const fetchAddress = async (longitude, latitude) => {
   const mapboxToken =
     "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
@@ -24,8 +26,11 @@ const DescriptionPopup = ({
   selectedRoute,
   onClose,
   onModifyRoute,
+  setRoutes,
+  setDescriptionPopup,
 }) => {
   const [waypointAddresses, setWaypointAddresses] = useState([]);
+  const [exportModalOpen, setExportModalOpen] = useState(false);
   useEffect(() => {
     const fetchAddresses = async () => {
       const addresses = await Promise.all(
@@ -39,57 +44,68 @@ const DescriptionPopup = ({
 
     fetchAddresses();
   }, [descriptionPopup.mainWaypoints]);
-
+  const handleProceed = () => {
+    setRoutes([selectedRoute]);
+    setDescriptionPopup(null);
+    setExportModalOpen(true);
+  };
   return (
-    <Popup
-      longitude={descriptionPopup.longitude}
-      latitude={descriptionPopup.latitude}
-      closeOnClick={true}
-      onClose={onClose}
-      className="custom-popup"
-      closeButton={false}
-    >
-      <div className="popup-content">
-        <div
-          className="popup-header"
-          style={{
-            borderBottom: `4px solid ${selectedRoute.color}`,
-            marginBottom: "10px",
-            paddingBottom: "5px",
-          }}
-        >
-          <h3
+    <>
+      <Popup
+        longitude={descriptionPopup.longitude}
+        latitude={descriptionPopup.latitude}
+        closeOnClick={true}
+        onClose={onClose}
+        className="custom-popup"
+        closeButton={false}
+      >
+        <div className="popup-content">
+          <div
+            className="popup-header"
             style={{
-              margin: 0,
-              fontSize: "16px",
-              fontWeight: "600",
-              color: selectedRoute.color,
+              borderBottom: `4px solid ${selectedRoute.color}`,
+              marginBottom: "10px",
+              paddingBottom: "5px",
             }}
           >
-            {descriptionPopup.name}
-          </h3>
-        </div>
-
-        <div className="popup-body">
-          <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
-            {descriptionPopup.description}
-          </p>
-          <div className="waypoints">
-            <h4>Waypoints:</h4>
-            <ul>
-              {waypointAddresses.map((address, index) => (
-                <li key={index}>{address}</li>
-              ))}
-            </ul>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: "16px",
+                fontWeight: "600",
+                color: selectedRoute.color,
+              }}
+            >
+              {descriptionPopup.name}
+            </h3>
           </div>
-        </div>
 
-        <button className="popup-button" onClick={onModifyRoute}>
-          Proceed
-          <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
-        </button>
-      </div>
-    </Popup>
+          <div className="popup-body">
+            <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
+              {descriptionPopup.description}
+            </p>
+            <div className="waypoints">
+              <h4>Waypoints:</h4>
+              <ul>
+                {waypointAddresses.map((address, index) => (
+                  <li key={index}>{address}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <button className="popup-button" onClick={handleProceed}>
+            Proceed
+            <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
+          </button>
+        </div>
+      </Popup>
+      <ExportModal
+        open={exportModalOpen}
+        onClose={() => setExportModalOpen(false)}
+        route={selectedRoute}
+      />
+    </>
   );
 };
 

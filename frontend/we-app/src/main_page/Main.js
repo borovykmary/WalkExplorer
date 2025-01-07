@@ -223,7 +223,8 @@ const Main = () => {
               descriptionPopup={descriptionPopup}
               selectedRoute={selectedRoute}
               onClose={() => setDescriptionPopup(null)}
-              onModifyRoute={() => console.log("Modify route")}
+              setRoutes={setRoutes}
+              setDescriptionPopup={setDescriptionPopup}
             />
           )}
         </Map>

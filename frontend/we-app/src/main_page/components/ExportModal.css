@@ -1,0 +1,39 @@
+.export-modal {
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 20vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.export-modal h6 {
+  margin-bottom: 16px;
+}
+
+.export-modal p {
+  margin-bottom: 16px;
+}
+
+.export-modal a {
+  color: #1a73e8;
+  text-decoration: none;
+  word-break: break-all;
+  display: block;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.export-modal a:hover {
+  text-decoration: underline;
+}
+
+.export-modal .MuiFormControlLabel-root {
+  margin-bottom: 16px;
+}
+
+.export-modal .MuiButton-root {
+  display: block;
+  margin: auto;
+}
