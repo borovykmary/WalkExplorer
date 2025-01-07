@@ -29,6 +29,7 @@ body,
   width: 320px;
   height: auto;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .textarea {
@@ -103,4 +104,54 @@ body,
   margin-top: 1px;
   color: rgb(86, 18, 18);
   font-size: 12px;
+}
+
+.confirmation-overlay {
+  position: fixed;
+  top: 300px;
+  left: 107px;
+  width: 300px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.confirmation-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.confirmation-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-button {
+  background-color: #ed5514;
+  color: white;
+  font-weight: bold;
 }
