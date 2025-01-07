@@ -9,6 +9,7 @@ import { ReactComponent as FavouritesIcon } from "./assets/favourites.svg";
 import { ReactComponent as AddIcon } from "./assets/button-add.svg";
 import DescriptionPopup from "./components/DescriptionPopup";
 import FavouritesModal from "./components/FavouritesModal";
+import PlaceIcon from "@mui/icons-material/Place";
 
 const mapboxToken =
   "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
@@ -63,7 +64,11 @@ const Main = () => {
     const alignedRoutes = await Promise.all(
       routes.map(async (route) => {
         const alignedPath = await fetchRouteFromMapbox(route);
-        return { ...route, path: alignedPath };
+        return {
+          ...route,
+          path: alignedPath,
+          mainWaypoints: route.mainWaypoints,
+        };
       })
     );
     setRoutes((prevRoutes) => [...prevRoutes, ...alignedRoutes]);
@@ -76,6 +81,14 @@ const Main = () => {
         (route) => `${route.name}-layer` === features[0].layer.id
       );
       if (clickedRoute) {
+        setRoutes((prevRoutes) => {
+          const otherRoutes = prevRoutes.filter(
+            (route) => route.name !== clickedRoute.name
+          );
+          return [...otherRoutes, clickedRoute];
+        });
+
+        console.log("Clicked route:", clickedRoute);
         setSelectedRoute(clickedRoute);
         setDescriptionPopup({
           longitude: event.lngLat.lng,
@@ -83,12 +96,19 @@ const Main = () => {
           name: clickedRoute.name,
           description: clickedRoute.description,
           waypoints: clickedRoute.path,
+          mainWaypoints: clickedRoute.mainWaypoints,
         });
       }
     }
   };
-  const handleRouteClick = (route) => {
-    setSelectedRoute(route);
+  const handleRouteClick = (clickedRoute) => {
+    setRoutes((prevRoutes) => {
+      const otherRoutes = prevRoutes.filter(
+        (route) => route.name !== clickedRoute.name
+      );
+      return [...otherRoutes, clickedRoute];
+    });
+    setSelectedRoute(clickedRoute);
   };
 
   const handleSelectRoute = async (route) => {
@@ -114,16 +134,6 @@ const Main = () => {
 
     setFavouritesModalVisible(false);
   };
-  const Point = ({ color }) => (
-    <div
-      style={{
-        width: "10px",
-        height: "10px",
-        borderRadius: "50%",
-        backgroundColor: color,
-      }}
-    ></div>
-  );
 
   return (
     <div className="app-container">
@@ -172,55 +182,48 @@ const Main = () => {
               />
             </Source>
           ))}
-          {routes.map((route) => (
-            <React.Fragment key={`${route.name}-markers`}>
-              <Marker
-                longitude={route.path[0][0]}
-                latitude={route.path[0][1]}
-                anchor="bottom"
-                onClick={() => handleRouteClick(route)}
-              >
-                <div
-                  className="marker-start"
-                  style={{
-                    backgroundColor:
-                      selectedRoute?.name === route.name ? route.color : "gray",
-                  }}
+          {routes.map((route) =>
+            route.mainWaypoints.map((waypoint, index) => {
+              const isStart = index === 0;
+              const isEnd = index === route.mainWaypoints.length - 1;
+              const markerClass = isStart
+                ? "marker-start"
+                : isEnd
+                ? "marker-end"
+                : "marker-waypoint";
+
+              return (
+                <Marker
+                  key={`${route.name}-marker-${index}`}
+                  longitude={waypoint[0]}
+                  latitude={waypoint[1]}
+                  anchor="bottom"
+                  onClick={() => handleRouteClick(route)}
                 >
-                  <Point
-                    color={
-                      selectedRoute?.name === route.name ? route.color : "gray"
-                    }
-                  />
-                </div>
-              </Marker>
-              <Marker
-                longitude={route.path[route.path.length - 1][0]}
-                latitude={route.path[route.path.length - 1][1]}
-                anchor="bottom"
-                onClick={() => handleRouteClick(route)}
-              >
-                <div
-                  className="marker-end"
-                  style={{
-                    backgroundColor:
-                      selectedRoute?.name === route.name ? route.color : "gray",
-                  }}
-                >
-                  <Point
-                    color={
-                      selectedRoute?.name === route.name ? route.color : "gray"
-                    }
-                  />
-                </div>
-              </Marker>
-            </React.Fragment>
-          ))}
+                  {isStart || isEnd ? (
+                    <div
+                      className={markerClass}
+                      style={{
+                        backgroundColor: route.color,
+                      }}
+                    />
+                  ) : (
+                    <PlaceIcon
+                      style={{
+                        color: route.color,
+                      }}
+                    />
+                  )}
+                </Marker>
+              );
+            })
+          )}
           {descriptionPopup && (
             <DescriptionPopup
               descriptionPopup={descriptionPopup}
               selectedRoute={selectedRoute}
               onClose={() => setDescriptionPopup(null)}
+              onModifyRoute={() => console.log("Modify route")}
             />
           )}
         </Map>

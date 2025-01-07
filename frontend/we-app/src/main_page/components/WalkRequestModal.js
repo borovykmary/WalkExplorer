@@ -44,14 +44,16 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
         const routes = response.data.routes.map((route) => {
           const color = colors[colorIndex % colors.length];
           colorIndex++;
+          const mainWaypoints = [
+            [route.start.longitude, route.start.latitude],
+            ...route.waypoints.map((wp) => [wp.longitude, wp.latitude]),
+            [route.endpoint.longitude, route.endpoint.latitude],
+          ];
           return {
             name: route.title,
             description: route.description,
-            path: [
-              [route.start.longitude, route.start.latitude],
-              ...route.waypoints.map((wp) => [wp.longitude, wp.latitude]),
-              [route.endpoint.longitude, route.endpoint.latitude],
-            ],
+            path: mainWaypoints,
+            mainWaypoints: mainWaypoints,
             color: color,
           };
         });
@@ -161,7 +163,7 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
             onChange={(e) => setUserInput(e.target.value)}
           ></textarea>
         </>
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
+        {errorMessage && <div className="message">{errorMessage}</div>}
 
         <div className="actions">
           {loading ? (

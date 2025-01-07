@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Popup } from "react-map-gl";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+const fetchAddress = async (longitude, latitude) => {
+  const mapboxToken =
+    "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
 
+  const response = await fetch(
+    `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxToken}`
+  );
+  const data = await response.json();
+  if (data.features && data.features.length > 0) {
+    const place = data.features[0];
+    const name = place.text;
+    const postcode = place.context.find((c) =>
+      c.id.startsWith("postcode")
+    ).text;
+    return `${name}, ${postcode}`;
+  }
+  return "Unknown location";
+};
 const DescriptionPopup = ({
   descriptionPopup,
   selectedRoute,
   onClose,
   onModifyRoute,
 }) => {
+  const [waypointAddresses, setWaypointAddresses] = useState([]);
+  useEffect(() => {
+    const fetchAddresses = async () => {
+      const addresses = await Promise.all(
+        descriptionPopup.mainWaypoints.map(async (waypoint) => {
+          const address = await fetchAddress(waypoint[0], waypoint[1]);
+          return address;
+        })
+      );
+      setWaypointAddresses(addresses);
+    };
+
+    fetchAddresses();
+  }, [descriptionPopup.mainWaypoints]);
+
   return (
     <Popup
       longitude={descriptionPopup.longitude}
@@ -42,10 +74,18 @@ const DescriptionPopup = ({
           <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
             {descriptionPopup.description}
           </p>
+          <div className="waypoints">
+            <h4>Waypoints:</h4>
+            <ul>
+              {waypointAddresses.map((address, index) => (
+                <li key={index}>{address}</li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <button className="popup-button" onClick={onModifyRoute}>
-          Modify Route
+          Proceed
           <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
         </button>
       </div>
