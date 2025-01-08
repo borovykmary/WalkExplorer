@@ -30,15 +30,15 @@ function Login() {
       if (!response.ok) {
         const errorData = await response.json();
         if (errorData.error) {
-          setFieldError("email", errorData.error); // Show error on email field
+          setFieldError("email", errorData.error);
         }
         throw new Error(errorData.error || "Login failed");
       }
       const data = await response.json();
-      localStorage.setItem("authToken", data.token); // Store token
-      navigate("/main"); // Redirect to main page
+      localStorage.setItem("authToken", data.token);
+      navigate("/main");
     } catch (error) {
-      alert(error.message); // Display generic error message
+      alert(error.message);
     } finally {
       setSubmitting(false);
     }
@@ -51,7 +51,7 @@ function Login() {
   return (
     <div className="app-container">
       <LogoIcon className="logo" />
-      <div className="welcome-text">Welcome to Walk Explorer!</div>
+      <div className="welcome-text">Welcome to Walker Explorer!</div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
