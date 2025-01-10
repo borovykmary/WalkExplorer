@@ -35,7 +35,7 @@ function Login() {
         throw new Error(errorData.error || "Login failed");
       }
       const data = await response.json();
-      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("access_token", data.token);
       navigate("/main");
     } catch (error) {
       alert(error.message);

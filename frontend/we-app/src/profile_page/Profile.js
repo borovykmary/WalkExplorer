@@ -1,50 +1,99 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Profile.css";
-import profilePic from "./R.png"; // Replace with your profile photo image path
-import editIcon from "./edit.jpg"; // Replace with your edit icon image path
-import backIcon from "./thin_ar.jpg"; // Replace with your back icon image path
-import favoriteRoutesIcon from "./thik_ar.jpg"; // Replace with your favorite routes button image path
+import profilePic from "./R.png";
+import editIcon from "./edit.jpg";
+import backIcon from "./thin_ar.jpg";
+import favoriteRoutesIcon from "./thik_ar.jpg";
 
 function Profile() {
-  // State variables for editing mode, user data, and file input for profile picture
   const [isEditing, setIsEditing] = useState(false);
-  const [username, setUsername] = useState("User123");
-  const [email, setEmail] = useState("user@example.com");
+  const [username, setUsername] = useState(""); // Initially empty
+  const [email, setEmail] = useState("");
   const [profileImage, setProfileImage] = useState(profilePic);
   const [newImage, setNewImage] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("access_token");
+
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+
+    fetch("http://localhost:8000/api/profile/", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+      credentials: "include",
+    })
+      .then((response) => {
+        if (response.status === 401) {
+          localStorage.removeItem("access_token");
+          navigate("/login");
+        } else if (response.ok) {
+          return response.json();
+        } else {
+          return response.text(); // Log non-JSON responses
+        }
+      })
+      .then((data) => {
+        console.log("Fetched Profile Data:", data); // Debugging
+        if (typeof data === "string") {
+          console.log("Error response:", data); // Log HTML or plain text response
+        } else {
+          // Correctly set state
+          setUsername(data.username || ""); // Ensure empty username is handled
+          setEmail(data.email);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching profile data:", error);
+        navigate("/login");
+      });
+  }, [navigate]);
 
   const handleEditClick = () => {
     setIsEditing(true);
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setNewImage(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   const handleConfirmChanges = () => {
-    setProfileImage(newImage || profilePic); // Use the new image or keep the existing one
-    setIsEditing(false);
-    // You can add additional logic to save the updated data (e.g., API call)
+    const token = localStorage.getItem("access_token");
+    fetch("http://localhost:8000/api/profile/", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+      body: JSON.stringify({ username }), // Only sending the username
+    })
+      .then((response) => {
+        if (response.ok) {
+          setIsEditing(false);
+          return response.json();
+        } else {
+          throw new Error("Failed to update username.");
+        }
+      })
+      .then((data) => {
+        setUsername(data.username);
+      })
+      .catch((error) => console.error("Error updating profile:", error));
   };
 
   return (
     <div className="profile-container">
-      {/* Top section with back button, profile picture, and edit button */}
+      {/* Top section */}
       <div className="profile-header">
         <Link to="/main">
           <img src={backIcon} alt="Back" className="back-button" />
         </Link>
         <div className="profile-photo">
           <img
-            src={newImage || profileImage} // Show new image if available
+            src={newImage || profileImage}
             alt="Profile"
             className="profile-photo-img"
           />
@@ -53,40 +102,37 @@ function Profile() {
           src={editIcon}
           alt="Edit"
           className="edit-button"
-          onClick={handleEditClick} // Trigger edit mode
+          onClick={handleEditClick}
         />
       </div>
 
       {/* User Info Section */}
       {isEditing ? (
         <div className="user-info">
+          {/* Username Section */}
           <div className="username-section">
             <h2 className="username-title">Username</h2>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="username-input"
-            />
+            {isEditing ? (
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="username-input"
+                placeholder="Set your username"
+              />
+            ) : (
+              <p className="username-value">
+                {username || "No username set. Click edit to set one."}
+              </p>
+            )}
           </div>
+
+          {/* Email Section */}
           <div className="email-section">
             <h2 className="email-title">Email</h2>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="email-input"
-            />
+            <p className="email-value">{email || "No email found."}</p>
           </div>
-          <div className="image-upload-section">
-            <h2 className="image-title">Change Profile Picture</h2>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="image-upload"
-            />
-          </div>
+
           <div className="confirm-btn-container">
             <button
               className="button confirm-btn"
@@ -98,13 +144,19 @@ function Profile() {
         </div>
       ) : (
         <div className="user-info">
+          {/* Username Section */}
           <div className="username-section">
             <h2 className="username-title">Username</h2>
-            <p className="username-value">{username}</p>
+            <p className="username-value">
+              {username || "No username set. Click edit to set one."}
+            </p>
           </div>
+
+          {/* Email Section */}
           <div className="email-section">
             <h2 className="email-title">Email</h2>
-            <p className="email-value">{email}</p>
+            <p className="email-value">{email || "No email found."}</p>{" "}
+            {/* Proper email rendering */}
           </div>
         </div>
       )}
@@ -122,9 +174,15 @@ function Profile() {
           </Link>
         </p>
       </div>
-
-      {/* Sign Out Button */}
-      <button className="sign-out-btn">Sign Out</button>
+      <button
+        className="sign-out-btn"
+        onClick={() => {
+          localStorage.removeItem("access_token");
+          navigate("/login");
+        }}
+      >
+        Sign Out
+      </button>
     </div>
   );
 }
