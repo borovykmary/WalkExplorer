@@ -22,8 +22,16 @@ const ExportModal = ({ open, onClose, route }) => {
       route.path[route.path.length - 1][0]
     }&waypoints=${waypoints}`;
   };
+  const truncateLink = (link, maxLength = 100) => {
+    if (link.length <= maxLength) {
+      return link;
+    }
+    return `${link.substring(0, maxLength)}...`;
+  };
 
   const googleMapsLink = generateGoogleMapsLink(route);
+  const truncatedLink = truncateLink(googleMapsLink);
+
   const handleCheckboxChange = (event) => {
     setAddToFavourites(event.target.checked);
   };
@@ -46,7 +54,7 @@ const ExportModal = ({ open, onClose, route }) => {
         </Typography>
         <Typography variant="body2" gutterBottom>
           <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
-            {googleMapsLink}
+            {truncatedLink}
           </a>
         </Typography>
         <FormControlLabel

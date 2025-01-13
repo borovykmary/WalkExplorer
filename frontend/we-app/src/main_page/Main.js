@@ -42,6 +42,11 @@ const Main = () => {
         [17.032, 51.1105],
         [17.038, 51.1095],
       ],
+      mainWaypoints: [
+        [17.0362, 51.1227],
+        [17.032, 51.1105],
+        [17.038, 51.1095],
+      ],
       color: "#FFD700",
     },
     {
@@ -53,9 +58,17 @@ const Main = () => {
         [17.0505, 51.118],
         [17.0585, 51.117],
       ],
+      mainWaypoints: [
+        [17.0362, 51.1227],
+        [17.043, 51.12],
+        [17.0505, 51.118],
+        [17.0585, 51.117],
+      ],
       color: "#0000FF",
     },
   ]);
+  const [viewMode, setViewMode] = useState("default");
+  const [hiddenRoutes, setHiddenRoutes] = useState([]);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
@@ -131,6 +144,7 @@ const Main = () => {
         name: newRoute.name,
         description: newRoute.description,
         waypoints: newRoute.path,
+        mainWaypoints: newRoute.mainWaypoints,
       });
     }
 
@@ -139,9 +153,22 @@ const Main = () => {
   useEffect(() => {
     if (selectedRoute) {
       console.log("Selected route updated:", selectedRoute);
-      // Add any additional logic that should happen when selectedRoute is updated
     }
   }, [selectedRoute]);
+  const handleProceed = () => {
+    setViewMode("confirm");
+  };
+
+  const handleGoBack = () => {
+    setViewMode("default");
+  };
+
+  const handleConfirmSelection = () => {
+    setRoutes((prevRoutes) =>
+      prevRoutes.filter((route) => route.name !== selectedRoute.name)
+    );
+    setExportModalOpen(true);
+  };
 
   return (
     <div className="app-container">
@@ -233,13 +260,17 @@ const Main = () => {
               onClose={() => setDescriptionPopup(null)}
               setRoutes={setRoutes}
               setDescriptionPopup={setDescriptionPopup}
+              handleProceed={handleProceed}
+              viewMode={viewMode}
+              handleGoBack={handleGoBack}
+              handleConfirmSelection={handleConfirmSelection}
             />
           )}
           {exportModalOpen && (
             <ExportModal
               open={exportModalOpen}
               onClose={() => setExportModalOpen(false)}
-              setRoutes={selectedRoute}
+              route={selectedRoute}
             />
           )}
         </Map>

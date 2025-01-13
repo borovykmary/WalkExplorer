@@ -28,6 +28,10 @@ const DescriptionPopup = ({
   onModifyRoute,
   setRoutes,
   setDescriptionPopup,
+  handleProceed,
+  viewMode,
+  handleGoBack,
+  handleConfirmSelection,
 }) => {
   const [waypointAddresses, setWaypointAddresses] = useState([]);
   useEffect(() => {
@@ -43,12 +47,7 @@ const DescriptionPopup = ({
 
     fetchAddresses();
   }, [descriptionPopup.mainWaypoints]);
-  const handleProceed = () => {
-    console.log("Proceed button clicked"); // Debug log
-    setRoutes([selectedRoute]);
-    setDescriptionPopup(null);
-    onClose();
-  };
+
   return (
     <>
       <Popup
@@ -94,10 +93,24 @@ const DescriptionPopup = ({
             </div>
           </div>
 
-          <button className="popup-button" onClick={handleProceed}>
-            Proceed
-            <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
-          </button>
+          {viewMode === "default" ? (
+            <button className="popup-button" onClick={handleProceed}>
+              Proceed
+              <ArrowForwardIcon
+                fontSize="small"
+                style={{ marginLeft: "5px" }}
+              />
+            </button>
+          ) : (
+            <div className="popup-buttons">
+              <button className="popup-button" onClick={handleGoBack}>
+                Go Back
+              </button>
+              <button className="popup-button" onClick={handleConfirmSelection}>
+                Confirm Selection
+              </button>
+            </div>
+          )}
         </div>
       </Popup>
     </>
