@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Map, { Source, Layer, Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./Main.css";
@@ -10,13 +10,25 @@ import { ReactComponent as AddIcon } from "./assets/button-add.svg";
 import DescriptionPopup from "./components/DescriptionPopup";
 import FavouritesModal from "./components/FavouritesModal";
 
+const mapboxToken =
+  "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
+
+const fetchRouteFromMapbox = async (route) => {
+  const response = await fetch(
+    `https://api.mapbox.com/directions/v5/mapbox/walking/${route.path.join(
+      ";"
+    )}?geometries=geojson&access_token=${mapboxToken}`
+  );
+  const data = await response.json();
+  return data.routes[0].geometry.coordinates;
+};
+
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
   const [isFavouritesModalVisible, setFavouritesModalVisible] = useState(false);
   const [routes, setRoutes] = useState([]);
   const [selectedRoute, setSelectedRoute] = useState(null);
-  const [showPopup, setShowPopup] = useState(false);
   const [descriptionPopup, setDescriptionPopup] = useState(null);
   const [loading, setLoading] = useState(false);
   const [savedRoutes, setSavedRoutes] = useState([
@@ -42,81 +54,22 @@ const Main = () => {
       color: "#0000FF",
     },
   ]);
-  const [isEditMode, setIsEditMode] = useState(false);
-  const [adjustedWaypoints, setAdjustedWaypoints] = useState([]);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
   const openFavouritesModal = () => setFavouritesModalVisible(true);
   const closeFavouritesModal = () => setFavouritesModalVisible(false);
 
-  const mapboxToken =
-    "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
-
-  const fetchRouteFromMapbox = async (waypoints, color, name, description) => {
-    const coordinates = waypoints.map((point) => point.join(",")).join(";");
-    const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coordinates}?geometries=geojson&access_token=${mapboxToken}`;
-
-    setLoading(true);
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data.routes.length > 0) {
-        const route = {
-          name,
-          color,
-          description,
-          path: data.routes[0].geometry.coordinates, // Use street-aligned route
-        };
-        setRoutes((prevRoutes) => [...prevRoutes, route]);
-      }
-    } catch (error) {
-      console.error("Error fetching route:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const generateMockRoutes = () => {
-    const mockRouteRequests = [
-      {
-        name: "Golden Path",
-        color: "#FFD700", // Yellow
-        description:
-          "Golden Path takes you on a delightful walk starting at Example street. You will pass through charming residential streets, stop by the historic Stare Miasto (Old Town), and finish with a beautiful view at Wrocław Market Square.",
-        waypoints: [
-          [17.0362, 51.1227], // Start
-          [17.032, 51.1105], // Stop 1: Stare Miasto (Old Town)
-          [17.038, 51.1095], // Stop 2: Wrocław Market Square
-        ],
-      },
-      {
-        name: "Sea Breeze",
-        color: "#0000FF", // Blue
-        description:
-          "Blue one? Great choice! Starting at Example street, you’ll explore peaceful parks, take a break at a riverside cafe, and finish your relaxing walk by the Oder River for some quiet moments alone.",
-        waypoints: [
-          [17.0362, 51.1227], // Start
-          [17.043, 51.12], // Stop 1: Park Słowackiego
-          [17.0505, 51.118], // Stop 2: Riverside Cafe
-          [17.0585, 51.117], // End: Oder River
-        ],
-      },
-    ];
-
-    // Fetch routes for all mock requests
-    mockRouteRequests.forEach((route) =>
-      fetchRouteFromMapbox(
-        route.waypoints,
-        route.color,
-        route.name,
-        route.description
-      )
+  const handleRouteGenerated = async (routes) => {
+    const alignedRoutes = await Promise.all(
+      routes.map(async (route) => {
+        const alignedPath = await fetchRouteFromMapbox(route);
+        return { ...route, path: alignedPath };
+      })
     );
+    setRoutes((prevRoutes) => [...prevRoutes, ...alignedRoutes]);
   };
 
-  // Handle map clicks for routes
   const handleMapClick = (event) => {
     const features = event.features;
     if (features && features.length > 0) {
@@ -134,37 +87,29 @@ const Main = () => {
       }
     }
   };
+
   const handleSelectRoute = async (route) => {
-    const coordinates = route.path.map((point) => point.join(",")).join(";");
-    const url = `https://api.mapbox.com/directions/v5/mapbox/walking/${coordinates}?geometries=geojson&access_token=${mapboxToken}`;
-
-    setLoading(true);
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data.routes.length > 0) {
-        const updatedRoute = {
-          ...route,
-          path: data.routes[0].geometry.coordinates, // Use street-aligned route
-        };
-        setRoutes((prevRoutes) => [...prevRoutes, updatedRoute]);
-        setSelectedRoute(updatedRoute);
-        setDescriptionPopup({
-          longitude: updatedRoute.path[0][0],
-          latitude: updatedRoute.path[0][1],
-          name: updatedRoute.name,
-          description: updatedRoute.description,
-        });
-      }
-    } catch (error) {
-      console.error("Error fetching route:", error);
-    } finally {
-      setLoading(false);
-      closeFavouritesModal();
+    if (!route.path || !Array.isArray(route.path) || route.path.length === 0) {
+      console.error("Invalid route path:", route.path);
+      return;
     }
-  };
 
+    const updatedRoute = await fetchRouteFromMapbox(route);
+
+    if (updatedRoute) {
+      const newRoute = { ...route, path: updatedRoute };
+      setRoutes((prevRoutes) => [...prevRoutes, newRoute]);
+      setSelectedRoute(newRoute);
+      setDescriptionPopup({
+        longitude: newRoute.path[0][0],
+        latitude: newRoute.path[0][1],
+        name: newRoute.name,
+        description: newRoute.description,
+      });
+    }
+
+    setFavouritesModalVisible(false);
+  };
   return (
     <div className="app-container">
       <div className="top-navigation">
@@ -185,7 +130,7 @@ const Main = () => {
           mapStyle="mapbox://styles/mapbox/streets-v11"
           mapboxAccessToken={mapboxToken}
           onClick={handleMapClick}
-          interactiveLayerIds={routes.map((route) => `${route.name}-layer`)} // Ensure this is correct
+          interactiveLayerIds={routes.map((route) => `${route.name}-layer`)}
         >
           {routes.map((route) => (
             <Source
@@ -212,30 +157,30 @@ const Main = () => {
               />
             </Source>
           ))}
-          {selectedRoute && (
-            <Marker
-              longitude={selectedRoute.path[selectedRoute.path.length - 1][0]}
-              latitude={selectedRoute.path[selectedRoute.path.length - 1][1]}
-              anchor="bottom"
-            >
-              <div
-                className="marker-end"
-                style={{ backgroundColor: selectedRoute.color }}
-              ></div>
-            </Marker>
-          )}
-          {selectedRoute && (
-            <Marker
-              longitude={selectedRoute.path[selectedRoute.path.length - 1][0]}
-              latitude={selectedRoute.path[selectedRoute.path.length - 1][1]}
-              anchor="bottom"
-            >
-              <div
-                className="marker-end"
-                style={{ backgroundColor: selectedRoute.color }}
-              ></div>
-            </Marker>
-          )}
+          {routes.map((route) => (
+            <React.Fragment key={`${route.name}-markers`}>
+              <Marker
+                longitude={route.path[0][0]}
+                latitude={route.path[0][1]}
+                anchor="bottom"
+              >
+                <div
+                  className="marker-start"
+                  style={{ backgroundColor: route.color }}
+                ></div>
+              </Marker>
+              <Marker
+                longitude={route.path[route.path.length - 1][0]}
+                latitude={route.path[route.path.length - 1][1]}
+                anchor="bottom"
+              >
+                <div
+                  className="marker-end"
+                  style={{ backgroundColor: route.color }}
+                ></div>
+              </Marker>
+            </React.Fragment>
+          ))}
           {descriptionPopup && (
             <DescriptionPopup
               descriptionPopup={descriptionPopup}
@@ -253,7 +198,7 @@ const Main = () => {
       <WalkRequestModal
         isVisible={isModalVisible}
         onClose={closeModal}
-        onRouteGenerated={generateMockRoutes}
+        onRouteGenerated={handleRouteGenerated}
       />
       <FavouritesModal
         isVisible={isFavouritesModalVisible}

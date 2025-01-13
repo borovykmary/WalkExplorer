@@ -100,7 +100,7 @@ def initialize_context():
         {"role": "system", "content": filtered_data}
     ]
     return context
-
+    
 def get_route_details(user_input, route_style, route_time):
     context = cache.get('conversation_context', initialize_context())
     dataset_sent = cache.get('dataset_sent', False)
