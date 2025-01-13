@@ -20,18 +20,22 @@ function Login() {
       .required("Password is required"),
   });
 
-  const handleSubmit = async (values, { setSubmitting }) => {
+  const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
     try {
-      const response = await fetch("http://localhost:8000/api/login/", {
+      const response = await fetch("http://localhost:8000/login/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
       if (!response.ok) {
-        throw new Error("Login failed");
+        const errorData = await response.json();
+        if (errorData.error) {
+          setFieldError("email", errorData.error);
+        }
+        throw new Error(errorData.error || "Login failed");
       }
       const data = await response.json();
-      alert("Login successful!");
+      localStorage.setItem("access_token", data.token);
       navigate("/main");
     } catch (error) {
       alert(error.message);
@@ -47,7 +51,7 @@ function Login() {
   return (
     <div className="app-container">
       <LogoIcon className="logo" />
-      <div className="welcome-text">Welcome to Walk Explorer!</div>
+      <div className="welcome-text">Welcome to Walker Explorer!</div>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

@@ -1,82 +1,119 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Popup } from "react-map-gl";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ExportModal from "./ExportModal";
 
+const fetchAddress = async (longitude, latitude) => {
+  const mapboxToken =
+    "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
+
+  const response = await fetch(
+    `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxToken}`
+  );
+  const data = await response.json();
+  if (data.features && data.features.length > 0) {
+    const place = data.features[0];
+    const name = place.text;
+    const postcode = place.context.find((c) =>
+      c.id.startsWith("postcode")
+    ).text;
+    return `${name}, ${postcode}`;
+  }
+  return "Unknown location";
+};
 const DescriptionPopup = ({
   descriptionPopup,
   selectedRoute,
   onClose,
   onModifyRoute,
+  setRoutes,
+  setDescriptionPopup,
+  handleProceed,
+  viewMode,
+  handleGoBack,
+  handleConfirmSelection,
 }) => {
+  const [waypointAddresses, setWaypointAddresses] = useState([]);
+  useEffect(() => {
+    const fetchAddresses = async () => {
+      const addresses = await Promise.all(
+        descriptionPopup.mainWaypoints.map(async (waypoint) => {
+          const address = await fetchAddress(waypoint[0], waypoint[1]);
+          return address;
+        })
+      );
+      setWaypointAddresses(addresses);
+    };
+
+    fetchAddresses();
+  }, [descriptionPopup.mainWaypoints]);
+
   return (
-    <Popup
-      longitude={descriptionPopup.longitude}
-      latitude={descriptionPopup.latitude}
-      closeOnClick={true}
-      onClose={onClose}
-      className="custom-popup"
-      closeButton={false}
-    >
-      <div className="popup-content">
-        <div
-          className="popup-header"
-          style={{
-            borderBottom: `4px solid ${selectedRoute.color}`,
-            marginBottom: "10px",
-            paddingBottom: "5px",
-          }}
-        >
-          <h3
+    <>
+      <Popup
+        longitude={descriptionPopup.longitude}
+        latitude={descriptionPopup.latitude}
+        closeOnClick={true}
+        onClose={onClose}
+        className="custom-popup"
+        closeButton={false}
+      >
+        <div className="popup-content">
+          <div
+            className="popup-header"
             style={{
-              margin: 0,
-              fontSize: "16px",
-              fontWeight: "600",
-              color: selectedRoute.color,
+              borderBottom: `4px solid ${selectedRoute.color}`,
+              marginBottom: "10px",
+              paddingBottom: "5px",
             }}
           >
-            {descriptionPopup.name}
-          </h3>
-        </div>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: "16px",
+                fontWeight: "600",
+                color: selectedRoute.color,
+              }}
+            >
+              {descriptionPopup.name}
+            </h3>
+          </div>
 
-        <div className="popup-body">
-          <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
-            {descriptionPopup.description}
-          </p>
-          <h4
-            style={{
-              fontSize: "14px",
-              margin: "10px 0 5px",
-              fontWeight: "600",
-            }}
-          >
-            Waypoints:
-          </h4>
-          <ul style={{ padding: "0 15px", margin: 0, listStyle: "none" }}>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Start:</strong> your location
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Stop point:</strong> National Wroclaw Museum
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Stop point:</strong> Art monument "name"
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>Food Stop:</strong> Seafood restaurant "Marine"
-            </li>
-            <li style={{ fontSize: "14px", marginBottom: "5px" }}>
-              <strong>End point:</strong> River Odra
-            </li>
-          </ul>
-        </div>
+          <div className="popup-body">
+            <p style={{ fontSize: "14px", margin: "0 0 10px 0" }}>
+              {descriptionPopup.description}
+            </p>
+            <div className="waypoints">
+              <h4>Waypoints:</h4>
+              <ul>
+                {waypointAddresses.map((address, index) => (
+                  <li key={index}>{address}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-        {/* Footer Section */}
-        <button className="popup-button" onClick={onModifyRoute}>
-          Modify Route
-          <ArrowForwardIcon fontSize="small" style={{ marginLeft: "5px" }} />
-        </button>
-      </div>
-    </Popup>
+          {viewMode === "default" ? (
+            <button className="popup-button" onClick={handleProceed}>
+              Proceed
+              <ArrowForwardIcon
+                fontSize="small"
+                style={{ marginLeft: "5px" }}
+              />
+            </button>
+          ) : (
+            <div className="popup-buttons">
+              <button className="popup-button" onClick={handleGoBack}>
+                Go Back
+              </button>
+              <button className="popup-button" onClick={handleConfirmSelection}>
+                Confirm Selection
+              </button>
+            </div>
+          )}
+        </div>
+      </Popup>
+    </>
   );
 };
 

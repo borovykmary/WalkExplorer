@@ -36,6 +36,9 @@
 }
 
 .route-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -45,4 +48,102 @@
 
 .route-item:hover {
   background: #f0f0f0;
+}
+.route-info {
+  flex-grow: 1;
+}
+.confirm-delete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete-icon {
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: #ff1a1a;
+}
+
+.confirm-delete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-delete-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.confirm-delete-content p {
+  margin-bottom: 20px;
+}
+
+.confirm-delete-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.confirm-delete-content button:hover {
+  background: #0056b3;
+}
+.route-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.route-detail-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.route-detail-content h3 {
+  margin-bottom: 20px;
+}
+
+.route-detail-content p {
+  margin-bottom: 20px;
+}
+
+.route-detail-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.route-detail-content button:hover {
+  background: #0056b3;
 }
