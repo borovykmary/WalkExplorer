@@ -68,7 +68,6 @@ const Main = () => {
     },
   ]);
   const [viewMode, setViewMode] = useState("default");
-  const [hiddenRoutes, setHiddenRoutes] = useState([]);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
