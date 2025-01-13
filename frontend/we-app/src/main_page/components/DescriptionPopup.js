@@ -30,7 +30,6 @@ const DescriptionPopup = ({
   setDescriptionPopup,
 }) => {
   const [waypointAddresses, setWaypointAddresses] = useState([]);
-  const [exportModalOpen, setExportModalOpen] = useState(false);
   useEffect(() => {
     const fetchAddresses = async () => {
       const addresses = await Promise.all(
@@ -45,9 +44,10 @@ const DescriptionPopup = ({
     fetchAddresses();
   }, [descriptionPopup.mainWaypoints]);
   const handleProceed = () => {
+    console.log("Proceed button clicked"); // Debug log
     setRoutes([selectedRoute]);
     setDescriptionPopup(null);
-    setExportModalOpen(true);
+    onClose();
   };
   return (
     <>
@@ -100,11 +100,6 @@ const DescriptionPopup = ({
           </button>
         </div>
       </Popup>
-      <ExportModal
-        open={exportModalOpen}
-        onClose={() => setExportModalOpen(false)}
-        route={selectedRoute}
-      />
     </>
   );
 };

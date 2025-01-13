@@ -37,16 +37,7 @@ const ExportModal = ({ open, onClose, route }) => {
 
   return (
     <Modal open={open} onClose={onClose}>
-      <Box
-        sx={{
-          p: 4,
-          backgroundColor: "white",
-          borderRadius: 2,
-          maxWidth: 400,
-          margin: "auto",
-          mt: "20vh",
-        }}
-      >
+      <Box className="export-modal">
         <Typography variant="h6" gutterBottom>
           Your route is completely generated
         </Typography>

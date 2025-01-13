@@ -10,6 +10,7 @@ import { ReactComponent as AddIcon } from "./assets/button-add.svg";
 import DescriptionPopup from "./components/DescriptionPopup";
 import FavouritesModal from "./components/FavouritesModal";
 import PlaceIcon from "@mui/icons-material/Place";
+import ExportModal from "./components/ExportModal";
 
 const mapboxToken =
   "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";
@@ -30,6 +31,7 @@ const Main = () => {
   const [isFavouritesModalVisible, setFavouritesModalVisible] = useState(false);
   const [routes, setRoutes] = useState([]);
   const [selectedRoute, setSelectedRoute] = useState(null);
+  const [exportModalOpen, setExportModalOpen] = useState(false);
   const [descriptionPopup, setDescriptionPopup] = useState(null);
   const [savedRoutes, setSavedRoutes] = useState([
     {
@@ -134,6 +136,12 @@ const Main = () => {
 
     setFavouritesModalVisible(false);
   };
+  useEffect(() => {
+    if (selectedRoute) {
+      console.log("Selected route updated:", selectedRoute);
+      // Add any additional logic that should happen when selectedRoute is updated
+    }
+  }, [selectedRoute]);
 
   return (
     <div className="app-container">
@@ -225,6 +233,13 @@ const Main = () => {
               onClose={() => setDescriptionPopup(null)}
               setRoutes={setRoutes}
               setDescriptionPopup={setDescriptionPopup}
+            />
+          )}
+          {exportModalOpen && (
+            <ExportModal
+              open={exportModalOpen}
+              onClose={() => setExportModalOpen(false)}
+              setRoutes={selectedRoute}
             />
           )}
         </Map>
