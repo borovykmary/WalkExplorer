@@ -3,12 +3,11 @@ from django.db import models
 class User(models.Model):
     user_id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=100, unique=True)
-    user_email = models.EmailField(max_length=255, unique=True)
+    email = models.EmailField(max_length=255, unique=True)
     hashed_password = models.CharField(max_length=255)
 
     def __str__(self):
         return self.username
-
 
 class Route(models.Model):
     route_id = models.AutoField(primary_key=True)
@@ -21,7 +20,6 @@ class Route(models.Model):
 
     def __str__(self):
         return self.route_name
-
 
 class RouteHistory(models.Model):
     history_id = models.AutoField(primary_key=True)
