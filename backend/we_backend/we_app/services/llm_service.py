@@ -3,6 +3,7 @@ import json
 from dotenv import load_dotenv
 import os
 from django.core.cache import cache
+from .verify_location import geocode_locations
 
 load_dotenv()
 
@@ -70,6 +71,11 @@ def parse_response(response):
         start = route['start']
         waypoints = route['waypoints']
         end = route['endpoint']
+        
+        # Geocode locations with name and address
+        start = geocode_locations([{'name': start['name'], 'address': start['address']}])[0]    
+        waypoints = geocode_locations([{'name': waypoint['name'], 'address': waypoint['address']} for waypoint in waypoints])
+        end = geocode_locations([{'name': end['name'], 'address': end['address']}])[0]
         
         print(route_index, title, description, start, waypoints, end)
         
