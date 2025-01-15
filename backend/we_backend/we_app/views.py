@@ -15,7 +15,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 import json
-from .models import User
+from .models import User, Route
 from datetime import datetime, timedelta
 from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
@@ -55,7 +55,6 @@ def generate_route_view(request):
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=405)
     
-
 
 class RegisterView(APIView):
     permission_classes = [AllowAny]
@@ -121,3 +120,30 @@ class ProfileView(APIView):
             })
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=400)
+        
+class RouteView(APIView):
+    def get(self, request):
+        routes = Route.objects.all()
+        routes_data = [{'route_id': route.route_id, 'user_id': route.user_id.user_id, 'title': route.title, 'description': route.description, 'start_point': route.start_point, 'waypoints': route.waypoints, 'endpoint': route.endpoint} for route in routes]
+        return JsonResponse({'routes': routes_data})
+
+    def post(self, request):
+        data = request.data
+        route = Route.objects.create(
+            user_id=User.objects.get(user_id=data.get('user_id')),
+            title=data.get('title'),
+            description=data.get('description'),
+            start_point=data.get('start_point'),
+            waypoints=data.get('waypoints'),
+            endpoint=data.get('endpoint')
+        )
+        route.save()
+        return JsonResponse({'message': 'Route added successfully', 'route_id': route.route_id})
+
+    def delete(self, request, route_id):
+        try:
+            route = Route.objects.get(route_id=route_id)
+            route.delete()
+            return JsonResponse({'message': 'Route deleted successfully'})
+        except Route.DoesNotExist:
+            return JsonResponse({'error': 'Route not found'}, status=404)
