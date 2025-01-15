@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FavouritesModal.css";
 import DeleteIcon from "@mui/icons-material/Delete";
+import CloseIcon from "@mui/icons-material/Close";
 
 const FavouritesModal = ({
   isVisible,
@@ -35,9 +36,7 @@ const FavouritesModal = ({
       <div className="fav-modal-content">
         <div className="fav-modal-header">
           <h2>Favourite Routes</h2>
-          <button className="fav-close-button" onClick={onClose}>
-            X
-          </button>
+          <CloseIcon className="fav-close-button" onClick={onClose} />
         </div>
         <div className="fav-modal-body">
           {savedRoutes.length > 0 ? (
@@ -69,8 +68,11 @@ const FavouritesModal = ({
         <div className="confirm-delete-overlay">
           <div className="confirm-delete-content">
             <p>Are you sure you want to delete this route?</p>
-            <button onClick={handleDelete}>Yes</button>
-            <button onClick={() => setRouteToDelete(null)}>No</button>
+            <button onClick={handleDelete}>Confirm</button>
+            <CloseIcon
+              className="close-icon"
+              onClick={() => setRouteToDelete(null)}
+            />
           </div>
         </div>
       )}
@@ -79,10 +81,8 @@ const FavouritesModal = ({
           <div className="route-detail-content">
             <h3>{selectedRoute.name}</h3>
             <p>{selectedRoute.description}</p>
-            <button onClick={() => onSelectRoute(selectedRoute)}>
-              Select Route
-            </button>
-            <button onClick={handleBack}>Back</button>
+            <button onClick={() => onSelectRoute(selectedRoute)}>Select</button>
+            <CloseIcon className="close-icon" onClick={handleBack} />
           </div>
         </div>
       )}

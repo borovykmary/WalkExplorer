@@ -161,7 +161,7 @@ function Profile() {
         </div>
       )}
 
-      {/* Favorite Routes Section */}
+      {/* Favorite Routes Section
       <div className="favorite-routes">
         <p className="favorite-routes-title">
           Favorite Routes
@@ -174,6 +174,7 @@ function Profile() {
           </Link>
         </p>
       </div>
+      */}
       <button
         className="sign-out-btn"
         onClick={() => {
