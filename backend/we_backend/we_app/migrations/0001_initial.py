@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('user_id', models.AutoField(primary_key=True, serialize=False)),
                 ('username', models.CharField(max_length=100, unique=True)),
-                ('user_email', models.EmailField(max_length=255, unique=True)),
+                ('email', models.EmailField(max_length=255, unique=True)),
                 ('hashed_password', models.CharField(max_length=255)),
             ],
         ),
