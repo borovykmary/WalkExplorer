@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./FavouritesModal.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CloseIcon from "@mui/icons-material/Close";
@@ -6,12 +6,70 @@ import CloseIcon from "@mui/icons-material/Close";
 const FavouritesModal = ({
   isVisible,
   onClose,
-  savedRoutes,
   onSelectRoute,
   onDeleteRoute,
 }) => {
   const [routeToDelete, setRouteToDelete] = useState(null);
   const [selectedRoute, setSelectedRoute] = useState(null);
+  const [savedRoutes, setSavedRoutes] = useState([]);
+
+  useEffect(() => {
+    if (isVisible) {
+      const fetchSavedRoutes = async () => {
+        try {
+          const token = localStorage.getItem("access_token");
+          console.log("Access token:", token);
+          const response = await fetch("http://localhost:8000/api/routes/", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Token ${token}`,
+            },
+          });
+          const data = await response.json();
+          console.log("Fetched saved routes:", data);
+          if (data.routes) {
+            const colors = ["#FF0000", "#00FF00", "#0000FF"]; // Example colors
+            let colorIndex = 0;
+            const routes = data.routes
+              .map((route) => {
+                const color = colors[colorIndex % colors.length];
+                colorIndex++;
+                let start, end, waypoints;
+                try {
+                  start = JSON.parse(route.start_point.replace(/'/g, '"'));
+                  end = JSON.parse(route.endpoint.replace(/'/g, '"'));
+                  waypoints = JSON.parse(route.waypoints.replace(/'/g, '"'));
+                } catch (parseError) {
+                  console.error("Error parsing route data:", parseError);
+                  return null;
+                }
+                const mainWaypoints = [
+                  [start.longitude, start.latitude],
+                  ...waypoints.map((wp) => [wp.longitude, wp.latitude]),
+                  [end.longitude, end.latitude],
+                ];
+                return {
+                  name: route.title,
+                  description: route.description,
+                  path: mainWaypoints,
+                  mainWaypoints: mainWaypoints,
+                  color: color,
+                };
+              })
+              .filter((route) => route !== null); // Filter out any null routes due to parsing errors
+            setSavedRoutes(routes);
+          } else {
+            console.error("No routes found in the response.");
+          }
+        } catch (error) {
+          console.error("Error fetching saved routes:", error);
+        }
+      };
+
+      fetchSavedRoutes();
+    }
+  }, [isVisible]);
 
   if (!isVisible) return null;
 

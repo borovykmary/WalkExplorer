@@ -34,6 +34,7 @@ const DescriptionPopup = ({
   handleConfirmSelection,
 }) => {
   const [waypointAddresses, setWaypointAddresses] = useState([]);
+
   useEffect(() => {
     const fetchAddresses = async () => {
       const addresses = await Promise.all(

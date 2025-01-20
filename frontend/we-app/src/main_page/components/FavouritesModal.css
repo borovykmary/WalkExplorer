@@ -89,7 +89,7 @@
   position: relative;
   background: white;
   padding: 20px;
-  width: 50%;
+  width: 30%;
   border-radius: 8px;
   text-align: center;
 }
@@ -132,7 +132,7 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  width: 70%;
+  width: 30%;
   height: fit-content;
 }
 

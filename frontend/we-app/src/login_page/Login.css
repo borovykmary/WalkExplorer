@@ -24,7 +24,6 @@
 .error-message {
   font-size: 12px;
   color: red;
-  margin-top: 5px;
 }
 
 .button-container {
@@ -36,13 +35,11 @@
 }
 
 .button {
-  width: 90%;
-  max-width: 400px;
-  padding: 20px;
+  width: 269px;
+  height: 44px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -51,15 +48,6 @@
   background-color: black !important;
   color: white !important;
   border: none;
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .login-btn:hover {

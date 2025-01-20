@@ -36,9 +36,49 @@ const ExportModal = ({ open, onClose, route }) => {
     setAddToFavourites(event.target.checked);
   };
 
-  const handleClose = () => {
+  const handleClose = async () => {
     if (addToFavourites) {
-      // Add the route to favourites logic here
+      try {
+        const token = localStorage.getItem("access_token");
+        console.log("Access token:", token);
+        console.log("Route title:", route.name);
+        console.log("Route description:", route.description);
+        console.log("Route start:", route.path[0][0]);
+        console.log("Route start:", route.path[0][1]);
+        console.log("Route waypoints:", route.path.slice(1, -1));
+        console.log("Route endpoint:", route.path[route.path.length - 1][0]);
+        const response = await fetch("http://localhost:8000/api/routes/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Token ${token}`,
+          },
+          body: JSON.stringify({
+            title: route.name,
+            description: route.description,
+            start_point: {
+              longitude: route.path[0][0],
+              latitude: route.path[0][1],
+            },
+            waypoints: route.path.slice(1, -1).map((point) => ({
+              longitude: point[0],
+              latitude: point[1],
+            })),
+            endpoint: {
+              longitude: route.path[route.path.length - 1][0],
+              latitude: route.path[route.path.length - 1][1],
+            },
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to save the route");
+        }
+
+        console.log("Route saved successfully");
+      } catch (error) {
+        console.error("Error saving the route:", error);
+      }
     }
     onClose();
   };

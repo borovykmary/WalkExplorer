@@ -11,12 +11,12 @@ class User(models.Model):
 
 class Route(models.Model):
     route_id = models.AutoField(primary_key=True)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    user_email = models.CharField(max_length=255, blank=True, null=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
-    start_point = models.CharField(max_length=255)
+    start_point = models.TextField(blank=True, null=True)
     waypoints = models.TextField(blank=True, null=True)  # Assuming waypoints are stored as a JSON string
-    endpoint = models.CharField(max_length=255)
+    endpoint = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.title

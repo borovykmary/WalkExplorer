@@ -6,6 +6,7 @@ import TopNavigation from "./components/TopNavigation";
 import WalkRequestModal from "./components/WalkRequestModal";
 import { ReactComponent as BarsIcon } from "./assets/bars-2.svg";
 import { ReactComponent as FavouritesIcon } from "./assets/favourites.svg";
+import { ReactComponent as FavouritesGuestIcon } from "./assets/favourites_guest.svg";
 import { ReactComponent as AddIcon } from "./assets/button-add.svg";
 import DescriptionPopup from "./components/DescriptionPopup";
 import FavouritesModal from "./components/FavouritesModal";
@@ -33,41 +34,15 @@ const Main = () => {
   const [selectedRoute, setSelectedRoute] = useState(null);
   const [exportModalOpen, setExportModalOpen] = useState(false);
   const [descriptionPopup, setDescriptionPopup] = useState(null);
-  const [savedRoutes, setSavedRoutes] = useState([
-    {
-      name: "Golden Path",
-      description: "A delightful walk starting at Example street...",
-      path: [
-        [17.0362, 51.1227],
-        [17.032, 51.1105],
-        [17.038, 51.1095],
-      ],
-      mainWaypoints: [
-        [17.0362, 51.1227],
-        [17.032, 51.1105],
-        [17.038, 51.1095],
-      ],
-      color: "#FFD700",
-    },
-    {
-      name: "Sea Breeze",
-      description: "Explore peaceful parks and riverside cafes...",
-      path: [
-        [17.0362, 51.1227],
-        [17.043, 51.12],
-        [17.0505, 51.118],
-        [17.0585, 51.117],
-      ],
-      mainWaypoints: [
-        [17.0362, 51.1227],
-        [17.043, 51.12],
-        [17.0505, 51.118],
-        [17.0585, 51.117],
-      ],
-      color: "#0000FF",
-    },
-  ]);
   const [viewMode, setViewMode] = useState("default");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is logged in by checking for an authentication token
+    const token = localStorage.getItem("access_token");
+    setIsLoggedIn(!!token);
+    console.log("User is logged in:", !!token);
+  }, []);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
@@ -275,7 +250,7 @@ const Main = () => {
         </Map>
       </div>
       <div className="bookmark-icon" onClick={openFavouritesModal}>
-        <FavouritesIcon />
+        {isLoggedIn ? <FavouritesIcon /> : <FavouritesGuestIcon />}
       </div>
       =
       <AddIcon className="fab" onClick={openModal} />
@@ -287,7 +262,6 @@ const Main = () => {
       <FavouritesModal
         isVisible={isFavouritesModalVisible}
         onClose={closeFavouritesModal}
-        savedRoutes={savedRoutes}
         onSelectRoute={handleSelectRoute}
       />
     </div>

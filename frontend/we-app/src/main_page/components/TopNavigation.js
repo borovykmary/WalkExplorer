@@ -9,7 +9,11 @@ const TopNavigation = ({ closeMenu }) => {
     closeMenu();
     navigate("/profile");
   };
-
+  const goToHomePage = () => {
+    closeMenu();
+    localStorage.removeItem("access_token");
+    navigate("/");
+  };
   return (
     <>
       <div className="menu-overlay" onClick={closeMenu}></div>
@@ -24,7 +28,9 @@ const TopNavigation = ({ closeMenu }) => {
           </div>
           <div className="menu-item">Home Page</div>
           <div className="user-avatar">AB</div>
-          <button className="logout-btn">Log Out</button>
+          <button className="logout-btn" onClick={goToHomePage}>
+            Log Out
+          </button>
         </div>
       </div>
     </>

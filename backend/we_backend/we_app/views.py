@@ -26,6 +26,7 @@ from django.contrib.auth.models import User
 
 @csrf_exempt
 def generate_route_view(request):
+    permission_classes = [AllowAny]
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
@@ -122,15 +123,32 @@ class ProfileView(APIView):
             return JsonResponse({"error": str(e)}, status=400)
         
 class RouteView(APIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
+        user = request.user
+    
+        if not user.is_authenticated:
+            return Response(
+                {"detail": "Authentication credentials were not provided."},
+                status=401
+            )
         routes = Route.objects.all()
-        routes_data = [{'route_id': route.route_id, 'user_id': route.user_id.user_id, 'title': route.title, 'description': route.description, 'start_point': route.start_point, 'waypoints': route.waypoints, 'endpoint': route.endpoint} for route in routes]
+        routes_data = [{'route_id': route.route_id, 'user_email': route.user_email, 'title': route.title, 'description': route.description, 'start_point': route.start_point, 'waypoints': route.waypoints, 'endpoint': route.endpoint} for route in routes]
         return JsonResponse({'routes': routes_data})
 
     def post(self, request):
+        user = request.user
+    
+        if not user.is_authenticated:
+            return Response(
+                {"detail": "Authentication credentials were not provided."},
+                status=401
+            )
         data = request.data
         route = Route.objects.create(
-            user_id=User.objects.get(user_id=data.get('user_id')),
+            user_email=user.email,
             title=data.get('title'),
             description=data.get('description'),
             start_point=data.get('start_point'),
@@ -141,6 +159,13 @@ class RouteView(APIView):
         return JsonResponse({'message': 'Route added successfully', 'route_id': route.route_id})
 
     def delete(self, request, route_id):
+        user = request.user
+    
+        if not user.is_authenticated:
+            return Response(
+                {"detail": "Authentication credentials were not provided."},
+                status=401
+            )
         try:
             route = Route.objects.get(route_id=route_id)
             route.delete()
