@@ -8,7 +8,7 @@ import favoriteRoutesIcon from "./thik_ar.jpg";
 
 function Profile() {
   const [isEditing, setIsEditing] = useState(false);
-  const [username, setUsername] = useState(""); // Initially empty
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [profileImage, setProfileImage] = useState(profilePic);
   const [newImage, setNewImage] = useState(null);
@@ -30,25 +30,10 @@ function Profile() {
       },
       credentials: "include",
     })
-      .then((response) => {
-        if (response.status === 401) {
-          localStorage.removeItem("access_token");
-          navigate("/login");
-        } else if (response.ok) {
-          return response.json();
-        } else {
-          return response.text(); // Log non-JSON responses
-        }
-      })
+      .then((response) => response.json())
       .then((data) => {
-        console.log("Fetched Profile Data:", data); // Debugging
-        if (typeof data === "string") {
-          console.log("Error response:", data); // Log HTML or plain text response
-        } else {
-          // Correctly set state
-          setUsername(data.username || ""); // Ensure empty username is handled
-          setEmail(data.email);
-        }
+        setFirstName(data.first_name || "");
+        setEmail(data.email || "");
       })
       .catch((error) => {
         console.error("Error fetching profile data:", error);
@@ -56,32 +41,30 @@ function Profile() {
       });
   }, [navigate]);
 
-  const handleEditClick = () => {
-    setIsEditing(true);
-  };
-
   const handleConfirmChanges = () => {
     const token = localStorage.getItem("access_token");
+
     fetch("http://localhost:8000/api/profile/", {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Token ${token}`,
       },
-      body: JSON.stringify({ username }), // Only sending the username
+      body: JSON.stringify({ first_name: firstName }),
     })
       .then((response) => {
-        if (response.ok) {
-          setIsEditing(false);
-          return response.json();
-        } else {
-          throw new Error("Failed to update username.");
-        }
+        if (response.ok) return response.json();
+        throw new Error("Failed to update profile.");
       })
       .then((data) => {
-        setUsername(data.username);
+        setFirstName(data.first_name || firstName);
+        setIsEditing(false);
+        alert("Profile updated successfully!");
       })
-      .catch((error) => console.error("Error updating profile:", error));
+      .catch((error) => {
+        console.error("Error updating profile:", error);
+        alert("Failed to update profile. Please try again.");
+      });
   };
 
   return (
@@ -102,37 +85,27 @@ function Profile() {
           src={editIcon}
           alt="Edit"
           className="edit-button"
-          onClick={handleEditClick}
+          onClick={() => setIsEditing(true)}
         />
       </div>
 
       {/* User Info Section */}
       {isEditing ? (
         <div className="user-info">
-          {/* Username Section */}
-          <div className="username-section">
-            <h2 className="username-title">Username</h2>
-            {isEditing ? (
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="username-input"
-                placeholder="Set your username"
-              />
-            ) : (
-              <p className="username-value">
-                {username || "No username set. Click edit to set one."}
-              </p>
-            )}
+          <div className="first-name-section">
+            <h2 className="first-name-title">First Name</h2>
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              className="first-name-input"
+              placeholder="Set your first name"
+            />
           </div>
-
-          {/* Email Section */}
           <div className="email-section">
             <h2 className="email-title">Email</h2>
             <p className="email-value">{email || "No email found."}</p>
           </div>
-
           <div className="confirm-btn-container">
             <button
               className="button confirm-btn"
@@ -144,24 +117,19 @@ function Profile() {
         </div>
       ) : (
         <div className="user-info">
-          {/* Username Section */}
-          <div className="username-section">
-            <h2 className="username-title">Username</h2>
-            <p className="username-value">
-              {username || "No username set. Click edit to set one."}
+          <div className="first-name-section">
+            <h2 className="first-name-title">Username</h2>
+            <p className="first-name-value">
+              {firstName || "No username set. Click edit to set one."}
             </p>
           </div>
-
-          {/* Email Section */}
           <div className="email-section">
             <h2 className="email-title">Email</h2>
-            <p className="email-value">{email || "No email found."}</p>{" "}
-            {/* Proper email rendering */}
+            <p className="email-value">{email || "No email found."}</p>
           </div>
         </div>
       )}
 
-      {/* Favorite Routes Section */}
       <div className="favorite-routes">
         <p className="favorite-routes-title">
           Favorite Routes
