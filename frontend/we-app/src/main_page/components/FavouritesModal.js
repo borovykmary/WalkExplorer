@@ -35,24 +35,20 @@ const FavouritesModal = ({
               .map((route) => {
                 const color = colors[colorIndex % colors.length];
                 colorIndex++;
-                let start, end, waypoints;
+                let path, mainWaypoints;
                 try {
-                  start = JSON.parse(route.start_point.replace(/'/g, '"'));
-                  end = JSON.parse(route.endpoint.replace(/'/g, '"'));
-                  waypoints = JSON.parse(route.waypoints.replace(/'/g, '"'));
+                  path = JSON.parse(route.path);
+                  mainWaypoints = JSON.parse(route.mainWaypoints);
                 } catch (parseError) {
                   console.error("Error parsing route data:", parseError);
                   return null;
                 }
-                const mainWaypoints = [
-                  [start.longitude, start.latitude],
-                  ...waypoints.map((wp) => [wp.longitude, wp.latitude]),
-                  [end.longitude, end.latitude],
-                ];
+                console.log("path :", path);
+                console.log("mainWaypoints :", mainWaypoints);
                 return {
                   name: route.title,
                   description: route.description,
-                  path: mainWaypoints,
+                  path: path,
                   mainWaypoints: mainWaypoints,
                   color: color,
                 };

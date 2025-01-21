@@ -14,9 +14,8 @@ class Route(models.Model):
     user_email = models.CharField(max_length=255, blank=True, null=True)
     title = models.CharField(max_length=100)
     description = models.TextField()
-    start_point = models.TextField(blank=True, null=True)
-    waypoints = models.TextField(blank=True, null=True)  # Assuming waypoints are stored as a JSON string
-    endpoint = models.TextField(blank=True, null=True)
+    path = models.TextField(blank=True, null=True)
+    mainWaypoints = models.TextField(blank=True, null=True)  # Assuming waypoints are stored as a JSON string
 
     def __str__(self):
         return self.title

@@ -135,7 +135,7 @@ class RouteView(APIView):
                 status=401
             )
         routes = Route.objects.all()
-        routes_data = [{'route_id': route.route_id, 'user_email': route.user_email, 'title': route.title, 'description': route.description, 'start_point': route.start_point, 'waypoints': route.waypoints, 'endpoint': route.endpoint} for route in routes]
+        routes_data = [{'route_id': route.route_id, 'user_email': route.user_email, 'title': route.title, 'description': route.description, 'path': route.path, 'mainWaypoints': route.mainWaypoints} for route in routes]
         return JsonResponse({'routes': routes_data})
 
     def post(self, request):
@@ -151,9 +151,8 @@ class RouteView(APIView):
             user_email=user.email,
             title=data.get('title'),
             description=data.get('description'),
-            start_point=data.get('start_point'),
-            waypoints=data.get('waypoints'),
-            endpoint=data.get('endpoint')
+            path=data.get('path'),
+            mainWaypoints=data.get('mainWaypoints'),
         )
         route.save()
         return JsonResponse({'message': 'Route added successfully', 'route_id': route.route_id})

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Popup } from "react-map-gl";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ExportModal from "./ExportModal";
-
 const fetchAddress = async (longitude, latitude) => {
   const mapboxToken =
     "pk.eyJ1IjoiaWxsdXNoa2EtcHdyIiwiYSI6ImNtMml0ZnhvajBmZjEyanNkNmVvcnM4ZWIifQ.vs6oHrb0Iyo-IkVP3gds7A";

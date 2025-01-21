@@ -43,10 +43,14 @@ const ExportModal = ({ open, onClose, route }) => {
         console.log("Access token:", token);
         console.log("Route title:", route.name);
         console.log("Route description:", route.description);
-        console.log("Route start:", route.path[0][0]);
-        console.log("Route start:", route.path[0][1]);
-        console.log("Route waypoints:", route.path.slice(1, -1));
-        console.log("Route endpoint:", route.path[route.path.length - 1][0]);
+        console.log("Route waypoints:", route.path);
+        console.log("Route main waypoints:", route.mainWaypoints);
+
+        if (!route.mainWaypoints) {
+          console.error("mainWaypoints is null or undefined");
+          return;
+        }
+
         const response = await fetch("http://localhost:8000/api/routes/", {
           method: "POST",
           headers: {
@@ -56,18 +60,8 @@ const ExportModal = ({ open, onClose, route }) => {
           body: JSON.stringify({
             title: route.name,
             description: route.description,
-            start_point: {
-              longitude: route.path[0][0],
-              latitude: route.path[0][1],
-            },
-            waypoints: route.path.slice(1, -1).map((point) => ({
-              longitude: point[0],
-              latitude: point[1],
-            })),
-            endpoint: {
-              longitude: route.path[route.path.length - 1][0],
-              latitude: route.path[route.path.length - 1][1],
-            },
+            path: JSON.stringify(route.path),
+            mainWaypoints: JSON.stringify(route.mainWaypoints),
           }),
         });
 

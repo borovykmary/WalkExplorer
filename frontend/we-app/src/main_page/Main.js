@@ -100,27 +100,26 @@ const Main = () => {
     setSelectedRoute(clickedRoute);
   };
 
-  const handleSelectRoute = async (route) => {
-    if (!route.path || !Array.isArray(route.path) || route.path.length === 0) {
-      console.error("Invalid route path:", route.path);
+  const handleSelectRoute = async (savedroute) => {
+    if (
+      !savedroute.path ||
+      !Array.isArray(savedroute.path) ||
+      savedroute.path.length === 0
+    ) {
+      console.error("Invalid route path:", savedroute.path);
       return;
     }
 
-    const updatedRoute = await fetchRouteFromMapbox(route);
-
-    if (updatedRoute) {
-      const newRoute = { ...route, path: updatedRoute };
-      setRoutes((prevRoutes) => [...prevRoutes, newRoute]);
-      setSelectedRoute(newRoute);
-      setDescriptionPopup({
-        longitude: newRoute.path[0][0],
-        latitude: newRoute.path[0][1],
-        name: newRoute.name,
-        description: newRoute.description,
-        waypoints: newRoute.path,
-        mainWaypoints: newRoute.mainWaypoints,
-      });
-    }
+    setRoutes((prevRoutes) => [...prevRoutes, savedroute]);
+    setSelectedRoute(savedroute);
+    setDescriptionPopup({
+      longitude: savedroute.path[0][0],
+      latitude: savedroute.path[0][1],
+      name: savedroute.name,
+      description: savedroute.description,
+      waypoints: savedroute.path,
+      mainWaypoints: savedroute.mainWaypoints,
+    });
 
     setFavouritesModalVisible(false);
   };
