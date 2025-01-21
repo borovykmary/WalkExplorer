@@ -119,11 +119,40 @@
   padding: 10px 18px;
   color: #000000;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   background-color: transparent;
   border: none;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  cursor: pointer;
+}
+.button-container-dp {
+  display: flex;
+  gap: 5px;
+}
+.popup-button-goback {
+  width: auto;
+  padding: 10px 18px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.popup-button-confirm {
+  width: 120px;
+  padding: 10px 18px;
+  margin-top: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #000000;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
   cursor: pointer;
 }
 .popup-button:hover {

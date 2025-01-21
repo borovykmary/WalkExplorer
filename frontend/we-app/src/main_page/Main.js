@@ -248,7 +248,14 @@ const Main = () => {
           )}
         </Map>
       </div>
-      <div className="bookmark-icon" onClick={openFavouritesModal}>
+      <div
+        className="bookmark-icon"
+        onClick={() => {
+          if (isLoggedIn) {
+            openFavouritesModal();
+          }
+        }}
+      >
         {isLoggedIn ? <FavouritesIcon /> : <FavouritesGuestIcon />}
       </div>
       =

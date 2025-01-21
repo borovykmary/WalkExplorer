@@ -101,11 +101,14 @@ const DescriptionPopup = ({
               />
             </button>
           ) : (
-            <div className="popup-buttons">
-              <button className="popup-button" onClick={handleGoBack}>
+            <div className="button-container-dp">
+              <button className="popup-button-goback" onClick={handleGoBack}>
                 Go Back
               </button>
-              <button className="popup-button" onClick={handleConfirmSelection}>
+              <button
+                className="popup-button-confirm"
+                onClick={handleConfirmSelection}
+              >
                 Confirm Selection
               </button>
             </div>

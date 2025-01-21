@@ -75,6 +75,7 @@ const ExportModal = ({ open, onClose, route }) => {
       }
     }
     onClose();
+    window.location.reload();
   };
 
   return (
