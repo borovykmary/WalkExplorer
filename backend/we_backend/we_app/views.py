@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .services.route_processor import process_user_input
 import json
+=======
+from django.shortcuts import render
+from rest_framework.decorators import api_view
+>>>>>>> basic_front_new
 from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
+from .serializers import UserProfileSerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
@@ -21,7 +27,6 @@ from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.permissions import AllowAny
-
 from django.contrib.auth.models import User
 
 @csrf_exempt
@@ -58,11 +63,12 @@ def generate_route_view(request):
 
 class RegisterView(APIView):
     permission_classes = [AllowAny]
+
     def post(self, request):
         email = request.data.get('email')
         password = request.data.get('password')
-        if User.objects.filter(username=email).exists():
-            return Response({"error": "User already exists"}, status=status.HTTP_400_BAD_REQUEST)
+        if User.objects.filter(email=email).exists():
+            return Response({"error": "User with this email already exists."}, status=status.HTTP_400_BAD_REQUEST)
         user = User.objects.create_user(username=email, email=email, password=password)
         user.save()
         return Response({"message": "User registered successfully!"}, status=status.HTTP_201_CREATED)
@@ -73,6 +79,7 @@ class LoginView(APIView):
     def post(self, request):
         email = request.data.get('email')
         password = request.data.get('password')
+        print(email, password)
         user = authenticate(request, username=email, password=password)
         if user is not None:
             token, created = Token.objects.get_or_create(user=user)
@@ -81,45 +88,21 @@ class LoginView(APIView):
 
 
 class ProfileView(APIView):
-    # Ensure that only authenticated users can access this view
-    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
-    # GET method: Fetch the user's profile data (username and email)
     def get(self, request):
         user = request.user
+        serializer = UserProfileSerializer(user)
+        return Response(serializer.data)
 
-        if not user.is_authenticated:
-            return Response(
-                {"detail": "Authentication credentials were not provided."},
-                status=401
-            )
-
-        return JsonResponse({
-            "username": user.username if user.username else None,
-            "email": user.email if user.email else "No email found",
-        })
-
-    # PATCH method: Update the user's profile (e.g., username)
     def patch(self, request):
-        try:
-            data = request.data
-            user = request.user
-
-            # Update only the username, not the email
-            new_username = data.get("username", user.username)
-            if new_username:  # Ensure username is not empty
-                user.username = new_username
-
-            user.save()
-
-            return JsonResponse({
-                "message": "Profile updated successfully.",
-                "username": user.username,
-                "email": user.email,  # Ensure email is not updated via PATCH
-            })
-        except Exception as e:
-            return JsonResponse({"error": str(e)}, status=400)
+        data = request.data
+        user = request.user
+        serializer = UserProfileSerializer(user, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=400)
         
 class RouteView(APIView):
     def get(self, request):
@@ -147,3 +130,4 @@ class RouteView(APIView):
             return JsonResponse({'message': 'Route deleted successfully'})
         except Route.DoesNotExist:
             return JsonResponse({'error': 'Route not found'}, status=404)
+        
