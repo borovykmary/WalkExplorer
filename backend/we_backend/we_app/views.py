@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .services.route_processor import process_user_input
 import json
-=======
 from django.shortcuts import render
 from rest_framework.decorators import api_view
->>>>>>> basic_front_new
 from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from rest_framework.response import Response
