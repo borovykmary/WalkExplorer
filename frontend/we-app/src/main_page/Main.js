@@ -36,6 +36,7 @@ const Main = () => {
   const [descriptionPopup, setDescriptionPopup] = useState(null);
   const [viewMode, setViewMode] = useState("default");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isFavouritesClicked, setIsFavouritesClicked] = useState(false);
 
   useEffect(() => {
     // Check if the user is logged in by checking for an authentication token
@@ -61,6 +62,7 @@ const Main = () => {
       })
     );
     setRoutes((prevRoutes) => [...prevRoutes, ...alignedRoutes]);
+    console.log("Generated routes:", alignedRoutes);
   };
 
   const handleMapClick = (event) => {
@@ -165,31 +167,33 @@ const Main = () => {
           onClick={handleMapClick}
           interactiveLayerIds={routes.map((route) => `${route.name}-layer`)}
         >
-          {routes.map((route) => (
-            <Source
-              key={route.name}
-              id={route.name}
-              type="geojson"
-              data={{
-                type: "Feature",
-                properties: {},
-                geometry: {
-                  type: "LineString",
-                  coordinates: route.path,
-                },
-              }}
-            >
-              <Layer
-                id={`${route.name}-layer`}
-                type="line"
-                paint={{
-                  "line-color": route.color,
-                  "line-width": selectedRoute?.name === route.name ? 5 : 3, // Glow on selection
-                  "line-opacity": selectedRoute?.name === route.name ? 1 : 0.4,
+          {routes &&
+            routes.map((route) => (
+              <Source
+                key={route.name}
+                id={route.name}
+                type="geojson"
+                data={{
+                  type: "Feature",
+                  properties: {},
+                  geometry: {
+                    type: "LineString",
+                    coordinates: route.path,
+                  },
                 }}
-              />
-            </Source>
-          ))}
+              >
+                <Layer
+                  id={`${route.name}-layer`}
+                  type="line"
+                  paint={{
+                    "line-color": route.color,
+                    "line-width": selectedRoute?.name === route.name ? 5 : 3, // Glow on selection
+                    "line-opacity":
+                      selectedRoute?.name === route.name ? 1 : 0.4,
+                  }}
+                />
+              </Source>
+            ))}
           {routes.map((route) =>
             route.mainWaypoints.map((waypoint, index) => {
               const isStart = index === 0;
@@ -244,6 +248,8 @@ const Main = () => {
               open={exportModalOpen}
               onClose={() => setExportModalOpen(false)}
               route={selectedRoute}
+              hideCheckbox={isFavouritesClicked}
+              isLoggedIn={isLoggedIn}
             />
           )}
         </Map>
@@ -252,6 +258,7 @@ const Main = () => {
         className="bookmark-icon"
         onClick={() => {
           if (isLoggedIn) {
+            setIsFavouritesClicked(true);
             openFavouritesModal();
           }
         }}

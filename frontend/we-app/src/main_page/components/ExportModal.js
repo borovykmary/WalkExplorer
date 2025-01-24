@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import "./ExportModal.css";
 
-const ExportModal = ({ open, onClose, route }) => {
+const ExportModal = ({ hideCheckbox, isLoggedIn, open, onClose, route }) => {
   const [addToFavourites, setAddToFavourites] = useState(false);
   const generateGoogleMapsLink = (route) => {
     const baseUrl = "https://www.google.com/maps/dir/?api=1";
@@ -92,16 +92,18 @@ const ExportModal = ({ open, onClose, route }) => {
             {truncatedLink}
           </a>
         </Typography>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={addToFavourites}
-              onChange={handleCheckboxChange}
-              color="primary"
-            />
-          }
-          label="Add to Favourites"
-        />
+        {isLoggedIn && !hideCheckbox && (
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={addToFavourites}
+                onChange={handleCheckboxChange}
+                color="primary"
+              />
+            }
+            label="Add to Favourites"
+          />
+        )}
         <Button variant="contained" color="primary" onClick={handleClose}>
           Close
         </Button>

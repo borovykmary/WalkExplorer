@@ -38,7 +38,7 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
         { headers: { "Content-Type": "application/json" } }
       );
 
-      console.log("Generated Route:", response.data);
+      console.log("Generated Route:", response.data.routes);
 
       if (response.data.routes) {
         const routes = response.data.routes.map((route) => {
