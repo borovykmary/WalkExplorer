@@ -76,4 +76,8 @@ Favorites and Sharing: Users can save their favorite routes and share them with 
 Maryna Borovyk, Illia Pastushok, Sofiia Tretiak
 ## Demonstration
 ### Screenshots:
-<div style="display: flex; flex-wrap: wrap;"> <div style="flex: 1; margin: 10px;"> <img src="docs/start.png" alt="Initial Screen" title="Initial Screen" style="width: 100%;"/> </div> <div style="flex: 1; margin: 10px;"> <img src="docs/main.png" alt="Conversation Screen" title="Conversation Screen" style="width: 100%;"/> </div> </div> <div style="display: flex; flex-wrap: wrap;"> <div style="flex: 1; margin: 10px;"> <img src="docs/register.png" alt="Register Screen" title="Register Screen" style="width: 100%;"/> </div> <div style="flex: 1; margin: 10px;"> <img src="docs/map.png" alt="Map Screen" title="Map Screen" style="width: 100%;"/> </div> </div> <div style="display: flex; flex-wrap: wrap;"> <div style="flex: 1; margin: 10px;"> <img src="docs/map_result.png" alt="Map Result Screen" title="Map Result Screen" style="width: 100%;"/> </div> <div style="flex: 1; margin: 10px;"> <img src="docs/profile.png" alt="Profile Screen" title="Profile Screen" style="width: 100%;"/> </div> </div> <div style="display: flex; flex-wrap: wrap;"> <div style="flex: 1; margin: 10px;"> <img src="docs/completion.png" alt="Completion Screen" title="Completion Screen" style="width: 100%;"/> </div> <div style="flex: 1; margin: 10px;"> <img src="docs/no_login.png" alt="Map for Guest Screen" title="Map for Guest Screen" style="width: 100%;"/> </div> </div> ```
+| ![Initial Screen](docs/start.png) | ![Conversation Screen](docs/main.png) |
+|:---------------------------------:|:------------------------------------:|
+| ![Register Screen](docs/register.png) | ![Map Screen](docs/map.png) |
+| ![Map Result Screen](docs/map_result.png) | ![Profile Screen](docs/profile.png) |
+| ![Completion Screen](docs/completion.png) | ![Map for Guest Screen](docs/no_login.png) |
