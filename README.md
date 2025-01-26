@@ -57,7 +57,7 @@ Favorites and Sharing: Users can save their favorite routes and share them with 
     ```
 
 4. **Add your api keys:**
-    Create a .env file in the we_venv directory and add your api keys:
+    Create a .env file in the we_backend directory and add your api keys:
     ```sh
     DEBUG=True
     SECRET_KEY=your_secret_key
@@ -78,34 +78,34 @@ Maryna Borovyk, Illia Pastushok, Sofiia Tretiak
 ### Screenshots:
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; margin: 10px;">
-    <img src="docs/start.png" alt="Initial Screen" title="Initial Screen" style="width: 100%;"/>
+    <img src="docs/start.png" alt="Initial Screen" title="Initial Screen" style="width: 50%;"/>
   </div>
   <div style="flex: 1; margin: 10px;">
-    <img src="docs/main.png" alt="Conversation Screen" title="Conversation Screen" style="width: 100%;"/>
-  </div>
-</div>
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="flex: 1; margin: 10px;">
-    <img src="docs/register.png" alt="Register Screen" title="Register Screen" style="width: 100%;"/>
-  </div>
-  <div style="flex: 1; margin: 10px;">
-    <img src="docs/map.png" alt="Map Screen" title="Map Screen" style="width: 100%;"/>
+    <img src="docs/main.png" alt="Conversation Screen" title="Conversation Screen" style="width: 50%;"/>
   </div>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; margin: 10px;">
-    <img src="docs/map_result.png" alt="Map Result Screen" title="Map Result Screen" style="width: 100%;"/>
+    <img src="docs/register.png" alt="Register Screen" title="Register Screen" style="width: 50%;"/>
   </div>
   <div style="flex: 1; margin: 10px;">
-    <img src="docs/profile.png" alt="Profile Screen" title="Profile Screen" style="width: 100%;"/>
+    <img src="docs/map.png" alt="Map Screen" title="Map Screen" style="width: 50%;"/>
   </div>
 </div>
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1; margin: 10px;">
-    <img src="docs/completion.png" alt="Completion Screen" title="Completion Screen" style="width: 100%;"/>
+    <img src="docs/map_result.png" alt="Map Result Screen" title="Map Result Screen" style="width: 50%;"/>
   </div>
   <div style="flex: 1; margin: 10px;">
-    <img src="docs/no_login.png" alt="Map for Guest Screen" title="Map for Guest Screen" style="width: 100%;"/>
+    <img src="docs/profile.png" alt="Profile Screen" title="Profile Screen" style="width: 50%;"/>
+  </div>
+</div>
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="flex: 1; margin: 10px;">
+    <img src="docs/completion.png" alt="Completion Screen" title="Completion Screen" style="width: 50%;"/>
+  </div>
+  <div style="flex: 1; margin: 10px;">
+    <img src="docs/no_login.png" alt="Map for Guest Screen" title="Map for Guest Screen" style="width: 50%;"/>
   </div>
 </div>
 
