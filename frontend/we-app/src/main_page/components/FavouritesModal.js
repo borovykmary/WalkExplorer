@@ -27,7 +27,7 @@ const FavouritesModal = ({
       const data = await response.json();
       console.log("Fetched saved routes:", data);
       if (data.routes) {
-        const colors = ["#FF0000", "#00FF00", "#0000FF"]; // Example colors
+        const colors = ["#5C4FA1", "#8DAD78", "#BB088B"];
         let colorIndex = 0;
         const routes = data.routes
           .map((route) => {
@@ -91,6 +91,7 @@ const FavouritesModal = ({
       if (response.ok) {
         onDeleteRoute(routeToDelete.routeId);
         setRouteToDelete(null);
+        fetchSavedRoutes();
       } else {
         console.error("Failed to delete the route");
       }

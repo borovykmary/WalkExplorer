@@ -189,9 +189,7 @@ const WalkRequestModal = ({ isVisible, onClose, onRouteGenerated }) => {
               <button className="confirm-button" onClick={confirmClose}>
                 Yes
               </button>
-              <button className="cancel-button" onClick={cancelClose}>
-                <CloseIcon fontSize="small" />
-              </button>
+              <CloseIcon className="close-icon" onClick={cancelClose} />
             </div>
           </div>
         </div>

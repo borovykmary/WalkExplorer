@@ -23,9 +23,6 @@ const DescriptionPopup = ({
   descriptionPopup,
   selectedRoute,
   onClose,
-  onModifyRoute,
-  setRoutes,
-  setDescriptionPopup,
   handleProceed,
   viewMode,
   handleGoBack,
@@ -45,7 +42,7 @@ const DescriptionPopup = ({
     };
 
     fetchAddresses();
-  }, [descriptionPopup.mainWaypoints]);
+  }, [descriptionPopup]);
 
   return (
     <>

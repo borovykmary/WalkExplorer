@@ -89,7 +89,13 @@ const Main = () => {
           waypoints: clickedRoute.path,
           mainWaypoints: clickedRoute.mainWaypoints,
         });
+      } else {
+        // Close the popup if no route was clicked
+        setDescriptionPopup(null);
       }
+    } else {
+      // Close the popup if the map is clicked without a route
+      setDescriptionPopup(null);
     }
   };
   const handleRouteClick = (clickedRoute) => {
@@ -235,8 +241,6 @@ const Main = () => {
               descriptionPopup={descriptionPopup}
               selectedRoute={selectedRoute}
               onClose={() => setDescriptionPopup(null)}
-              setRoutes={setRoutes}
-              setDescriptionPopup={setDescriptionPopup}
               handleProceed={handleProceed}
               viewMode={viewMode}
               handleGoBack={handleGoBack}
