@@ -13,18 +13,8 @@ from django.contrib.auth import authenticate
 from .serializers import UserProfileSerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
-import json
-from .models import User, Route
-from datetime import datetime, timedelta
-from rest_framework.response import Response
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.permissions import AllowAny
-from django.contrib.auth.models import User
+from .models import User, Route
 
 @csrf_exempt
 def generate_route_view(request):
@@ -55,6 +45,8 @@ def generate_route_view(request):
             return JsonResponse({'routes': routes_response})
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON'}, status=400)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
     else:
         return JsonResponse({'error': 'Invalid request method'}, status=405)
     
@@ -63,92 +55,98 @@ class RegisterView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
-        email = request.data.get('email')
-        password = request.data.get('password')
-        if User.objects.filter(email=email).exists():
-            return Response({"error": "User with this email already exists."}, status=status.HTTP_400_BAD_REQUEST)
-        user = User.objects.create_user(username=email, email=email, password=password)
-        user.save()
-        return Response({"message": "User registered successfully!"}, status=status.HTTP_201_CREATED)
+        try:
+            email = request.data.get('email')
+            password = request.data.get('password')
+            if not email or not password:
+                return Response({"error": "Email and password are required."}, status=status.HTTP_400_BAD_REQUEST)
+            if User.objects.filter(email=email).exists():
+                return Response({"error": "User with this email already exists."}, status=status.HTTP_400_BAD_REQUEST)
+            user = User.objects.create_user(username=email, email=email, password=password)
+            user.save()
+            return Response({"message": "User registered successfully!"}, status=status.HTTP_201_CREATED)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class LoginView(APIView):
     permission_classes = [AllowAny]  
     def post(self, request):
-        email = request.data.get('email')
-        password = request.data.get('password')
-        print(email, password)
-        user = authenticate(request, username=email, password=password)
-        if user is not None:
-            token, created = Token.objects.get_or_create(user=user)
-            return Response({"message": "Login successful!", "token": token.key}, status=status.HTTP_200_OK)
-        return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
+        try:
+            email = request.data.get('email')
+            password = request.data.get('password')
+            if not email or not password:
+                return Response({"error": "Email and password are required."}, status=status.HTTP_400_BAD_REQUEST)
+            user = authenticate(request, username=email, password=password)
+            if user is not None:
+                token, created = Token.objects.get_or_create(user=user)
+                return Response({"message": "Login successful!", "token": token.key}, status=status.HTTP_200_OK)
+            return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class ProfileView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        user = request.user
-        serializer = UserProfileSerializer(user)
-        return Response(serializer.data)
+        try:
+            user = request.user
+            serializer = UserProfileSerializer(user)
+            return Response(serializer.data)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def patch(self, request):
-        data = request.data
-        user = request.user
-        serializer = UserProfileSerializer(user, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=400)
+        try:
+            data = request.data
+            user = request.user
+            serializer = UserProfileSerializer(user, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=400)
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
 class RouteView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        user = request.user
-    
-        if not user.is_authenticated:
-            return Response(
-                {"detail": "Authentication credentials were not provided."},
-                status=401
-            )
-        routes = Route.objects.all()
-        routes_data = [{'route_id': route.route_id, 'user_email': route.user_email, 'title': route.title, 'description': route.description, 'path': route.path, 'mainWaypoints': route.mainWaypoints} for route in routes]
-        return JsonResponse({'routes': routes_data})
+        try:
+            user = request.user
+            routes = Route.objects.filter(user_email=user.email)
+            routes_data = [{'route_id': route.route_id, 'user_email': route.user_email, 'title': route.title, 'description': route.description, 'path': route.path, 'mainWaypoints': route.mainWaypoints} for route in routes]
+            return JsonResponse({'routes': routes_data})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
 
     def post(self, request):
-        user = request.user
-    
-        if not user.is_authenticated:
-            return Response(
-                {"detail": "Authentication credentials were not provided."},
-                status=401
+        try:
+            user = request.user
+            data = request.data
+            if not data.get('title') or not data.get('description'):
+                return JsonResponse({'error': 'Title and description are required.'}, status=400)
+            route = Route.objects.create(
+                user_email=user.email,
+                title=data.get('title'),
+                description=data.get('description'),
+                path=data.get('path'),
+                mainWaypoints=data.get('mainWaypoints'),
             )
-        data = request.data
-        route = Route.objects.create(
-            user_email=user.email,
-            title=data.get('title'),
-            description=data.get('description'),
-            path=data.get('path'),
-            mainWaypoints=data.get('mainWaypoints'),
-        )
-        route.save()
-        return JsonResponse({'message': 'Route added successfully', 'route_id': route.route_id})
+            route.save()
+            return JsonResponse({'message': 'Route added successfully', 'route_id': route.route_id})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
 
     def delete(self, request, route_id):
-        user = request.user
-    
-        if not user.is_authenticated:
-            return Response(
-                {"detail": "Authentication credentials were not provided."},
-                status=401
-            )
         try:
-            route = Route.objects.get(route_id=route_id)
+            user = request.user
+            route = Route.objects.get(route_id=route_id, user_email=user.email)
             route.delete()
             return JsonResponse({'message': 'Route deleted successfully'})
         except Route.DoesNotExist:
             return JsonResponse({'error': 'Route not found'}, status=404)
-        
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
